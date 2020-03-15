@@ -43,5 +43,6 @@ module Top_Student (
     always@(posedge CLK100MHZ)
     begin
         led = (sw == 1) ? my_mic_data:0;
+        oled_data = my_mic_data[11:7];
     end
 endmodule
