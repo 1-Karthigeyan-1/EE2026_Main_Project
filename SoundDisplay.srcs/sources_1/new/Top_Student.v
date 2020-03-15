@@ -32,7 +32,7 @@ module Top_Student (
     wire [11:0]my_mic_data;
     
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
-    clock_divider clk6p25m(CLK100MHZ,3'b111,sixclock);
+    clock_divider clk6p25m(CLK100MHZ,8,sixclock);
     debounce deboun(mid_button,CLK100MHZ,reset);
     Oled_Display oled(.clk(sixclock), .reset(reset),
     .pixel_data(oled_data), .cs(rgb_cs), .sdin(rgb_sdin), .sclk(rgb_sclk), .d_cn(rgb_d_cn), .resn(rgb_resn), .vccen(rgb_vccen),
@@ -41,5 +41,7 @@ module Top_Student (
 
     // Delete this comment and write your codes and instantiations here
     always@(posedge CLK100MHZ)
+    begin
         led = (sw == 1) ? my_mic_data:0;
+    end
 endmodule

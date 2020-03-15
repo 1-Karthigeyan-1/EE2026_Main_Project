@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date         : Mon Mar  9 17:22:20 2020
-| Host         : LAPTOP-2ML4QPL2 running 64-bit major release  (build 9200)
+| Date         : Sun Mar 15 18:56:50 2020
+| Host         : InfinityTimeout running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_Student_control_sets_placed.rpt
 | Design       : Top_Student
 | Device       : xc7a35t
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     8 |
-| Unused register locations in slices containing registers |    26 |
+| Number of unique control sets                            |    13 |
+| Unused register locations in slices containing registers |    36 |
 +----------------------------------------------------------+-------+
 
 
@@ -36,7 +36,7 @@ Table of Contents
 +--------+--------------+
 |      2 |            1 |
 |      6 |            1 |
-|    16+ |            6 |
+|    16+ |           11 |
 +--------+--------------+
 
 
@@ -46,29 +46,34 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              56 |           10 |
+| No           | No                    | No                     |             108 |           22 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |             166 |           37 |
+| No           | Yes                   | No                     |             256 |           45 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
-| Yes          | Yes                   | No                     |             104 |           14 |
+| Yes          | Yes                   | No                     |             104 |           15 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------------+---------------------------------+-------------------------------------+------------------+----------------+
-|     Clock Signal     |          Enable Signal          |           Set/Reset Signal          | Slice Load Count | Bel Load Count |
-+----------------------+---------------------------------+-------------------------------------+------------------+----------------+
-| ~sixclock_BUFG       |                                 |                                     |                1 |              2 |
-|  deboun/test/slow    |                                 |                                     |                1 |              6 |
-| ~sixclock_BUFG       |                                 | deboun/reset                        |                9 |             34 |
-| ~sixclock_BUFG       | nolabel_line31/delay[0]_i_1_n_0 | deboun/reset                        |                5 |             40 |
-|  CLK100MHZ_IBUF_BUFG |                                 | clk6p25m/clear                      |                6 |             42 |
-|  CLK100MHZ_IBUF_BUFG |                                 |                                     |                8 |             48 |
-| ~sixclock_BUFG       | nolabel_line31/state            | deboun/reset                        |                9 |             64 |
-| ~sixclock_BUFG       |                                 | nolabel_line31/spi_word[39]_i_1_n_0 |               22 |             90 |
-+----------------------+---------------------------------+-------------------------------------+------------------+----------------+
++-----------------------------+-----------------------+---------------------------+------------------+----------------+
+|         Clock Signal        |     Enable Signal     |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
++-----------------------------+-----------------------+---------------------------+------------------+----------------+
+| ~sixclock_BUFG              |                       |                           |                1 |              2 |
+|  deboun/test/slow           |                       |                           |                1 |              6 |
+| ~CaptAudio/J_MIC3_Pin4_OBUF |                       |                           |                5 |             24 |
+|  clk/CLK                    |                       |                           |                5 |             24 |
+|  CLK100MHZ_IBUF_BUFG        |                       | clk/CLK                   |                3 |             24 |
+|  CLK100MHZ_IBUF_BUFG        |                       | led[11]_i_1_n_0           |                5 |             24 |
+| ~sixclock_BUFG              |                       | deboun/reset              |                6 |             34 |
+| ~sixclock_BUFG              | oled/delay[0]_i_1_n_0 | deboun/reset              |                5 |             40 |
+|  CLK100MHZ_IBUF_BUFG        |                       | clk/clear                 |                6 |             42 |
+|  CLK100MHZ_IBUF_BUFG        |                       | clk6p25m/cd_out0          |                6 |             42 |
+|  CLK100MHZ_IBUF_BUFG        |                       |                           |               10 |             52 |
+| ~sixclock_BUFG              | oled/state            | deboun/reset              |               10 |             64 |
+| ~sixclock_BUFG              |                       | oled/spi_word[39]_i_1_n_0 |               19 |             90 |
++-----------------------------+-----------------------+---------------------------+------------------+----------------+
 
 

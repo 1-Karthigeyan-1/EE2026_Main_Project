@@ -23,19 +23,20 @@ create_project -in_memory -part xc7a35tcpg236-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.cache/wt [current_project]
-set_property parent.project_path C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.cache/wt [current_project]
+set_property parent.project_path C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo c:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.cache/ip [current_project]
+set_property ip_output_repo c:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
-  C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/sources_1/new/Oled_Display.v
-  C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/sources_1/new/clock_divider.v
-  C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/sources_1/new/debounce.v
-  C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/sources_1/new/my_dff.v
-  C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/sources_1/new/sp_mod.v
-  C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/sources_1/new/Top_Student.v
+  C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Audio_Capture.v
+  C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Oled_Display.v
+  C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/clock_divider.v
+  C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/debounce.v
+  C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/my_dff.v
+  C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/sp_mod.v
+  C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Top_Student.v
 }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -45,8 +46,8 @@ read_verilog -library xil_defaultlib {
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc
-set_property used_in_implementation false [get_files C:/Users/Sean/Downloads/SoundDisplay/SoundDisplay/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+read_xdc C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc
+set_property used_in_implementation false [get_files C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 0
 close [open __synthesis_is_running__ w]
