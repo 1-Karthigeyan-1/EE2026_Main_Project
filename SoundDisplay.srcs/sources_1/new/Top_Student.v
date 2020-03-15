@@ -31,15 +31,15 @@ module Top_Student (
     wire sixclock, reset, clk20k;
     wire [11:0]my_mic_data;
     
-    clk_voice clk(CLK100MHZ , 2499 , clk20k);
+    clock_divider clk(CLK100MHZ , 2499 , clk20k);
     clock_divider clk6p25m(CLK100MHZ,3'b111,sixclock);
     debounce deboun(mid_button,CLK100MHZ,reset);
-    Oled_Display(.clk(sixclock), .reset(reset),
+    Oled_Display oled(.clk(sixclock), .reset(reset),
     .pixel_data(oled_data), .cs(rgb_cs), .sdin(rgb_sdin), .sclk(rgb_sclk), .d_cn(rgb_d_cn), .resn(rgb_resn), .vccen(rgb_vccen),
       .pmoden(rgb_pmoden));
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
 
     // Delete this comment and write your codes and instantiations here
-    always@posedge(CLK100MHZ)
+    always@(posedge CLK100MHZ)
         led = (sw == 1) ? my_mic_data:0;
 endmodule
