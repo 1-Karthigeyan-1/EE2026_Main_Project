@@ -19,28 +19,25 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-parameter BLACK = 16'b0000000000000000, WHITE = 16'b1111111111111111;
-module border(input CLK100MHZ, input [1:0] mode, input [12:0] pixel_index, output reg [15:0] oled_data);
-    wire [6:0] x;
-    wire [6:0] y;
-    coordinates coor(pixel_index, x , y);
+
+module border(input CLK100MHZ, input mode, input [6:0] x, input [6:0] y, output reg [15:0] oled_data);
     always @ (posedge CLK100MHZ) begin
         // 1 pixel border
-        if (mode == 2'd1) begin
+        if (mode == 0) begin
             if ((x == 0 || x == 95) || (y==0 || y==63)) begin
-            oled_data <= WHITE; //WHITE
+                oled_data <= WHITE;
             end
             else begin
-                oled_data <= BLACK; //BLACK
+                oled_data <= BLACK;
             end
         end
         // 3 pixel border
-        if (mode == 2'd3) begin
+        if (mode == 1) begin
             if (((x>= 0 && x <= 2) || (x >= 93 && x <= 95)) || ((y>= 0 && y <= 2) || (y>=61 && y <= 63))) begin
-                oled_data <= WHITE; //WHITE
+                oled_data <= WHITE;
             end
             else begin
-                oled_data <= BLACK; //BLACK
+                oled_data <= BLACK;
             end
         end 
     end

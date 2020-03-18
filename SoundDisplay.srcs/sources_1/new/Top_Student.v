@@ -14,7 +14,6 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module Top_Student (
     input  J_MIC3_Pin3,   // Connect from this signal to Audio_Capture.v
     output J_MIC3_Pin1,   // Connect to this signal from Audio_Capture.v
@@ -31,7 +30,9 @@ module Top_Student (
     wire sixclock, reset, clk20k;
     wire [11:0]my_mic_data;
     wire [12:0]pixel_index;
-    reg [1:0] mode;
+    reg mode;
+    reg [4:0] soundlevel = 1;
+    wire [16:0] barclock;
     
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
     clock_divider clk6p25m(CLK100MHZ,8,sixclock);
@@ -41,11 +42,20 @@ module Top_Student (
       .pmoden(rgb_pmoden));
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
 
-    // Delete this comment and write your codes and instantiations here
-    border (CLK100MHZ, mode, pixel_index, oled_data);
+//    border (CLK100MHZ, mode, pixel_index, oled_data);
+//    drawRectangle(CLK100MHZ,soundlevel,pixel_index,oled_data);
+    oled_main display(sixclock, sw , soundlevel, pixel_index, oled_data);
+    always @ (posedge sixclock) begin
+        soundlevel <= (soundlevel == 16)? 1 :soundlevel + 1;
+    end
+/*
+    always @ (posedge barclock) begin
+        soundlevel <= (soundlevel == 16)? 1 :soundlevel + 1;
+    end
     always@(posedge CLK100MHZ)
     begin
-        mode = (sw[15] == 2'd1)?2'd3:2'd1;
-        led = (sw == 1) ? my_mic_data:0;
+//        mode = (sw[15] == 1)?1:0;
+        led = (sw[0] == 1) ? my_mic_data:0;
     end
+*/
 endmodule

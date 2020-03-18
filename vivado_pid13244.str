@@ -1,0 +1,1622 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 13244
+License: Customer
+
+Current time: 	Wed Mar 18 18:57:18 SGT 2020
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 67 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Sean
+User home directory: C:/Users/Sean
+User working directory: C:/Users/Sean/Desktop/EE2026_Main_Project
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Sean/Desktop/EE2026_Main_Project/vivado.log
+Vivado journal file location: 	C:/Users/Sean/Desktop/EE2026_Main_Project/vivado.jou
+Engine tmp dir: 	C:/Users/Sean/Desktop/EE2026_Main_Project/.Xil/Vivado-13244-DESKTOP-905I2GK
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	200 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 522 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Sean\Desktop\EE2026_Main_Project\SoundDisplay.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// [GUI Memory]: 57 MB (+56779kb) [00:00:05]
+// [Engine Memory]: 474 MB (+346057kb) [00:00:05]
+// Tcl Message: open_project C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 79 MB (+20581kb) [00:00:08]
+// [Engine Memory]: 574 MB (+79602kb) [00:00:08]
+// [GUI Memory]: 92 MB (+9385kb) [00:00:09]
+// [Engine Memory]: 619 MB (+16640kb) [00:00:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 619 MB. GUI used memory: 42 MB. Current time: 3/18/20 6:57:21 PM SGT
+// Tcl Message: open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 877.758 ; gain = 143.875 
+// Project name: SoundDisplay; location: C:/Users/Sean/Desktop/EE2026_Main_Project; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clocks (clocks.v)]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, clocks (clocks.v)]", 3, false, false, false, false, false, true); // B (D, ck) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("clocks.v", 71, 445); // ce (w, ck)
+typeControlKey((HResource) null, "clocks.v", 'v'); // ce (w, ck)
+selectCodeEditor("clocks.v", 1, 417); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("Top_Student.v", 85, 176); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 85, 176); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 85, 176, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectCodeEditor("clocks.v", 172, 417); // ce (w, ck)
+selectCodeEditor("clocks.v", 172, 417, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "clocks.v", 'v'); // ce (w, ck)
+selectCodeEditor("clocks.v", 166, 385); // ce (w, ck)
+selectCodeEditor("clocks.v", 166, 385, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "clocks.v", 'v'); // ce (w, ck)
+selectCodeEditor("clocks.v", 166, 462); // ce (w, ck)
+selectCodeEditor("clocks.v", 172, 416); // ce (w, ck)
+selectCodeEditor("clocks.v", 151, 438); // ce (w, ck)
+selectCodeEditor("clocks.v", 152, 384); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Top_Student.v", 476, 369); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectCodeEditor("clocks.v", 407, 381); // ce (w, ck)
+typeControlKey((HResource) null, "clocks.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 77, 387); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 119, 384); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 232, 385); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 183, 166); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 153, 128); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 198, 120); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 173, 343); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 173, 343, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 220, 379); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 173, 362); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 206, 409); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 198, 393); // ce (w, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 644 MB. GUI used memory: 45 MB. Current time: 3/18/20 6:58:55 PM SGT
+selectCodeEditor("Top_Student.v", 246, 345); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 456, 308); // ce (w, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 154, 361); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 184, 333); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 184, 333, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'c'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 148, 355); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 148, 355, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), drawRectangle : drawRectangle (drawRectangle.v)]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), drawRectangle : drawRectangle (drawRectangle.v)]", 7, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("drawRectangle.v", 209, 178); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 209, 178, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "drawRectangle.v", 'v'); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 183, 282); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 183, 282, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "drawRectangle.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 651 MB (+1477kb) [00:02:37]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("Top_Student.v", 180, 368); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("Top_Student.v", 431, 400); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 85, 346); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 82, 334); // ce (w, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 85, 401); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 157, 279); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 157, 279, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 116, 263); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 116, 263, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'c'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 173, 284); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 173, 284, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 193, 315); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 185, 355); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Launch Runs"); // f (ck)
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 18 19:00:56 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Wed Mar 18 19:00:56 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 135 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+collapseTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, ck)
+expandTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21); // u (O, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 675 MB. GUI used memory: 51 MB. Current time: 3/18/20 7:03:15 PM SGT
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bx (ck):  Auto Connect : addNotify
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 945.828 ; gain = 0.000 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACA941A 
+// [Engine Memory]: 1,308 MB (+654509kb) [00:06:15]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// Elapsed time: 12 seconds
+dismissDialog("Auto Connect"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 44 seconds
+selectCodeEditor("clocks.v", 48, 401); // ce (w, ck)
+selectCodeEditor("clocks.v", 42, 402); // ce (w, ck)
+selectCodeEditor("clocks.v", 64, 400); // ce (w, ck)
+selectCodeEditor("clocks.v", 204, 397); // ce (w, ck)
+selectCodeEditor("clocks.v", 45, 404); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Launch Runs"); // f (ck)
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 18 19:04:33 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Wed Mar 18 19:04:33 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_COMPLETED
+// [GUI Memory]: 97 MB (+953kb) [00:08:17]
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,328 MB. GUI used memory: 52 MB. Current time: 3/18/20 7:06:45 PM SGT
+// Elapsed time: 138 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 238 seconds
+selectCodeEditor("clocks.v", 48, 401); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+selectButton("OptionPane.button", "OK"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 18 19:11:09 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Wed Mar 18 19:11:09 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 1); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 103 MB (+300kb) [00:15:09]
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 127 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("Top_Student.v", 460, 388); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 425, 381); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 420, 371); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 429, 390); // ce (w, ck)
+// Elapsed time: 45 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 11); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 13, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Basys3_Master.xdc]", 13, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 118, 464); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 221, 429); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 234, 448); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 4); // k (j, ck)
+selectCodeEditor("Basys3_Master.xdc", 283, 322); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), CaptAudio : Audio_Capture (Audio_Capture.v)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), CaptAudio : Audio_Capture (Audio_Capture.v)]", 6, false); // B (D, ck)
+selectCodeEditor("Top_Student.v", 196, 232); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 191, 303); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 160, 273); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 75, 210); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 47, 216); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 47, 216, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 199, 212); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 286, 213); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 908, 216); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 908, 216, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 87, 217); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 87, 217, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 155, 217); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 155, 217); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 155, 217, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 121, 166); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 121, 166, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 121, 144); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Basys3_Master.xdc", 4); // k (j, ck)
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, border (border.v)]", 10, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, border (border.v), coor : coordinates (coordinates.v)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 858, 123); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 889, 113); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 9, 269); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 217 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 83, 184); // ce (w, ck)
+selectCodeEditor("border.v", 288, 192); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 25 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// [GUI Memory]: 109 MB (+1272kb) [00:25:13]
+// Elapsed time: 429 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 268, 26); // ce (w, ck)
+typeControlKey((HResource) null, "border.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+typeControlKey((HResource) null, "drawRectangle.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// [GUI Memory]: 115 MB (+568kb) [00:33:51]
+// Elapsed time: 219 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Launch Runs"); // f (ck)
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Wed Mar 18 19:34:31 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Wed Mar 18 19:34:31 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 26 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: RUN_FAILED
+// TclEventType: RUN_STEP_COMPLETED
+// ah (ck): Implementation Failed: addNotify
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Implementation Failed"); // ah (ck)
+selectCheckBox(PAResourceItoN.MsgView_CRITICAL_WARNINGS, (String) null, false); // g (aQ, ck): FALSE
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aQ, ck): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, ck): FALSE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 6, false); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 6, false); // ah (O, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.. ]", 6, false, false, false, false, false, true); // ah (O, ck) - Double Click
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Implementation, Opt Design, DRC, Netlist, Net, [DRC MDRV-1] Multiple Driver Nets: Net nolabel_line48/spi_word_reg[39][0] has multiple drivers: nolabel_line46/oled_data_reg[0]/Q, and nolabel_line48/oled_data_reg[0]/Q.. ]", 5, true); // ah (O, ck) - Node
+selectCodeEditor("Top_Student.v", 375, 286); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 337, 265); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 336, 265, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 384, 301); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 384, 301, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 24 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "oled_main"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 9 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/oled_main.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/oled_main.v 
+// I (ck): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectCodeEditor("Top_Student.v", 221, 370); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 205, 357); // ce (w, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Top_Student.v", 192, 332); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 284, 335); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 278, 356); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectCodeEditor("Top_Student.v", 308, 316); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 491, 297); // ce (w, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("Top_Student.v", 375, 262); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, oled_main (oled_main.v)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, oled_main (oled_main.v)]", 11, false, false, false, false, false, true); // B (D, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,338 MB. GUI used memory: 56 MB. Current time: 3/18/20 7:36:46 PM SGT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 263, 411); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 199, 292); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 462, 300); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 57, 309); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 474, 299); // ce (w, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 420, 439); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 22, 420); // ce (w, ck)
+selectCodeEditor("oled_main.v", 20, 419); // ce (w, ck)
+selectCodeEditor("oled_main.v", 27, 419); // ce (w, ck)
+selectCodeEditor("oled_main.v", 105, 396); // ce (w, ck)
+selectCodeEditor("oled_main.v", 105, 396, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 161, 381); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("oled_main.v", 216, 418); // ce (w, ck)
+selectCodeEditor("oled_main.v", 216, 418, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 364, 385); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 227, 402); // ce (w, ck)
+selectCodeEditor("oled_main.v", 227, 402, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 304, 412); // ce (w, ck)
+selectCodeEditor("oled_main.v", 304, 412, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 257, 397); // ce (w, ck)
+selectCodeEditor("oled_main.v", 257, 397, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 447, 385); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 350, 400); // ce (w, ck)
+selectCodeEditor("oled_main.v", 350, 400, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 629, 386); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 338, 397); // ce (w, ck)
+selectCodeEditor("oled_main.v", 338, 397, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 827, 368); // ce (w, ck)
+selectCodeEditor("oled_main.v", 743, 397); // ce (w, ck)
+selectCodeEditor("oled_main.v", 744, 384); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 177, 268); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 177, 268, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 250, 420); // ce (w, ck)
+// Elapsed time: 12 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top_Student.v", 241, 418); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 95, 44); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 290, 419); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 247, 397); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 253, 420); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 199, 420); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 242, 420); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 299, 47); // ce (w, ck)
+selectCodeEditor("border.v", 165, 147); // ce (w, ck)
+selectCodeEditor("border.v", 167, 300); // ce (w, ck)
+selectCodeEditor("border.v", 145, 300); // ce (w, ck)
+selectCodeEditor("border.v", 169, 300); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 733, 382); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 306, 300); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 306, 300, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 385, 45); // ce (w, ck)
+typeControlKey((HResource) null, "border.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 487, 387); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 601, 44); // ce (w, ck)
+typeControlKey((HResource) null, "border.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 673, 385); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 742, 399); // ce (w, ck)
+selectCodeEditor("oled_main.v", 843, 388); // ce (w, ck)
+// Elapsed time: 856 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 56, 130); // ce (w, ck)
+selectCodeEditor("border.v", 100, 414); // ce (w, ck)
+// Elapsed time: 330 seconds
+typeControlKey((HResource) null, "border.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 160, 280); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 160, 280, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,338 MB. GUI used memory: 52 MB. Current time: 3/18/20 8:06:46 PM SGT
+// Elapsed time: 391 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 50 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 359, 149); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 323, 142); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 232, 132); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 184, 130); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 184, 130, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("drawRectangle.v", 257, 140); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 189, 132); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 188, 132, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("drawRectangle.v", 188, 147); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 183, 127); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 183, 127, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("drawRectangle.v", 190, 164); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 199, 141); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 192, 126); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 192, 126, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("drawRectangle.v", 203, 145); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,338 MB. GUI used memory: 51 MB. Current time: 3/18/20 8:36:46 PM SGT
+// Elapsed time: 1809 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 1030 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 75 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 57 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 311, 75); // ce (w, ck)
+typeControlKey((HResource) null, "drawRectangle.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 2, 400); // ce (w, ck)
+selectCodeEditor("oled_main.v", 244, 448); // ce (w, ck)
+selectCodeEditor("oled_main.v", 244, 448, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 290, 468); // ce (w, ck)
+selectCodeEditor("oled_main.v", 290, 468, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 375, 126); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("drawRectangle.v", 537, 132); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 542, 131); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 542, 131, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("drawRectangle.v", 132, 163); // ce (w, ck)
+typeControlKey((HResource) null, "drawRectangle.v", 'c'); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 533, 126); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 533, 126, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "drawRectangle.v", 'v'); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("drawRectangle.v", 164, 162); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 160, 155); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 484, 127); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 510, 151); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 488, 127); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 560, 167); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 691, 156); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 595, 130); // ce (w, ck)
+typeControlKey((HResource) null, "drawRectangle.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 440, 91); // ce (w, ck)
+selectCodeEditor("border.v", 440, 91, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("border.v", 492, 91); // ce (w, ck)
+selectCodeEditor("border.v", 468, 92); // ce (w, ck)
+typeControlKey((HResource) null, "border.v", 'v'); // ce (w, ck)
+selectCodeEditor("border.v", 308, 147); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 473, 473); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 184, 343); // ce (w, ck)
+selectCodeEditor("oled_main.v", 184, 343, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 155, 453); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 164, 246); // ce (w, ck)
+typeControlKey((HResource) null, "border.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 218, 477); // ce (w, ck)
+selectCodeEditor("oled_main.v", 188, 472); // ce (w, ck)
+selectCodeEditor("oled_main.v", 179, 471); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 82, 400); // ce (w, ck)
+selectCodeEditor("oled_main.v", 62, 404); // ce (w, ck)
+selectCodeEditor("oled_main.v", 57, 412); // ce (w, ck)
+selectCodeEditor("oled_main.v", 25, 436); // ce (w, ck)
+selectCodeEditor("oled_main.v", 29, 452); // ce (w, ck)
+selectCodeEditor("oled_main.v", 62, 447); // ce (w, ck)
+selectCodeEditor("oled_main.v", 32, 434); // ce (w, ck)
+selectCodeEditor("oled_main.v", 25, 403); // ce (w, ck)
+selectCodeEditor("oled_main.v", 55, 370); // ce (w, ck)
+selectCodeEditor("oled_main.v", 183, 404); // ce (w, ck)
+selectCodeEditor("oled_main.v", 222, 371); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 728, 108); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 89, 215); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 500, 71); // ce (w, ck)
+selectCodeEditor("border.v", 77, 74); // ce (w, ck)
+selectCodeEditor("border.v", 504, 73); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 712, 248); // ce (w, ck)
+selectCodeEditor("oled_main.v", 573, 284); // ce (w, ck)
+selectCodeEditor("oled_main.v", 543, 349); // ce (w, ck)
+selectCodeEditor("oled_main.v", 498, 372); // ce (w, ck)
+selectCodeEditor("oled_main.v", 671, 233); // ce (w, ck)
+selectCodeEditor("oled_main.v", 422, 341); // ce (w, ck)
+selectCodeEditor("oled_main.v", 382, 367); // ce (w, ck)
+selectCodeEditor("oled_main.v", 227, 432); // ce (w, ck)
+selectCodeEditor("oled_main.v", 129, 388); // ce (w, ck)
+selectCodeEditor("oled_main.v", 27, 334); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 315, 341); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 116, 403); // ce (w, ck)
+typeControlKey((HResource) null, "border.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 171, 381); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 92, 441); // ce (w, ck)
+selectCodeEditor("oled_main.v", 138, 299); // ce (w, ck)
+selectCodeEditor("oled_main.v", 159, 331); // ce (w, ck)
+selectCodeEditor("oled_main.v", 162, 322); // ce (w, ck)
+selectCodeEditor("oled_main.v", 240, 350); // ce (w, ck)
+selectCodeEditor("oled_main.v", 223, 326); // ce (w, ck)
+selectCodeEditor("oled_main.v", 255, 316); // ce (w, ck)
+selectCodeEditor("oled_main.v", 241, 336); // ce (w, ck)
+selectCodeEditor("oled_main.v", 241, 323); // ce (w, ck)
+selectCodeEditor("oled_main.v", 240, 314); // ce (w, ck)
+selectCodeEditor("oled_main.v", 57, 300); // ce (w, ck)
+selectCodeEditor("oled_main.v", 112, 279); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,338 MB. GUI used memory: 51 MB. Current time: 3/18/20 9:06:46 PM SGT
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210183ACA941A 
+// n (ck): Close Hardware Target: addNotify
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_SERVER_UPDATE
+// Elapsed time: 67 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (n)
+dismissDialog("Close Hardware Target"); // n (ck)
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 32 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 341, 227); // ce (w, ck)
+selectCodeEditor("oled_main.v", 341, 227, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("oled_main.v", 189, 172); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 722, 283); // ce (w, ck)
+typeControlKey((HResource) null, "drawRectangle.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 353, 243); // ce (w, ck)
+selectCodeEditor("oled_main.v", 353, 243, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 110, 197); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 241, 193); // ce (w, ck)
+selectCodeEditor("oled_main.v", 386, 256); // ce (w, ck)
+selectCodeEditor("oled_main.v", 212, 416); // ce (w, ck)
+selectCodeEditor("oled_main.v", 188, 400); // ce (w, ck)
+selectCodeEditor("oled_main.v", 198, 433); // ce (w, ck)
+selectCodeEditor("oled_main.v", 198, 433, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 266, 443); // ce (w, ck)
+selectCodeEditor("oled_main.v", 265, 431); // ce (w, ck)
+selectCodeEditor("oled_main.v", 257, 452); // ce (w, ck)
+selectCodeEditor("oled_main.v", 257, 436); // ce (w, ck)
+selectCodeEditor("oled_main.v", 351, 228); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 229, 284); // ce (w, ck)
+selectCodeEditor("border.v", 209, 302); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 195, 306); // ce (w, ck)
+selectCodeEditor("oled_main.v", 198, 298); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("oled_main.v", 50, 336); // ce (w, ck)
+selectCodeEditor("oled_main.v", 118, 373); // ce (w, ck)
+selectCodeEditor("oled_main.v", 145, 316); // ce (w, ck)
+selectCodeEditor("oled_main.v", 207, 311); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 106, 383); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("oled_main.v", 185, 403); // ce (w, ck)
+selectCodeEditor("oled_main.v", 260, 398); // ce (w, ck)
+selectCodeEditor("oled_main.v", 56, 368); // ce (w, ck)
+selectCodeEditor("oled_main.v", 56, 366); // ce (w, ck)
+selectCodeEditor("oled_main.v", 118, 406); // ce (w, ck)
+selectCodeEditor("oled_main.v", 132, 444); // ce (w, ck)
+selectCodeEditor("oled_main.v", 139, 396); // ce (w, ck)
+selectCodeEditor("oled_main.v", 296, 107); // ce (w, ck)
+selectCodeEditor("oled_main.v", 296, 107, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 310, 192); // ce (w, ck)
+selectCodeEditor("oled_main.v", 349, 192); // ce (w, ck)
+selectCodeEditor("oled_main.v", 253, 109); // ce (w, ck)
+selectCodeEditor("oled_main.v", 294, 112); // ce (w, ck)
+selectCodeEditor("oled_main.v", 294, 112, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 122, 58); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 122, 58, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 125, 59); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 125, 59, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 409, 110); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 220, 181); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 199, 161); // ce (w, ck)
+selectCodeEditor("oled_main.v", 199, 161, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 218, 163); // ce (w, ck)
+selectCodeEditor("oled_main.v", 218, 163, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 253, 174); // ce (w, ck)
+// Elapsed time: 32 seconds
+typeControlKey(null, null, 'z');
+selectCodeEditor("oled_main.v", 209, 235); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("oled_main.v", 234, 213); // ce (w, ck)
+selectCodeEditor("oled_main.v", 111, 221); // ce (w, ck)
+selectCodeEditor("oled_main.v", 251, 234); // ce (w, ck)
+selectCodeEditor("oled_main.v", 239, 229); // ce (w, ck)
+selectCodeEditor("oled_main.v", 114, 239); // ce (w, ck)
+selectCodeEditor("oled_main.v", 218, 231); // ce (w, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// aj (ck): Save Project: addNotify
+dismissDialog("Save Project"); // aj (ck)
+selectCodeEditor("oled_main.v", 120, 228); // ce (w, ck)
+selectCodeEditor("oled_main.v", 75, 232); // ce (w, ck)
+selectCodeEditor("oled_main.v", 209, 252); // ce (w, ck)
+selectCodeEditor("oled_main.v", 238, 248); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("oled_main.v", 433, 231); // ce (w, ck)
+selectCodeEditor("oled_main.v", 382, 248); // ce (w, ck)
+selectCodeEditor("oled_main.v", 297, 271); // ce (w, ck)
+selectCodeEditor("oled_main.v", 284, 284); // ce (w, ck)
+selectCodeEditor("oled_main.v", 79, 278); // ce (w, ck)
+selectCodeEditor("oled_main.v", 72, 278); // ce (w, ck)
+selectCodeEditor("oled_main.v", 72, 278, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 170, 281); // ce (w, ck)
+selectCodeEditor("oled_main.v", 250, 282); // ce (w, ck)
+selectCodeEditor("oled_main.v", 182, 330); // ce (w, ck)
+selectCodeEditor("oled_main.v", 115, 344); // ce (w, ck)
+selectCodeEditor("oled_main.v", 119, 334); // ce (w, ck)
+selectCodeEditor("oled_main.v", 107, 346); // ce (w, ck)
+selectCodeEditor("oled_main.v", 235, 278); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("oled_main.v", 82, 300); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 91, 318); // ce (w, ck)
+selectCodeEditor("oled_main.v", 85, 319); // ce (w, ck)
+selectCodeEditor("oled_main.v", 258, 323); // ce (w, ck)
+selectCodeEditor("oled_main.v", 267, 314); // ce (w, ck)
+selectCodeEditor("oled_main.v", 72, 365); // ce (w, ck)
+selectCodeEditor("oled_main.v", 72, 365, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 127, 369); // ce (w, ck)
+selectCodeEditor("oled_main.v", 116, 394); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("oled_main.v", 892, 76); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 336, 435); // ce (w, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 116, 453); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 200, 454); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 200, 454, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 347, 451); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 329, 452); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 460, 451); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 586, 452); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 453, 456); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 587, 452); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 343, 430); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 343, 423); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 115, 439); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 247, 417); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("Top_Student.v", 175, 360); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 257, 362); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 273, 366); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 199, 365); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 102, 449); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 586, 451); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 452, 294); // ce (w, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 121, 473); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 183, 483); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 125, 466); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 191, 366); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 210, 370); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 210, 370, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 345, 364); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 345, 364, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 340, 322); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 307, 320); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 307, 320, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 330, 366); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 244, 298); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 299, 318); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 299, 318, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 233, 299); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 233, 299); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 233, 299); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 233, 299, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 461, 292); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 234, 163); // ce (w, ck)
+selectCodeEditor("oled_main.v", 234, 163, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 168, 160); // ce (w, ck)
+selectCodeEditor("oled_main.v", 168, 160, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 324, 164); // ce (w, ck)
+selectCodeEditor("oled_main.v", 324, 164, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 353, 164); // ce (w, ck)
+selectCodeEditor("oled_main.v", 353, 164, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 210, 275); // ce (w, ck)
+selectCodeEditor("drawRectangle.v", 210, 275, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("drawRectangle.v", 263, 236); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 163, 165); // ce (w, ck)
+selectCodeEditor("oled_main.v", 163, 165, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 235, 81); // ce (w, ck)
+selectCodeEditor("oled_main.v", 305, 82); // ce (w, ck)
+selectCodeEditor("oled_main.v", 305, 82); // ce (w, ck)
+selectCodeEditor("oled_main.v", 305, 82, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectCodeEditor("clocks.v", 89, 400); // ce (w, ck)
+selectCodeEditor("clocks.v", 89, 400); // ce (w, ck)
+selectCodeEditor("clocks.v", 89, 400, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("clocks.v", 69, 431); // ce (w, ck)
+selectCodeEditor("clocks.v", 69, 431, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("clocks.v", 123, 440); // ce (w, ck)
+selectCodeEditor("clocks.v", 123, 440, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("clocks.v", 174, 454); // ce (w, ck)
+selectCodeEditor("clocks.v", 174, 454, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("clocks.v", 100, 453); // ce (w, ck)
+selectCodeEditor("clocks.v", 100, 453, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("clocks.v", 257, 454); // ce (w, ck)
+selectCodeEditor("clocks.v", 257, 454, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("clocks.v", 326, 450); // ce (w, ck)
+selectCodeEditor("clocks.v", 326, 450, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("clocks.v", 310, 457); // ce (w, ck)
+selectCodeEditor("clocks.v", 310, 457); // ce (w, ck)
+selectCodeEditor("clocks.v", 310, 457); // ce (w, ck)
+selectCodeEditor("clocks.v", 310, 457, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "clocks.v", 'c'); // ce (w, ck)
+selectCodeEditor("clocks.v", 327, 385); // ce (w, ck)
+selectCodeEditor("clocks.v", 327, 385, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "clocks.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Project Summary", 0); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 249, 286); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 192, 279); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 192, 279, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 127, 78); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 127, 78, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 255, 289); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 239, 275); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 212, 346); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 212, 346, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 269, 345); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 192, 381); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 195, 367); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 448, 296); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("Top_Student.v", 383, 260); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("Top_Student.v", 514, 241); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 88, 235); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 28, 237); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "clocks.v", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 222, 301); // ce (w, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectCodeEditor("Top_Student.v", 945, 217); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 945, 217); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 945, 217); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 945, 217, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 43 seconds
+selectCodeEditor("Top_Student.v", 360, 300); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 360, 300, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 151, 111); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 151, 111, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// Elapsed time: 32 seconds
+typeControlKey((HResource) null, "Top_Student.v", 'c'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 362, 352); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 362, 352, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 100, 402); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 100, 402, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 193, 399); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 193, 399, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "Top_Student.v", 'v'); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 354, 402); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 354, 402, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("Top_Student.v", 371, 356); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 363, 369); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 362, 350); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 360, 366); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 362, 349); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 351, 398); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 357, 424); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 352, 466); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 320, 448); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 316, 441); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 291, 377); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 2); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Wed Mar 18 21:23:10 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Wed Mar 18 21:23:10 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+// Elapsed time: 15 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (ck)
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectCodeEditor("border.v", 735, 406); // ce (w, ck)
+selectCodeEditor("border.v", 681, 481); // ce (w, ck)
+// Elapsed time: 53 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// Elapsed time: 59 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-1031] BLACK is not declared [C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/drawRectangle.v:29]. ]", 4, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Sean\Desktop\EE2026_Main_Project\SoundDisplay.srcs\sources_1\new\drawRectangle.v;-;;-;16;-;line;-;29;-;;-;16;-;"); // ah (O, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+selectCodeEditor("oled_main.v", 1123, 161); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 3); // k (j, ck)
+selectCodeEditor("drawRectangle.v", 45, 371); // ce (w, ck)
+typeControlKey((HResource) null, "drawRectangle.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+// A (ck): No Implementation Results Available: addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+selectButton("OptionPane.button", "OK"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Wed Mar 18 21:26:50 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Wed Mar 18 21:26:50 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 5); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,338 MB. GUI used memory: 53 MB. Current time: 3/18/20 9:36:46 PM SGT
+// Elapsed time: 828 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// Tcl Message: ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.  Targets(s) ", jsn-Basys3-210183ACA941A" may be locked by another hw_server. 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Labtoolstcl 44-494] There is no active target available for server at localhost.  Targets(s) ", jsn-Basys3-210183ACA941A" may be locked by another hw_server.  
+// a (ck): Critical Messages: addNotify
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_OBJECT_DELETE
+// TclEventType: HW_SERVER_CLOSE
+// Tcl Message: disconnect_hw_server localhost:3121 
+// bx (ck):  Auto Connect : addNotify
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACA941A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 24 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 4); // k (j, ck)
+selectCodeEditor("oled_main.v", 188, 436); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("oled_main.v", 120, 382); // ce (w, ck)
+selectCodeEditor("oled_main.v", 295, 385); // ce (w, ck)
+selectCodeEditor("oled_main.v", 371, 384); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("oled_main.v", 245, 411); // ce (w, ck)
+selectCodeEditor("oled_main.v", 235, 445); // ce (w, ck)
+selectCodeEditor("oled_main.v", 221, 434); // ce (w, ck)
+selectCodeEditor("oled_main.v", 263, 410); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 138, 466); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 219, 468); // ce (w, ck)
+selectCodeEditor("oled_main.v", 219, 468, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "border.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "drawRectangle.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 4); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)

@@ -1,8 +1,8 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.2 (win64) Build 2258646 Thu Jun 14 20:03:12 MDT 2018
-| Date             : Mon Mar 16 17:23:24 2020
-| Host             : LAPTOP-2ML4QPL2 running 64-bit major release  (build 9200)
+| Date             : Thu Mar 19 01:03:33 2020
+| Host             : DESKTOP-905I2GK running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_Student_power_routed.rpt -pb Top_Student_power_summary_routed.pb -rpx Top_Student_power_routed.rpx
 | Design           : Top_Student
 | Device           : xc7a35tcpg236-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.076        |
+| Total On-Chip Power (W)  | 0.079        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.004        |
+| Dynamic (W)              | 0.008        |
 | Device Static (W)        | 0.072        |
 | Effective TJA (C/W)      | 5.0          |
 | Max Ambient (C)          | 84.6         |
@@ -52,17 +52,18 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Clocks         |     0.002 |        3 |       --- |             --- |
-| Slice Logic    |    <0.001 |      661 |       --- |             --- |
-|   LUT as Logic |    <0.001 |      302 |     20800 |            1.45 |
+| Clocks         |     0.001 |        3 |       --- |             --- |
+| Slice Logic    |     0.001 |      863 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      467 |     20800 |            2.25 |
 |   CARRY4       |    <0.001 |       46 |      8150 |            0.56 |
-|   Register     |    <0.001 |      236 |     41600 |            0.57 |
-|   Others       |     0.000 |       22 |       --- |             --- |
+|   Register     |    <0.001 |      231 |     41600 |            0.56 |
+|   F7/F8 Muxes  |    <0.001 |        1 |     32600 |           <0.01 |
+|   Others       |     0.000 |       23 |       --- |             --- |
 |   BUFG         |     0.000 |        1 |        32 |            3.13 |
-| Signals        |    <0.001 |      519 |       --- |             --- |
-| I/O            |    <0.001 |       40 |       106 |           37.74 |
+| Signals        |    <0.001 |      674 |       --- |             --- |
+| I/O            |     0.004 |       27 |       106 |           25.47 |
 | Static Power   |     0.072 |          |           |                 |
-| Total          |     0.076 |          |           |                 |
+| Total          |     0.079 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -74,7 +75,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Vccint    |       1.000 |     0.013 |       0.003 |      0.010 |
 | Vccaux    |       1.800 |     0.013 |       0.000 |      0.013 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -138,20 +139,21 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+------------------+-----------+
-| Name             | Power (W) |
-+------------------+-----------+
-| Top_Student      |     0.004 |
-|   CaptAudio      |    <0.001 |
-|   clk            |    <0.001 |
-|   clk6p25m       |    <0.001 |
-|   deboun         |    <0.001 |
-|     test         |    <0.001 |
-|       dff1       |     0.000 |
-|       dff2       |     0.000 |
-|   nolabel_line45 |    <0.001 |
-|     coor         |    <0.001 |
-|   oled           |    <0.001 |
-+------------------+-----------+
++--------------------+-----------+
+| Name               | Power (W) |
++--------------------+-----------+
+| Top_Student        |     0.008 |
+|   CaptAudio        |    <0.001 |
+|   clk              |    <0.001 |
+|   clk6p25m         |    <0.001 |
+|   deboun           |    <0.001 |
+|     test           |    <0.001 |
+|       dff1         |     0.000 |
+|       dff2         |     0.000 |
+|   display          |    <0.001 |
+|     coor           |    <0.001 |
+|     nolabel_line35 |    <0.001 |
+|   oled             |    <0.001 |
++--------------------+-----------+
 
 

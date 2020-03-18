@@ -32,11 +32,12 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib {
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Audio_Capture.v
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Oled_Display.v
-  C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/border.v
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/clock_divider.v
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/coordinates.v
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/debounce.v
+  C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/drawRectangle.v
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/my_dff.v
+  C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/oled_main.v
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/sp_mod.v
   C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Top_Student.v
 }
