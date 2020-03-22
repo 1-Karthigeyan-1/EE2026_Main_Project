@@ -2,16 +2,13 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Mar 17 09:51:29 2020
-# Process ID: 6100
+# Start of session at: Fri Mar 20 21:11:21 2020
+# Process ID: 10516
 # Current directory: C:/Users/Sean/Desktop/EE2026_Main_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9924 C:\Users\Sean\Desktop\EE2026_Main_Project\SoundDisplay.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5420 C:\Users\Sean\Desktop\EE2026_Main_Project\SoundDisplay.xpr
 # Log file: C:/Users/Sean/Desktop/EE2026_Main_Project/vivado.log
 # Journal file: C:/Users/Sean/Desktop/EE2026_Main_Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.xpr
-update_compile_order -fileset sources_1
-close [ open C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/drawRectangle.v w ]
-add_files C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/drawRectangle.v
 update_compile_order -fileset sources_1

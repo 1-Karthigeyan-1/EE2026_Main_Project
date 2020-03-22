@@ -19,15 +19,15 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, output reg [15:0] oled_data);
+module drawRectangle(input sixclock, input [15:0] mode, input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, output reg [15:0] oled_data);
 
     //13 x 3 pixel rectangles
     always @ (posedge sixclock) begin
         case (mode)
             0: begin
                 oled_data <= BLACK;
-            end
-            1: begin
+               end
+            16'b0000000000000001: begin
                 if (x >= 42 && x <= 56 && y >= 55 && y <= 56) begin
                 oled_data <= GREEN;
                 end
@@ -35,7 +35,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            2: begin
+            16'b0000000000000011: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53))) begin
                 oled_data <= GREEN;
                 end
@@ -43,7 +43,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            3: begin
+            16'b0000000000000111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50))) begin
                 oled_data <= GREEN;
                 end
@@ -51,7 +51,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            4: begin
+            16'b0000000000001111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47))) begin
                 oled_data <= GREEN;
                 end
@@ -59,7 +59,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            5: begin
+            16'b0000000000011111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44))) begin
                 oled_data <= GREEN;
                 end
@@ -67,7 +67,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            6: begin
+            16'b0000000000111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -75,7 +75,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            7: begin
+            16'b0000000001111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -86,7 +86,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            8: begin
+            16'b0000000011111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -97,7 +97,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            9: begin
+            16'b0000000111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -108,7 +108,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            10: begin
+            16'b0000001111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -119,7 +119,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            11: begin
+            16'b0000011111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -130,7 +130,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            12: begin
+            16'b0000111111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -144,7 +144,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            13: begin
+            16'b0001111111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -158,7 +158,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            14: begin
+            16'b0011111111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -172,7 +172,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            15: begin
+            16'b0111111111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end
@@ -186,7 +186,7 @@ module drawRectangle(input sixclock, input [4:0] mode, input [6:0] x, input [6:0
                 oled_data <= BLACK;
                 end
             end
-            16: begin
+            16'b1111111111111111: begin
                 if (x >= 42 && x <= 56 && ((y >= 55 && y <= 56) || (y >= 52 && y <= 53) || (y >= 49 && y <= 50) || (y >= 46 && y <= 47) || (y >= 43 && y <= 44) || (y >= 40 && y <= 41))) begin
                 oled_data <= GREEN;
                 end

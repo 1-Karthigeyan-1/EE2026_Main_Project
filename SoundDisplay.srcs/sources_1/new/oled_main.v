@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module oled_main(input sixclock, input [15:0] sw , input [4:0] soundlevel, input [12:0] pixel_index, output reg [15:0] oled_data);
+module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, input [12:0] pixel_index, output reg [15:0] oled_data);
     wire [6:0] x;
     wire [6:0] y;
     wire [15:0] graphdata;
