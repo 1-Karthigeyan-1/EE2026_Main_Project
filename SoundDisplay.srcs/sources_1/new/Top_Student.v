@@ -28,7 +28,7 @@ module Top_Student (
     output reg [15:0]led
     );
     
-    reg [15:0] oled_data;
+    wire [15:0] oled_data;
     wire sixclock, reset, clk20k, clk2, clk381;
     wire [11:0] my_mic_data;
     wire [12:0] pixel_index;
@@ -59,24 +59,14 @@ module Top_Student (
         soundlevel <= 16'b1111111111111111;
     end
 */
-    always@(posedge CLK100MHZ, posedge clk381 , posedge sixclock)
+
+    always @ (posedge clk381)
     begin
-        led = (sw == 1) ? my_mic_data:(led_state); //replace 0 with amplitude studd;
-        
-        soundlevel <= led;
-        if (sw[11] == 0)
-            copy_of_mic <= led;
-        //Freeze volume bar
-        if (sw[11] == 1)
-            soundlevel <= copy_of_mic;
-        //Hide volume bar
-        if (sw[10] == 1) begin
-            soundlevel <= 0;
-        end
+        led = (sw[0] == 1) ? my_mic_data:(led_state); //replace 0 with amplitude stud;
         
         if (clk381== 1)
         begin
-            if(sw == 1)
+            if(sw[0] == 1)
                 display_state  = 0;
             else
                 display_state <= display_state + 1;
@@ -102,9 +92,20 @@ module Top_Student (
                  seg <= 8'b1111_1111;
                  display_state <= 0;
             end
-      
             endcase  
         end  
+    end
+    always @ (posedge sixclock) begin
+        soundlevel <= led;
+        if (sw[11] == 0)
+            copy_of_mic <= led;
+        //Freeze volume bar
+        if (sw[11] == 1)
+            soundlevel <= copy_of_mic;
+        //Hide volume bar
+        if (sw[10] == 1) begin
+            soundlevel <= 0;
+        end
     end
 /*
     always@(posedge sixclock)

@@ -32,7 +32,7 @@ module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, inpu
     reg [15:0] WHITE = 16'b1111111111111111;
     
     coordinates coor(pixel_index, x , y);
-    drawRectangle(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
+    drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
     
     always @ (posedge sixclock) begin
         if (sw[13] == 1) begin
