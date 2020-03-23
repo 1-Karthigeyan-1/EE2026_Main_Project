@@ -1,0 +1,60 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Sun Mar 22 22:45:44 2020
+# Process ID: 1396
+# Current directory: C:/Users/karth/Desktop/EE2026_Main_Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2208 C:\Users\karth\Desktop\EE2026_Main_Project\SoundDisplay.xpr
+# Log file: C:/Users/karth/Desktop/EE2026_Main_Project/vivado.log
+# Journal file: C:/Users/karth/Desktop/EE2026_Main_Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 813.402 ; gain = 72.859
+update_compile_order -fileset sources_1
+close [ open C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/anplitude_mode.v w ]
+add_files C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/anplitude_mode.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Mar 22 23:29:49 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sun Mar 22 23:29:49 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Mar 22 23:30:13 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sun Mar 22 23:30:13 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+[Sun Mar 22 23:30:52 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sun Mar 22 23:30:52 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Mar 22 23:31:24 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sun Mar 22 23:31:24 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 6
+[Sun Mar 22 23:31:58 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sun Mar 22 23:32:39 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sun Mar 22 23:32:39 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 22 23:33:33 2020...

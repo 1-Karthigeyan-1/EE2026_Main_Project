@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module clock_divider(input basys_clock,input [12:0]m, output reg cd_out = 0);
-    reg [20:0] count = 0;
+module clock_divider(input basys_clock,input [30:0]m, output reg cd_out = 0);
+    reg [30:0] count = 0;
     always @ (posedge basys_clock) begin
         count <= (count == m)? 0: count + 1;
         cd_out <= (count == 0) ? ~cd_out : cd_out;
