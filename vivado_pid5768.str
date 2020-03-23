@@ -251,3 +251,24 @@ selectCodeEditor("Top_Student.v", 828, 108, false, false, false, false, true); /
 selectCodeEditor("Top_Student.v", 321, 197); // ce (w, ck)
 selectCodeEditor("Top_Student.v", 180, 232); // ce (w, ck)
 // [GUI Memory]: 91 MB (+849kb) [00:17:17]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// WARNING: HTimer (StateMonitor Timer) is taking 739ms to process. Increasing delay to 4000 ms.
+// [GUI Memory]: 96 MB (+726kb) [00:27:33]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
