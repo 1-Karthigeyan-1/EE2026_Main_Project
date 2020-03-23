@@ -1,0 +1,10 @@
+.Xil/
+SoundDisplay.cache/
+SoundDisplay.hw/
+SoundDisplay.ip_user_files/
+SoundDisplay.runs/
+SoundDisplay.sim/
+*.lpr
+*.txt
+*.jou
+*.log
