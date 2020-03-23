@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module anplitude_mode(input CLK100MHZ,input clk2,  input[11:0] my_mic_data  , output reg [15:0]led_state = 0, output reg[7:0]segs1 = 0, output reg[7:0]segs0 = 0);
+module amplitude_mode(input CLK100MHZ,input clk2,  input[11:0] my_mic_data  , output reg [15:0]led_state = 0, output reg[7:0]segs1 = 0, output reg[7:0]segs0 = 0);
     reg [11:0]max = 0;
     always@(posedge CLK100MHZ, posedge clk2)
     begin
@@ -124,15 +124,15 @@ module anplitude_mode(input CLK100MHZ,input clk2,  input[11:0] my_mic_data  , ou
         end        
         else if (max >= 1750)
         begin
-                led_state <= 16'b0000_0000_0000_0011;
-                segs1 <= 8'b11000000; //0
-                segs0 <= 8'b11111001; //1
+            led_state <= 16'b0000_0000_0000_0011;
+            segs1 <= 8'b11000000; //0
+            segs0 <= 8'b11111001; //1
         end
         else
         begin
-                led_state = 16'b0000_0000_0000_0001;
-                segs1 <= 8'b11000000; //0
-                segs0 <= 8'b11000000; //0
+            led_state <= 16'b0000_0000_0000_0001;
+            segs1 <= 8'b11000000; //0
+            segs0 <= 8'b11000000; //0
         end       
     end
 endmodule

@@ -39,6 +39,7 @@ module Top_Student (
     reg [2:0]display_state = 0;
     wire [15:0]led_state;
     wire [7:0]segs0 , segs1;
+    reg [15:0] sound_state;
     
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
     clock_divider clk6p25m(CLK100MHZ, 8 , sixclock);
@@ -51,7 +52,7 @@ module Top_Student (
     .pixel_data(oled_data), .cs(rgb_cs), .sdin(rgb_sdin), .sclk(rgb_sclk), .d_cn(rgb_d_cn), .resn(rgb_resn), .vccen(rgb_vccen),
       .pmoden(rgb_pmoden));
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
-    anplitude_mode amp(.CLK100MHZ(CLK100MHZ), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(led_state), .segs0(segs0) , .segs1(segs1)  );
+    amplitude_mode amp(.CLK100MHZ(CLK100MHZ), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(led_state), .segs0(segs0) , .segs1(segs1)  );
     
     oled_main display(sixclock, sw , soundlevel, pixel_index, oled_data);
 /*
@@ -62,43 +63,44 @@ module Top_Student (
 
     always @ (posedge clk381)
     begin
-        led = (sw[0] == 1) ? my_mic_data:(led_state); //replace 0 with amplitude stud;
+//        led = (sw[0] == 1) ? my_mic_data:(led_state); //replace 0 with amplitude stud;
         
-        if (clk381== 1)
+        if(sw[0] == 1)
+            display_state  = 0;
+        else
+            display_state <= display_state + 1;
+        case(display_state)
+        0:
         begin
-            if(sw[0] == 1)
-                display_state  = 0;
-            else
-                display_state <= display_state + 1;
-            case(display_state)
-            0:
-            begin
-                an <= 4'b1111;
-                seg <= 8'b1111_1111;
-            end
-            1:
-            begin
-                an <= 4'b1110;
-                seg <= segs0;
-            end
-            2:
-            begin
-                an <= 4'b1101;
-                seg <= segs1;
-            end
-            3:
-            begin
-                 an <= 4'b1111;
-                 seg <= 8'b1111_1111;
-                 display_state <= 0;
-            end
-            endcase  
-        end  
+            an <= 4'b1111;
+            seg <= 8'b1111_1111;
+        end
+        1:
+        begin
+            an <= 4'b1110;
+            seg <= segs0;
+        end
+        2:
+        begin
+            an <= 4'b1101;
+            seg <= segs1;
+        end
+        3:
+        begin
+             an <= 4'b1111;
+             seg <= 8'b1111_1111;
+             display_state <= 0;
+        end
+        endcase  
+    end
+    always @ (posedge clk2) begin
+        led <= (sw[0] == 1) ? my_mic_data:(led_state); //replace 0 with amplitude stud;
+        sound_state <= led_state;
     end
     always @ (posedge sixclock) begin
-        soundlevel <= led;
+        soundlevel <= sound_state;
         if (sw[11] == 0)
-            copy_of_mic <= led;
+            copy_of_mic <= sound_state;
         //Freeze volume bar
         if (sw[11] == 1)
             soundlevel <= copy_of_mic;
