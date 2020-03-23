@@ -59,21 +59,21 @@ module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, inpu
         //1 pixel border
         if ((x == 0 || x == 95) || (y==0 || y==63)) begin
             if(sw[14] == 0)
-            oled_data <= WHITE;
+                oled_data <= WHITE;
             else //turn off border
-            oled_data <= BLACK;
+                oled_data <= BLACK;
         end
         //3 pixel border
         else if (((x>= 1 && x <= 2) || (x >= 93 && x <= 94)) || ((y>= 1 && y <= 2) || (y>=61 && y <= 62))) begin
             if(sw[14] == 0 && sw[15] == 1)
-            oled_data <= WHITE;
+                oled_data <= WHITE;
             else //turn off border
-            oled_data <= BLACK;
+                oled_data <= BLACK;
         end
         //soundbar
-        else if (x >= 42 && x <= 56 && y >= 10 && y <= 56)begin
+        else if (x >= 42 && x <= 56 && y >= 10 && y <= 56)
             oled_data <= graphdata;
-        end
+        //all other cases
         else
             oled_data <= BLACK;
     end
