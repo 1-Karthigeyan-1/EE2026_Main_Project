@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09.03.2020 14:45:37
+// Create Date: 16.03.2020 16:13:28
 // Design Name: 
-// Module Name: clock_divider
+// Module Name: coordinates
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module clock_divider(input basys_clock,input [20:0]m, output reg cd_out = 0);
-    reg [20:0] count = 0;
-    always @ (posedge basys_clock) begin
-        count <= (count == m)? 0: count + 1;
-        cd_out <= (count == 0) ? ~cd_out : cd_out;
-    end
+module coordinates(input [12:0] pixel_index,output [6:0] x, output [6:0] y);
+    assign x = pixel_index % 96;
+    assign y = pixel_index / 96;
 endmodule
