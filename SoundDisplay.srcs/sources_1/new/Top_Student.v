@@ -59,41 +59,46 @@ module Top_Student (
         soundlevel <= 16'b1111111111111111;
     end
 */
+    reg [15:0] R;
+//    initial begin
+//    assign R = $random;
+//    assign led = R;
+//    end
     always @  (posedge clk2)
     begin
-    led = (sw[0] == 1) ? my_mic_data:led_state; //replace 0 with amplitude stud;
+//    led = (sw[0] == 1) ? my_mic_data:led_state; //replace 0 with amplitude stud;
+    R = $random;
+    led = R;
     end
     always @ (posedge clk381)
     begin
-        
-            if(sw[0] == 1)
-                display_state  = 0;
-            else
-            
-                display_state <= display_state + 1;
-            case(display_state)
-            0:
-            begin
-                an <= 4'b1111;
-                seg <= 8'b1111_1111;
-            end
-            1:
-            begin
-                an <= 4'b1110;
-                seg <= segs0;
-            end
-            2:
-            begin
-                an <= 4'b1101;
-                seg <= segs1;
-            end
-            3:
-            begin
-                 an <= 4'b1111;
-                 seg <= 8'b1111_1111;
-                 display_state <= 0;
-            end
-            endcase    
+        if(sw[0] == 1)
+            display_state  = 0;
+        else
+            display_state <= display_state + 1;
+        case(display_state)
+        0:
+        begin
+            an <= 4'b1111;
+            seg <= 8'b1111_1111;
+        end
+        1:
+        begin
+            an <= 4'b1110;
+            seg <= segs0;
+        end
+        2:
+        begin
+            an <= 4'b1101;
+            seg <= segs1;
+        end
+        3:
+        begin
+             an <= 4'b1111;
+             seg <= 8'b1111_1111;
+             display_state <= 0;
+        end
+        endcase    
     end
     always @ (posedge sixclock) begin
         soundlevel <= led;

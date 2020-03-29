@@ -23,6 +23,7 @@
 module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, input [12:0] pixel_index, output reg [15:0] oled_data);
     wire [6:0] x;
     wire [6:0] y;
+    wire [15:0] wordgamedata;
     wire [15:0] graphdata;
     reg [15:0] z = 0;
     reg [15:0] GREEN = 16'b0000011111100000;
@@ -33,7 +34,7 @@ module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, inpu
     
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
-    
+    wordGame(sixclock, x,y,WHITE,GREEN,YELLOW,RED,BLACK,wordgamedata);
     always @ (posedge sixclock) begin
         if (sw[13] == 1) begin
             GREEN = 16'b0000011111111111; //Cyan
@@ -56,25 +57,31 @@ module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, inpu
             BLACK = 16'b0000000000000000;
             WHITE = 16'b1111111111111111;
         end
-        //1 pixel border
-        if ((x == 0 || x == 95) || (y==0 || y==63)) begin
-            if(sw[14] == 0)
-                oled_data <= WHITE;
-            else //turn off border
+        //word game activated
+        if (sw[1] == 1) begin
+            oled_data <= wordgamedata;
+        end
+        else if (sw[1] == 0) begin
+            //1 pixel border
+            if ((x == 0 || x == 95) || (y==0 || y==63)) begin
+                if(sw[14] == 0)
+                    oled_data <= WHITE;
+                else //turn off border
+                    oled_data <= BLACK;
+            end
+            //3 pixel border
+            else if (((x>= 1 && x <= 2) || (x >= 93 && x <= 94)) || ((y>= 1 && y <= 2) || (y>=61 && y <= 62))) begin
+                if(sw[14] == 0 && sw[15] == 1)
+                    oled_data <= WHITE;
+                else //turn off border
+                    oled_data <= BLACK;
+            end
+            //soundbar
+            else if (x >= 42 && x <= 56 && y >= 10 && y <= 56)
+                oled_data <= graphdata;
+            //all other cases
+            else
                 oled_data <= BLACK;
         end
-        //3 pixel border
-        else if (((x>= 1 && x <= 2) || (x >= 93 && x <= 94)) || ((y>= 1 && y <= 2) || (y>=61 && y <= 62))) begin
-            if(sw[14] == 0 && sw[15] == 1)
-                oled_data <= WHITE;
-            else //turn off border
-                oled_data <= BLACK;
-        end
-        //soundbar
-        else if (x >= 42 && x <= 56 && y >= 10 && y <= 56)
-            oled_data <= graphdata;
-        //all other cases
-        else
-            oled_data <= BLACK;
     end
 endmodule
