@@ -20,27 +20,69 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module wordGame(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,YELLOW,RED,BLACK,output reg [15:0] wordgamedata);
+module wordGame(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right,output reg [15:0] wordgamedata, output reg [10:0] score = 0);
 wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
-reg [30:0] counter = 0;
+wire [15:0] pink_data;
+reg [40:0] counter = 0;
+reg [17:0] button_counter = 0;
 reg [5:0] random = 5;
 reg [2:0] word;
+reg [15:0] COLOR = 16'b0000011111100000; //start with green
 
-blue_color(sixclock,x,y,WHITE,GREEN,YELLOW,RED,BLACK,blue_data);
-red_color(sixclock,x,y,WHITE,GREEN,YELLOW,RED,BLACK,red_data);
-green_color(sixclock,x,y,WHITE,GREEN,YELLOW,RED,BLACK,green_data);
+blue_color blue(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,blue_data);
+red_color red(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,red_data);
+green_color green(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
+pink_color pink(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 always @ (posedge sixclock) begin
     counter <= counter +1;
+    button_counter <= button_counter+1;
     random <= random + 5;
-    word <= (counter == 0)? {random[5:0], random[4] ^ random[2]} % 3 : word;
+    word <= (counter == 0)? {random[5:0], random[4] ^ random[2]} % 4 : word;
+    
+    // up - GREEN
+    // down - RED
+    // left - BLUE
+    // right - PINK
     case (word)
-        0:wordgamedata = blue_data;
-        1:wordgamedata = red_data;
-        2:wordgamedata = green_data;
-//        3:wordgamedata = pink_data;
+        0:
+        begin
+            wordgamedata = blue_data;
+            if (up==0 && down==0 && left==1 && right==0 && button_counter == 0)begin
+                score <= score + 1;
+            end
+        end
+        1:
+        begin
+            wordgamedata = red_data;
+            if (up==0 && down==1 && left==0 && right==0 && button_counter == 0)begin
+                score <= score + 1;
+            end
+        end
+        2:
+        begin
+            wordgamedata = green_data;
+            if (up==1 && down==0 && left==0 && right==0 && button_counter == 0)begin
+                score <= score + 1;
+            end
+        end
+        3:
+        begin
+            wordgamedata = pink_data;
+            if (up==0 && down==0 && left==0 && right==1 && button_counter == 0)begin
+                score <= score + 1;
+            end
+        end
     endcase
+    case (word)
+        0:COLOR = GREEN;
+        1:COLOR = RED;
+        2:COLOR = BLUE;
+        3:COLOR = PINK;
+    endcase
+
+
 end
 /*
     reg [6:0] x1 = 2;

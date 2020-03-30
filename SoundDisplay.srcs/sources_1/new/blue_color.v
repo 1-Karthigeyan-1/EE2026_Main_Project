@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module blue_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,YELLOW,RED,BLACK,output reg [15:0] blue_data);
+module blue_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,output reg [15:0] blue_data);
     wire [15:0] B_data;
     wire [15:0] L_data;
     wire [15:0] U_data;
@@ -29,10 +29,10 @@ module blue_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHI
     reg [6:0] y1 =1;
     reg [21:0] counter = 0;
 
-    letters(sixclock, x, y, x1, x1+4, y1, y1+9, 2, WHITE,GREEN,YELLOW,RED,BLACK, B_data); //b
-    letters(sixclock, x, y, x1+7, x1+11, y1, y1+9, 12, WHITE,GREEN,YELLOW,RED,BLACK, L_data); //L
-    letters(sixclock, x, y, x1+14, x1+18, y1, y1+9, 21, WHITE,GREEN,YELLOW,RED,BLACK, U_data); //U
-    letters(sixclock, x, y, x1+21, x1+25, y1, y1+9, 5, WHITE,GREEN,YELLOW,RED,BLACK, E_data); //E
+    letters b(sixclock, x, y, x1, x1+4, y1, y1+9, 2, WHITE,GREEN,PINK,RED,BLACK, B_data); //b
+    letters l(sixclock, x, y, x1+7, x1+11, y1, y1+9, 12, WHITE,GREEN,PINK,RED,BLACK, L_data); //L
+    letters u(sixclock, x, y, x1+14, x1+18, y1, y1+9, 21, WHITE,GREEN,PINK,RED,BLACK, U_data); //U
+    letters e(sixclock, x, y, x1+21, x1+25, y1, y1+9, 5, WHITE,GREEN,PINK,RED,BLACK, E_data); //E
     
     always @ (posedge sixclock) begin
         counter <= counter +1;

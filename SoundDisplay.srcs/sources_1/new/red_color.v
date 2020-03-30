@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module red_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,YELLOW,RED,BLACK,output reg [15:0] red_data);
+module red_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,output reg [15:0] red_data);
 
     wire [15:0] R_data;
     wire [15:0] E_data;
@@ -29,13 +29,13 @@ module red_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHIT
     reg [6:0] y1 =1;
     reg [21:0] counter = 0;
     
-    letters(sixclock, x, y, x1, x1+4, y1, y1+9, 18, WHITE,GREEN,YELLOW,RED,BLACK, R_data); //R
-    letters(sixclock, x, y, x1+7, x1+11, y1, y1+9, 5, WHITE,GREEN,YELLOW,RED,BLACK, E_data); //E
-    letters(sixclock, x, y, x1+14, x1+18, y1, y1+9, 4, WHITE,GREEN,YELLOW,RED,BLACK, D_data); //D
+    letters r(sixclock, x, y, x1, x1+4, y1, y1+9, 18, WHITE,GREEN,PINK,RED,BLACK, R_data); //R
+    letters e(sixclock, x, y, x1+7, x1+11, y1, y1+9, 5, WHITE,GREEN,PINK,RED,BLACK, E_data); //E
+    letters d(sixclock, x, y, x1+14, x1+18, y1, y1+9, 4, WHITE,GREEN,PINK,RED,BLACK, D_data); //D
 
     always @ (posedge sixclock) begin
         counter <= counter +1;
-        x1 <= (counter == 0)? {x1[3:0], x1[4] ^ x1[2]} % 70 : x1;
+        x1 <= (counter == 0)? {x1[3:0], x1[4] ^ x1[2]} % 77 : x1;
         y1 <= (counter == 0)? {y1[5:0], y1[5] ^ y1[1]} % 54: y1;
         if (x>=x1 && x<=x1+4 && y>=y1 && y<=y1+9)
             red_data <= R_data;

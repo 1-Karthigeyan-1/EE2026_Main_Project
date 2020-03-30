@@ -23,13 +23,14 @@ module Top_Student (
     output reg [3:0]an = 0,
     output reg [7:0]seg = 0,
     input CLK100MHZ,
-    input mid_button,
+    input mid_button, up_button, down_button, left_button, right_button,
     output rgb_cs,rgb_sdin,rgb_sclk,rgb_d_cn,rgb_resn,rgb_vccen,rgb_pmoden,
     output reg [15:0]led
     );
     
     wire [15:0] oled_data;
     wire sixclock, reset, clk20k, clk2, clk381;
+    wire up, down, left, right;
     wire [11:0] my_mic_data;
     wire [12:0] pixel_index;
     reg [15:0] soundlevel;
@@ -39,13 +40,18 @@ module Top_Student (
     reg [2:0]display_state = 0;
     wire [15:0]led_state;
     wire [7:0]segs0 , segs1;
+    wire [10:0] wordscore;
     
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
     clock_divider clk6p25m(CLK100MHZ, 8 , sixclock);
     clock_divider clk2hz(CLK100MHZ , 24999999 ,clk2);
     clock_divider clk381hz(CLK100MHZ , 130 , clk381);
     
-    debounce deboun(mid_button,CLK100MHZ,reset);
+    debounce midf(mid_button,CLK100MHZ,reset);
+    debounce upf(up_button,CLK100MHZ,up);
+    debounce downf(down_button,CLK100MHZ,down);
+    debounce leftf(left_button,CLK100MHZ,left);
+    debounce rightf(right_button,CLK100MHZ,right);
     
     Oled_Display oled(.clk(sixclock), .reset(reset),.pixel_index(pixel_index),
     .pixel_data(oled_data), .cs(rgb_cs), .sdin(rgb_sdin), .sclk(rgb_sclk), .d_cn(rgb_d_cn), .resn(rgb_resn), .vccen(rgb_vccen),
@@ -53,22 +59,17 @@ module Top_Student (
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
     amplitude_mode amp(.clk20k(clk20k), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(led_state), .segs0(segs0) , .segs1(segs1)  );
     
-    oled_main display(sixclock, sw , soundlevel, pixel_index, oled_data);
+    oled_main display(sixclock, sw , soundlevel, pixel_index, up, down, left, right, oled_data, wordscore);
 /*
     always @ (posedge sixclock) begin
         soundlevel <= 16'b1111111111111111;
     end
 */
-    reg [15:0] R;
-//    initial begin
-//    assign R = $random;
-//    assign led = R;
-//    end
+
     always @  (posedge clk2)
     begin
 //    led = (sw[0] == 1) ? my_mic_data:led_state; //replace 0 with amplitude stud;
-    R = $random;
-    led = R;
+    led = wordscore;
     end
     always @ (posedge clk381)
     begin

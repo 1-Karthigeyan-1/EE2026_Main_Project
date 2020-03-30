@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module green_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,YELLOW,RED,BLACK,output reg [15:0] green_data);
+module green_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,output reg [15:0] green_data);
     
     wire [15:0] G_data;
     wire [15:0] R_data;
@@ -30,15 +30,15 @@ module green_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WH
     reg [6:0] x1 =1;
     reg [6:0] y1 =1;
     reg [21:0] counter = 0;
-    letters(sixclock, x, y, x1, x1+4, y1, y1+9, 7, WHITE,GREEN,YELLOW,RED,BLACK, G_data); //G
-    letters(sixclock, x, y, x1+7, x1+11, y1, y1+9, 18, WHITE,GREEN,YELLOW,RED,BLACK, R_data); //R
-    letters(sixclock, x, y, x1+14, x1+18, y1, y1+9, 5, WHITE,GREEN,YELLOW,RED,BLACK, E1_data); //E
-    letters(sixclock, x, y, x1+21, x1+25, y1, y1+9, 5, WHITE,GREEN,YELLOW,RED,BLACK, E2_data); //E
-    letters(sixclock, x, y, x1+28, x1+32, y1, y1+9, 14, WHITE,GREEN,YELLOW,RED,BLACK, N_data); //N
+    letters g(sixclock, x, y, x1, x1+4, y1, y1+9, 7, WHITE,GREEN,PINK,RED,BLACK, G_data); //G
+    letters r(sixclock, x, y, x1+7, x1+11, y1, y1+9, 18, WHITE,GREEN,PINK,RED,BLACK, R_data); //R
+    letters e1(sixclock, x, y, x1+14, x1+18, y1, y1+9, 5, WHITE,GREEN,PINK,RED,BLACK, E1_data); //E
+    letters e2(sixclock, x, y, x1+21, x1+25, y1, y1+9, 5, WHITE,GREEN,PINK,RED,BLACK, E2_data); //E
+    letters n(sixclock, x, y, x1+28, x1+37, y1, y1+9, 14, WHITE,GREEN,PINK,RED,BLACK, N_data); //N
 
     always @ (posedge sixclock) begin
         counter <= counter +1;
-        x1 <= (counter == 0)? {x1[3:0], x1[4] ^ x1[2]} % 70 : x1;
+        x1 <= (counter == 0)? {x1[3:0], x1[4] ^ x1[2]} % 58 : x1;
         y1 <= (counter == 0)? {y1[5:0], y1[5] ^ y1[1]} % 54: y1;
         if (x>=x1 && x<=x1+4 && y>=y1 && y<=y1+9)
             green_data <= G_data;
@@ -48,7 +48,7 @@ module green_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WH
             green_data <= E1_data;
         else if (x>=x1+21 && x<=x1+25 && y>=y1 && y<=y1+9)
             green_data <= E2_data;
-        else if (x>=x1+28 && x<=x1+32 && y>=y1 && y<=y1+9)
+        else if (x>=x1+28 && x<=x1+37 && y>=y1 && y<=y1+9)
             green_data <= N_data;
         else
             green_data <= BLACK;
