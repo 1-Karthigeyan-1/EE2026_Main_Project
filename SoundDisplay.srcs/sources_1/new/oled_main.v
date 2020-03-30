@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, input [12:0] pixel_index, input up, down, left, right, output reg [15:0] oled_data, output reg [10:0] wordscore = 0);
+module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, input [12:0] pixel_index, input up, down, left, right, reset, output reg [15:0] oled_data, output reg [10:0] wordscore = 0);
     wire [6:0] x;
     wire [6:0] y;
     wire [15:0] wordgamedata;
@@ -37,7 +37,7 @@ module oled_main(input sixclock, input [15:0] sw , input [15:0] soundlevel, inpu
     
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
-    wordGame word(sixclock, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,wordgamedata, wscore);
+    wordGame word(sixclock, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wscore);
     always @ (posedge sixclock) begin
         if (sw[13] == 1) begin
             GREEN = 16'b0000011111111111; //Cyan

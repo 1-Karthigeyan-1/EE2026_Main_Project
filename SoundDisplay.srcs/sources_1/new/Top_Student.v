@@ -59,7 +59,7 @@ module Top_Student (
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
     amplitude_mode amp(.clk20k(clk20k), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(led_state), .segs0(segs0) , .segs1(segs1)  );
     
-    oled_main display(sixclock, sw , soundlevel, pixel_index, up, down, left, right, oled_data, wordscore);
+    oled_main display(sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wordscore);
 /*
     always @ (posedge sixclock) begin
         soundlevel <= 16'b1111111111111111;
