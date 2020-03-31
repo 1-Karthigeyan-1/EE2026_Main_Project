@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module wordGame(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [10:0] score = 0);
+module wordGame(input sixclock, input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [10:0] score = 0);
 wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
@@ -40,11 +40,17 @@ reg [25:0] speed4 = 0;
 reg [20:0] speed5 = 0;
 reg endflag = 0;
 
+wire [15:0] pixel_data;
+screen1(sixclock, pixel_index, pixel_data);
+
 blue_color blue(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,blue_data);
 red_color red(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,red_data);
 green_color green(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
 pink_color pink(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 always @ (posedge sixclock) begin
+    wordgamedata <= pixel_data;
+    /*
+
     counter <= counter + 1; //to comment out to implement speed
 //    speed1 <= speed1 + 1;
 //    speed2 <= speed2 + 1;
@@ -53,7 +59,7 @@ always @ (posedge sixclock) begin
 //    speed5 <= speed5 + 1;
     button_counter <= button_counter+1;
     random <= random + 5;
-    word <= (counter == 0)? {random[5:0], random[4] ^ random[2]} % 4 : word;
+    word <= (counter == 0)? {random[5:0], random[4] ^ random[5]} % 4 : word;
 
 // to comment out to implement speed
 // change speed of the intervals
@@ -170,7 +176,11 @@ always @ (posedge sixclock) begin
         counter <= 1;
         correctflag = NOINPUT;
     end
+    */
+
 end
+
+
 /*
     reg [6:0] x1 = 2;
     reg [6:0] x2 = 6;
