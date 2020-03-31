@@ -20,15 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module wordGame(input sixclock, input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [10:0] score = 0);
+module wordGame(input CLK100MHZ, input sixclock, input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [10:0] score = 0);
 wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
 wire [15:0] pink_data;
-reg [40:0] counter = 0;
+reg [30:0] counter = 0;
 reg [17:0] button_counter = 0;
 reg [5:0] random = 5;
 reg [2:0] word;
+reg [1:0] background_color;
 reg [15:0] COLOR = 16'b0000011111100000; //start with green
 reg correctflag =0;
 parameter NOINPUT = 0, CORRECT = 1, WRONG = 2, TIMEOUT = 3;
@@ -39,27 +40,35 @@ reg [30:0] speed3 = 0;
 reg [25:0] speed4 = 0;
 reg [20:0] speed5 = 0;
 reg endflag = 0;
-
+wire clkp5;
+wire [1:0]random_word;
+wire [1:0]random_color;
 wire [15:0] pixel_data;
+reg [22:0] sec_counter = 0;
+
 screen1(sixclock, pixel_index, pixel_data);
+
+clock_divider clkp5hz(CLK100MHZ , 6249999 , clkp5);
+
+
+rng_gen(clkp5 ,random_word);
+rng_gen(clkp5 ,random_color);
 
 blue_color blue(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,blue_data);
 red_color red(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,red_data);
 green_color green(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
 pink_color pink(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 always @ (posedge sixclock) begin
-    wordgamedata <= pixel_data;
-    /*
-
-    counter <= counter + 1; //to comment out to implement speed
+//    wordgamedata <= pixel_data; //picture
+    sec_counter <= sec_counter + 1;
 //    speed1 <= speed1 + 1;
 //    speed2 <= speed2 + 1;
 //    speed3 <= speed3 + 1;
 //    speed4 <= speed4 + 1;
 //    speed5 <= speed5 + 1;
     button_counter <= button_counter+1;
-    random <= random + 5;
-    word <= (counter == 0)? {random[5:0], random[4] ^ random[5]} % 4 : word;
+    word <= (sec_counter==0)? random_word%4 : word;
+    background_color <= (sec_counter==0)? random_color%4 : background_color;
 
 // to comment out to implement speed
 // change speed of the intervals
@@ -152,13 +161,13 @@ always @ (posedge sixclock) begin
     endcase
     
     //change color of background, shpuld have another random value
-    case (word)
+    case (background_color)
         0:COLOR <= GREEN;
-        1:COLOR <= RED;
+        1:COLOR <= PINK;
         2:COLOR <= BLUE;
-        3:COLOR <= PINK;
+        3:COLOR <= RED;
     endcase
-    
+    /*
     // Checks if answer is correct
     if(correctflag == CORRECT && counter != 0 && word!= 4) begin //answer is correct with time remaining
         score <= score + 1;
@@ -177,7 +186,6 @@ always @ (posedge sixclock) begin
         correctflag = NOINPUT;
     end
     */
-
 end
 
 

@@ -29,7 +29,7 @@ module Top_Student (
     );
     
     wire [15:0] oled_data;
-    wire sixclock, reset, clk20k, clk2, clk381;
+    wire sixclock, reset, clk20k, clk2, clk381, clkp5;
     wire up, down, left, right;
     wire [11:0] my_mic_data;
     wire [12:0] pixel_index;
@@ -47,6 +47,7 @@ module Top_Student (
     clock_divider clk2hz(CLK100MHZ , 24999999 ,clk2);
     clock_divider clk381hz(CLK100MHZ , 130 , clk381);
     
+    
     debounce midf(mid_button,CLK100MHZ,reset);
     debounce upf(up_button,CLK100MHZ,up);
     debounce downf(down_button,CLK100MHZ,down);
@@ -59,7 +60,7 @@ module Top_Student (
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
     amplitude_mode amp(.clk20k(clk20k), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(led_state), .segs0(segs0) , .segs1(segs1)  );
     
-    oled_main display(sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wordscore);
+    oled_main display(CLK100MHZ, sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wordscore);
 /*
     always @ (posedge sixclock) begin
         soundlevel <= 16'b1111111111111111;

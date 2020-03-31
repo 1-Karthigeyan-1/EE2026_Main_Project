@@ -34,6 +34,9 @@ module blue_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHI
     letters u(sixclock, x, y, x1+14, x1+18, y1, y1+9, 21, WHITE,GREEN,PINK,RED,BLACK, U_data); //U
     letters e(sixclock, x, y, x1+21, x1+25, y1, y1+9, 5, WHITE,GREEN,PINK,RED,BLACK, E_data); //E
     
+//    rng_gen(clkp5 ,random_x);
+//    rng_gen(clkp5 ,random_y);
+    
     always @ (posedge sixclock) begin
         counter <= counter +1;
         x1 <= (counter == 0)? {x1[3:0], x1[4] ^ x1[2]} % 70 : x1;

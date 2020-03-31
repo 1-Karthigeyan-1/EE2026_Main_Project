@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09.03.2020 14:45:37
+// Create Date: 31.03.2020 22:19:05
 // Design Name: 
-// Module Name: clock_divider
+// Module Name: rng_gen
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -20,10 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module clock_divider(input basys_clock,input [30:0]m, output reg cd_out = 0);
-    reg [30:0] count = 0;
-    always @ (posedge basys_clock) begin
-        count <= (count == m)? 0: count + 1;
-        cd_out <= (count == 0) ? ~cd_out : cd_out;
+module rng_gen(input clkp5 , output reg [7:0] actual);
+reg [20:0] number = 0;
+always@(posedge clkp5)
+    begin
+    number <= {number[19:0] , ~(number[20] ^ number[19])};
+    actual <= number % 77;
     end
 endmodule
