@@ -25,7 +25,7 @@ wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
 wire [15:0] pink_data;
-reg [30:0] counter = 0;
+reg [22:0] counter = 0;
 reg [17:0] button_counter = 0;
 reg [5:0] random = 5;
 reg [2:0] word;
@@ -33,18 +33,17 @@ reg [1:0] background_color;
 reg [15:0] COLOR = 16'b0000011111100000; //start with green
 reg correctflag =0;
 parameter NOINPUT = 0, CORRECT = 1, WRONG = 2, TIMEOUT = 3;
-parameter BLUE_WORD = 0, RED_WORD = 1, GREEN_WORD = 2, PINK_WORD = 3, CORRECT_SCREEN = 4, WRONG_SCREEN = 5;
-reg [40:0] speed1 = 0;
-reg [35:0] speed2 = 0;
-reg [30:0] speed3 = 0;
-reg [25:0] speed4 = 0;
-reg [20:0] speed5 = 0;
+parameter BLUE_WORD = 0, RED_WORD = 1, GREEN_WORD = 2, PINK_WORD = 3, CORRECT_SCREEN = 4, WRONG_SCREEN = 5, END_SCREEN = 6;
+reg [22:0] speed1 = 0;
+reg [21:0] speed2 = 0;
+reg [20:0] speed3 = 0;
+reg [19:0] speed4 = 0;
+reg [18:0] speed5 = 0;
 reg endflag = 0;
 wire clkp5;
 wire [1:0]random_word;
 wire [1:0]random_color;
 wire [15:0] pixel_data;
-reg [22:0] sec_counter = 0;
 
 screen1(sixclock, pixel_index, pixel_data);
 
@@ -60,34 +59,43 @@ green_color green(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
 pink_color pink(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 always @ (posedge sixclock) begin
 //    wordgamedata <= pixel_data; //picture
-    sec_counter <= sec_counter + 1;
-//    speed1 <= speed1 + 1;
-//    speed2 <= speed2 + 1;
-//    speed3 <= speed3 + 1;
-//    speed4 <= speed4 + 1;
-//    speed5 <= speed5 + 1;
+//    counter <= counter + 1; //to be removed
+    
+    speed1 <= speed1 + 1;
+    speed2 <= speed2 + 1;
+    speed3 <= speed3 + 1;
+    speed4 <= speed4 + 1;
+    speed5 <= speed5 + 1;
+
     button_counter <= button_counter+1;
-    word <= (sec_counter==0)? random_word%4 : word;
-    background_color <= (sec_counter==0)? random_color%4 : background_color;
+    word <= (counter==0)? random_word%4 : word;
+    background_color <= (counter==0)? random_color%4 : background_color;
 
 // to comment out to implement speed
 // change speed of the intervals
-//    case (score)
-//    2: counter <= speed1;
-//    4: counter <= speed2;
-//    6: counter <= speed3;
-//    8: counter <= speed4;
-//    10: counter <= speed5;
 
-//    11: endflag = 1;
+    if (score <= 2)
+        counter <= speed1;
+    else if (score>= 3 && score <=4)
+        counter <= speed2;
+    else if (score>= 5 && score <=6)
+        counter <= speed3;
+    else if (score>= 7 && score <=8)
+        counter <= speed4;
+    else if (score>= 9 && score <=10)
+        counter <= speed5;
+    else if (score>= 12)
+        endflag = 1;
 
-//    endcase
+    if (endflag) begin
+        if (reset && button_counter == 0) //restart game
+            endflag <= 0;
+        else
+            score <= 200;
+            word <= END_SCREEN;
+            correctflag <= NOINPUT;
+    end
 
-// to comment out to implement reset
-//    if (endflag) begin
-//        if (reset && button_counter == 0)
-//            endflag <= 0;
-//    end
 
     // up - GREEN
     // down - RED
@@ -99,7 +107,7 @@ always @ (posedge sixclock) begin
             wordgamedata <= blue_data;
             if (up==0 && down==0 && left==1 && right==0 && button_counter == 0)
                 correctflag = CORRECT; //correct answer
-            else if((up || down || right)&& button_counter == 0) begin
+            else if((up || down || right)&& left!= 1 && button_counter == 0) begin
                 correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
@@ -113,7 +121,7 @@ always @ (posedge sixclock) begin
             wordgamedata <= red_data;
             if (up==0 && down==1 && left==0 && right==0 && button_counter == 0)
                 correctflag = CORRECT; //correct answer
-            else if((up || down || right)&& button_counter == 0) begin
+            else if((up || down || right)&& down!= 1 &&button_counter == 0) begin
                 correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
@@ -127,7 +135,7 @@ always @ (posedge sixclock) begin
             wordgamedata <= green_data;
             if (up==1 && down==0 && left==0 && right==0 && button_counter == 0)
                 correctflag = CORRECT; //correct answer
-            else if((up || down || right)&& button_counter == 0) begin
+            else if((up || down || right)&& up!=1 &&button_counter == 0) begin
                 correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
@@ -141,7 +149,7 @@ always @ (posedge sixclock) begin
             wordgamedata <= pink_data;
             if (up==0 && down==0 && left==0 && right==1 && button_counter == 0)
                 correctflag = CORRECT; //correct answer
-            else if((up || down || right)&& button_counter == 0) begin
+            else if((up || down || right)&& right!=1 &&button_counter == 0) begin
                 correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
@@ -158,6 +166,10 @@ always @ (posedge sixclock) begin
         begin
             wordgamedata <= RED; //Ans is wrong so screen is red for 1 cycle
         end
+        END_SCREEN:
+        begin
+            wordgamedata <= GREEN;
+        end
     endcase
     
     //change color of background, shpuld have another random value
@@ -167,25 +179,25 @@ always @ (posedge sixclock) begin
         2:COLOR <= BLUE;
         3:COLOR <= RED;
     endcase
-    /*
+    
     // Checks if answer is correct
     if(correctflag == CORRECT && counter != 0 && word!= 4) begin //answer is correct with time remaining
         score <= score + 1;
-        word <= 4;
+        word <= CORRECT_SCREEN;
         counter <= 1;
         correctflag = NOINPUT;
     end
     else if (correctflag == WRONG) begin //answer wrong
-        word <= 5;
+        word <= WRONG_SCREEN;
         counter <= 1;
         correctflag = NOINPUT;
     end
     else if (correctflag == TIMEOUT && counter == 0) begin //time ran out
-        word <= 5;
+        word <= WRONG_SCREEN;
         counter <= 1;
         correctflag = NOINPUT;
     end
-    */
+    
 end
 
 
