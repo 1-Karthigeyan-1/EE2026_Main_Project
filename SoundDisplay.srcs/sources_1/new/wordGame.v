@@ -31,6 +31,8 @@ reg [5:0] random = 5;
 reg [2:0] word;
 reg [15:0] COLOR = 16'b0000011111100000; //start with green
 reg correctflag =0;
+parameter NOINPUT = 0, CORRECT = 1, WRONG = 2, TIMEOUT = 3;
+parameter BLUE_WORD = 0, RED_WORD = 1, GREEN_WORD = 2, PINK_WORD = 3, CORRECT_SCREEN = 4, WRONG_SCREEN = 5;
 reg [40:0] speed1 = 0;
 reg [35:0] speed2 = 0;
 reg [30:0] speed3 = 0;
@@ -77,73 +79,73 @@ always @ (posedge sixclock) begin
     // left - BLUE
     // right - PINK
     case (word)
-        0:
+        BLUE_WORD:
         begin
             wordgamedata <= blue_data;
             if (up==0 && down==0 && left==1 && right==0 && button_counter == 0)
-                correctflag = 1; //correct answer
+                correctflag = CORRECT; //correct answer
             else if((up || down || right)&& button_counter == 0) begin
-                correctflag = 2; //wrong answer
+                correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
-                correctflag = 3; //time ran out
+                correctflag = TIMEOUT; //time ran out
             end
             else
-                correctflag = 0; //no input
+                correctflag = NOINPUT; //no input
         end
-        1:
+        RED_WORD:
         begin
             wordgamedata <= red_data;
             if (up==0 && down==1 && left==0 && right==0 && button_counter == 0)
-                correctflag = 1; //correct answer
+                correctflag = CORRECT; //correct answer
             else if((up || down || right)&& button_counter == 0) begin
-                correctflag = 2; //wrong answer
+                correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
-                correctflag = 3; //time ran out
+                correctflag = TIMEOUT; //time ran out
             end
             else
-                correctflag = 0; //no input
+                correctflag = NOINPUT; //no input
         end
-        2:
+        GREEN_WORD:
         begin
             wordgamedata <= green_data;
             if (up==1 && down==0 && left==0 && right==0 && button_counter == 0)
-                correctflag = 1; //correct answer
+                correctflag = CORRECT; //correct answer
             else if((up || down || right)&& button_counter == 0) begin
-                correctflag = 2; //wrong answer
+                correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
-                correctflag = 3; //time ran out
+                correctflag = TIMEOUT; //time ran out
             end
             else
-                correctflag = 0; //no input
+                correctflag = NOINPUT; //no input
         end
-        3:
+        PINK_WORD:
         begin
             wordgamedata <= pink_data;
             if (up==0 && down==0 && left==0 && right==1 && button_counter == 0)
-                correctflag = 1; //correct answer
+                correctflag = CORRECT; //correct answer
             else if((up || down || right)&& button_counter == 0) begin
-                correctflag = 2; //wrong answer
+                correctflag = WRONG; //wrong answer
             end
             else if (counter == 0) begin
-                correctflag = 3; //time ran out
+                correctflag = TIMEOUT; //time ran out
             end
             else
-                correctflag = 0; //no input
+                correctflag = NOINPUT; //no input
         end
-        4:
+        CORRECT_SCREEN:
         begin
             wordgamedata <= GREEN; //Ans is correct so screen is green for 1 cycle
         end
-        5:
+        WRONG_SCREEN:
         begin
             wordgamedata <= RED; //Ans is wrong so screen is red for 1 cycle
         end
     endcase
     
-    //change color of background
+    //change color of background, shpuld have another random value
     case (word)
         0:COLOR <= GREEN;
         1:COLOR <= RED;
@@ -152,21 +154,21 @@ always @ (posedge sixclock) begin
     endcase
     
     // Checks if answer is correct
-    if(correctflag == 1 && counter != 0 && word!= 4) begin //answer is correct with time remaining
+    if(correctflag == CORRECT && counter != 0 && word!= 4) begin //answer is correct with time remaining
         score <= score + 1;
         word <= 4;
         counter <= 1;
-        correctflag = 0;
+        correctflag = NOINPUT;
     end
-    else if (correctflag == 2) begin //answer wrong
+    else if (correctflag == WRONG) begin //answer wrong
         word <= 5;
         counter <= 1;
-        correctflag = 0;
+        correctflag = NOINPUT;
     end
-    else if (correctflag == 3 && counter == 0) begin //time ran out
+    else if (correctflag == TIMEOUT && counter == 0) begin //time ran out
         word <= 5;
         counter <= 1;
-        correctflag = 0;
+        correctflag = NOINPUT;
     end
 end
 /*
