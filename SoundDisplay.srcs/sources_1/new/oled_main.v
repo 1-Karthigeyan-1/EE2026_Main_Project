@@ -34,10 +34,12 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
     reg [15:0] WHITE = 16'b1111111111111111;
     reg [15:0] BLUE = 16'b0000000000011111;
     wire [10:0] wscore;
-    
+    wire [15:0] covid_data;
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
     wordGame word(CLK100MHZ,sixclock,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wscore);
+    covid_main(sixclock, soundlevel, pixel_index, covid_data);
+    
     always @ (posedge sixclock) begin
         if (sw[13] == 1) begin
             GREEN = 16'b0000011111111111; //Cyan
@@ -65,7 +67,11 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
             oled_data <= wordgamedata;
             wordscore <= wscore;
         end
-        else if (sw[1] == 0) begin
+        //covid gallery activated
+        if (sw[2] == 1) begin
+            oled_data <= covid_data;
+        end
+        else if (sw[1] == 0 && sw[2] == 0) begin
             //1 pixel border
             if ((x == 0 || x == 95) || (y==0 || y==63)) begin
                 if(sw[14] == 0)

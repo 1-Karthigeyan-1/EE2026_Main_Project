@@ -36,7 +36,7 @@ module pink_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHI
 
     always @ (posedge sixclock) begin
         counter <= counter +1;
-        x1 <= (counter == 0)? {x1[5:0], ~(x1[6] ^ x1[5])} % 65 : x1;
+        x1 <= (counter == 0)? {x1[5:0], ~(x1[6] ^ x1[5])} % 60 : x1;
         y1 <= (counter == 0)? {y1[5:0], ~(y1[6] ^ y1[5])} % 54: y1;
         if (x>=x1 && x<=x1+4 && y>=y1 && y<=y1+9)
             green_data <= P_data;

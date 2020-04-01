@@ -31,6 +31,7 @@ always @ (posedge sixclock) begin
 $readmemh("correct_screen.mem", correct_screen);
 $readmemh("wrong_screen.mem", wrong_screen);
 $readmemh("game_over.mem", game_over);
+
 correct_data = correct_screen[pixel_index];
 over_data = game_over[pixel_index];
 wrong_data = wrong_screen[pixel_index];

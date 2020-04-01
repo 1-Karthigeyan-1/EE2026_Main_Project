@@ -96,9 +96,9 @@ module Top_Student (
         end
         3:
         begin
-             an <= 4'b1111;
-             seg <= 8'b1111_1111;
-             display_state <= 0;
+            an <= 4'b1111;
+            seg <= 8'b1111_1111;
+            display_state <= 0;
         end
         endcase    
     end
@@ -114,20 +114,4 @@ module Top_Student (
             soundlevel <= 0;
         end
     end
-/*
-    always@(posedge sixclock)
-    begin
-        led = (sw[0] == 1) ? my_mic_data:0;
-        soundlevel <= my_mic_data;
-        if (sw[11] == 0)
-            copy_of_mic <= my_mic_data;
-        //Freeze volume bar
-        if (sw[11] == 1)
-            soundlevel <= copy_of_mic;
-        //Hide volume bar
-        if (sw[10] == 1) begin
-            soundlevel <= 0;
-        end
-    end
-*/
 endmodule
