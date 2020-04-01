@@ -25,8 +25,8 @@ module blue_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHI
     wire [15:0] L_data;
     wire [15:0] U_data;
     wire [15:0] E_data;
-    reg [6:0] x1 =1;
-    reg [6:0] y1 =1;
+    reg [6:0] x1 =0;
+    reg [6:0] y1 =0;
     reg [21:0] counter = 0;
 
     letters b(sixclock, x, y, x1, x1+4, y1, y1+9, 2, WHITE,GREEN,PINK,RED,BLACK, B_data); //b
@@ -39,8 +39,8 @@ module blue_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHI
     
     always @ (posedge sixclock) begin
         counter <= counter +1;
-        x1 <= (counter == 0)? {x1[3:0], x1[4] ^ x1[2]} % 70 : x1;
-        y1 <= (counter == 0)? {y1[5:0], y1[5] ^ y1[1]} % 54: y1;
+        x1 <= (counter == 0)? {x1[5:0], ~(x1[6] ^ x1[5])} % 70 : x1;
+        y1 <= (counter == 0)? {y1[5:0], ~(y1[6] ^ y1[5])} % 54: y1;
         if (x>=x1 && x<=x1+4 && y>=y1 && y<=y1+9)
             blue_data <= B_data;
         else if (x>=x1+7 && x<=x1+11 && y>=y1 && y<=y1+9)
