@@ -54,13 +54,13 @@ always @ (posedge sixclock) begin
         if (onesec == 0) begin
             flag <= 1;
         end
-        
+
         //to implement with sound
     //    if (soundlevel == 16'b1111111111111111 && flag == 1) begin
     //        mode <= (mode == 5)? 0 : mode + 1;
     //        flag <= 0;
     //    end
-    
+
         //to be deleted
         if (flag == 1 && fivesec == 0) begin
             mode <= (mode == 5)? 0 : mode + 1;

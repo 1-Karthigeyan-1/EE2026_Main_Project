@@ -20,14 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module wordGame(input CLK100MHZ, input sixclock, input word_start,input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [2:0] lives = 7);
+module wordGame(input CLK100MHZ, input sixclock, input word_start,input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [2:0] lives);
 wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
 wire [15:0] pink_data;
 reg [3:0] score = 0;
 reg [30:0] counter = 0;
-//reg [17:0] button_counter = 0;
+reg [17:0] button_counter = 0;
 reg [3:0] word;
 reg [1:0] background_color;
 reg [15:0] COLOR = 16'b0000011111100000; //start with green
@@ -76,7 +76,7 @@ always @ (posedge sixclock) begin
         end
         word <= (counter==0)? random_word%4 : word; //picks a random word
         background_color <= (counter==0)? random_color%4 : background_color; //picks a random background color
-    //    button_counter <= button_counter+1;
+        button_counter <= button_counter+1;
     // change speed of the intervals
         if (word == CORRECT_SCREEN || word == WRONG_SCREEN) begin
             ver_speed <= ver_speed + 1;
@@ -118,11 +118,17 @@ always @ (posedge sixclock) begin
                 correctflag = CORRECT; //correct answer
             end
             if (up == 1 || down== 1 || right == 1) begin
+                if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
-                lives <= lives / 2;
+                case(lives)
+                7: lives <= 3;
+                3: lives <= 1;
+                1: lives <= 0;                
+                endcase
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
+                end
             end
         end
         RED_WORD:
@@ -132,11 +138,17 @@ always @ (posedge sixclock) begin
                 correctflag = CORRECT; //correct answer
             end
             if (up == 1 || left== 1 || right == 1) begin
+                if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
-                lives <= lives / 2;
+                case(lives)
+                7: lives <= 3;
+                3: lives <= 1;
+                1: lives <= 0;                
+                endcase
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
+                end
             end
         end
         GREEN_WORD:
@@ -146,11 +158,17 @@ always @ (posedge sixclock) begin
                 correctflag = CORRECT; //correct answer
             end
             if (left == 1 || down== 1 || right == 1) begin
+                if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
-                lives <= lives / 2;
+                case(lives)
+                7: lives <= 3;
+                3: lives <= 1;
+                1: lives <= 0;                
+                endcase
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
+                end
             end
         end
         PINK_WORD:
@@ -160,11 +178,17 @@ always @ (posedge sixclock) begin
                 correctflag = CORRECT; //correct answer
             end
             if (up == 1 || down== 1 || left == 1) begin
+                if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
-                lives <= lives / 2;
+                case(lives)
+                7: lives <= 3;
+                3: lives <= 1;
+                1: lives <= 0;                
+                endcase
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
+                end
             end
         end
         CORRECT_SCREEN:
@@ -188,7 +212,6 @@ always @ (posedge sixclock) begin
         2:COLOR <= BLUE;
         3:COLOR <= RED;
     endcase
-    
     end
     
     if (word_start == 1) begin
@@ -200,6 +223,7 @@ always @ (posedge sixclock) begin
                 2: wordgamedata <= instructions2_data;
             endcase
             startscreens <= (fivesec == 0)?((startscreens == 2)?startscreens:startscreens+1):startscreens;
+            lives <= 7;
             if (reset && startscreens == 2) begin
                 startflag <= 1;
                 startscreens <= 0;
@@ -211,7 +235,6 @@ always @ (posedge sixclock) begin
         startscreens <= 0;
         startflag <= 0;
     end
-    
     
     // Checks if answer is correct
     if(correctflag == CORRECT && counter != 0 && word!= CORRECT_SCREEN) begin //answer is correct with time remaining
@@ -235,7 +258,7 @@ always @ (posedge sixclock) begin
             ver_speed <= 1;
             correctflag = NOINPUT;
             word<= BLUE_WORD;
-            lives <= 3;
+            lives <= 7;
         end
         else begin
             word <= END_SCREEN;
@@ -244,51 +267,4 @@ always @ (posedge sixclock) begin
     end
 end
 
-
-/*
-    reg [6:0] x1 = 2;
-    reg [6:0] x2 = 6;
-    reg [6:0] y1 = 13;
-    reg [6:0] y2 = 22;
-    reg [4:0] letter = 3;
-    wire [15:0] C_data;
-    wire [15:0] H_data;
-    wire [15:0] O1_data;
-    wire [15:0] O2_data;
-    wire [15:0] S_data;
-    wire [15:0] E_data;
-    
-    letters(sixclock, x, y, 2, 6, 13, 22, 3, WHITE,GREEN,YELLOW,RED,BLACK, C_data); //C
-    letters(sixclock, x, y, 9, 13, 13, 22, 8, WHITE,GREEN,YELLOW,RED,BLACK, H_data); //H
-    letters(sixclock, x, y, 16, 20, 13, 22, 15, WHITE,GREEN,YELLOW,RED,BLACK, O1_data); //O
-    letters(sixclock, x, y, 23, 27, 13, 22, 15, WHITE,GREEN,YELLOW,RED,BLACK, O2_data); //O
-    letters(sixclock, x, y, 30, 34, 13, 22, 19, WHITE,GREEN,YELLOW,RED,BLACK, S_data); //S
-    letters(sixclock, x, y, 37, 41, 13, 22, 5, WHITE,GREEN,YELLOW,RED,BLACK, E1_data); //E
-    
-    letters(sixclock, x, y, 37, 41, 13, 22, 5, WHITE,GREEN,YELLOW,RED,BLACK, E2_data); //E
-    
-    always @ (posedge sixclock) begin
-        if (x>=2 && x<=6 && y>=13 && y<=22) begin
-            wordgamedata = C_data;
-        end
-        else if (x>=9 && x<=13 && y>=13 && y<=22) begin
-            wordgamedata = H_data;
-        end
-        else if (x>=16 && x<=20 && y>=13 && y<=22) begin
-            wordgamedata = O1_data;
-        end
-        else if (x>=23 && x<=27 && y>=13 && y<=22) begin
-            wordgamedata = O2_data;
-        end
-        else if (x>=30 && x<=34 && y>=13 && y<=22) begin
-            wordgamedata = S_data;
-        end
-        else if (x>=37 && x<=41 && y>=13 && y<=22) begin
-            wordgamedata = E_data;
-        end
-        else begin
-            wordgamedata = BLACK;
-        end
-    end
-*/
 endmodule

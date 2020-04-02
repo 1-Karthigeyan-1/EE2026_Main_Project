@@ -40,7 +40,7 @@ module Top_Student (
     reg [2:0]display_state = 0;
     wire [15:0]led_state;
     wire [7:0]segs0 , segs1;
-    wire [1:0] wlives;
+    wire [2:0] wlives;
     
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
     clock_divider clk6p25m(CLK100MHZ, 8 , sixclock);

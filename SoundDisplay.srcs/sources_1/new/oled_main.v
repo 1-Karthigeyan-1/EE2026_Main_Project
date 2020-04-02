@@ -35,7 +35,7 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
     reg [15:0] BLUE = 16'b0000000000011111;
     reg word_start = 0;
     reg covid_start = 0;    
-    wire [10:0] wlives;
+    wire [2:0] wlives;
     wire [15:0] covid_data;
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
