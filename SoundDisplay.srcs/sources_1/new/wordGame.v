@@ -20,11 +20,12 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module wordGame(input CLK100MHZ, input sixclock, input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [10:0] score = 0);
+module wordGame(input CLK100MHZ, input sixclock, input word_start,input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [2:0] lives = 7);
 wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
 wire [15:0] pink_data;
+reg [3:0] score = 0;
 reg [30:0] counter = 0;
 //reg [17:0] button_counter = 0;
 reg [3:0] word;
@@ -40,14 +41,21 @@ reg [22:0] speed3 = 0;
 reg [21:0] speed4 = 0;
 reg [20:0] speed5 = 0;
 reg endflag = 0;
+reg startflag = 0;
+reg [2:0] startscreens = 0;
+reg [24:0] fivesec = 0;
 wire clkp5;
 wire [1:0]random_word;
 wire [1:0]random_color;
+
+wire [15:0] title_data;
+wire [15:0] instructions_data;
+wire [15:0] instructions2_data;
 wire [15:0] correct_data;
 wire [15:0] wrong_data;
 wire [15:0] over_data;
 
-screen1 screens(sixclock, pixel_index, correct_data, wrong_data, over_data);
+screen1 screens(sixclock, pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
 
 clock_divider clkp5hz(CLK100MHZ , 6249999 , clkp5);
 
@@ -61,40 +69,43 @@ green_color green(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
 pink_color pink(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 
 always @ (posedge sixclock) begin
-    word <= (counter==0)? random_word%4 : word; //picks a random word
-    background_color <= (counter==0)? random_color%4 : background_color; //picks a random background color
 
-//    button_counter <= button_counter+1;
-// change speed of the intervals
-    if (word == CORRECT_SCREEN || word == WRONG_SCREEN) begin
-        ver_speed <= ver_speed + 1;
-        counter <= ver_speed;
-    end
-    else begin
-        if (score <= 2) begin
-            speed1 <= speed1 + 1;
-            counter <= speed1;
+    if (startflag == 1) begin
+        if (lives == 0) begin
+            endflag = 1;
         end
-        else if (score>= 3 && score <=4) begin
-            speed2 <= speed2 + 1;
-            counter <= speed2;
+        word <= (counter==0)? random_word%4 : word; //picks a random word
+        background_color <= (counter==0)? random_color%4 : background_color; //picks a random background color
+    //    button_counter <= button_counter+1;
+    // change speed of the intervals
+        if (word == CORRECT_SCREEN || word == WRONG_SCREEN) begin
+            ver_speed <= ver_speed + 1;
+            counter <= ver_speed;
         end
-        else if (score>= 5 && score <=6) begin
-            speed3 <= speed3 + 1;
-            counter <= speed3;
+        else begin
+            if (score <= 2) begin
+                speed1 <= speed1 + 1;
+                counter <= speed1;
+            end
+            else if (score>= 3 && score <=4) begin
+                speed2 <= speed2 + 1;
+                counter <= speed2;
+            end
+            else if (score>= 5 && score <=6) begin
+                speed3 <= speed3 + 1;
+                counter <= speed3;
+            end
+            else if (score>= 7 && score <=8) begin
+                speed4 <= speed4 + 1;
+                counter <= speed4;
+            end
+            else if (score>= 9 && score <=11) begin
+                speed5 <= speed5 + 1;
+                counter <= speed5;
+            end
+            else if (score>= 12)
+                endflag <= 1;
         end
-        else if (score>= 7 && score <=8) begin
-            speed4 <= speed4 + 1;
-            counter <= speed4;
-        end
-        else if (score>= 9 && score <=11) begin
-            speed5 <= speed5 + 1;
-            counter <= speed5;
-        end
-        else if (score>= 12)
-            endflag <= 1;
-    end
-
     // up - GREEN
     // down - RED
     // left - BLUE
@@ -108,6 +119,7 @@ always @ (posedge sixclock) begin
             end
             if (up == 1 || down== 1 || right == 1) begin
                 word <= WRONG_SCREEN;
+                lives <= lives / 2;
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
@@ -121,6 +133,7 @@ always @ (posedge sixclock) begin
             end
             if (up == 1 || left== 1 || right == 1) begin
                 word <= WRONG_SCREEN;
+                lives <= lives / 2;
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
@@ -134,6 +147,7 @@ always @ (posedge sixclock) begin
             end
             if (left == 1 || down== 1 || right == 1) begin
                 word <= WRONG_SCREEN;
+                lives <= lives / 2;
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
@@ -147,6 +161,7 @@ always @ (posedge sixclock) begin
             end
             if (up == 1 || down== 1 || left == 1) begin
                 word <= WRONG_SCREEN;
+                lives <= lives / 2;
                 ver_speed <= 1;
                 counter <= ver_speed;
                 correctflag = NOINPUT;
@@ -166,13 +181,6 @@ always @ (posedge sixclock) begin
         end
     endcase
     
-//    if (correctflag == WRONG) begin
-//        word <= WRONG_SCREEN;
-//        ver_speed <= 1;
-//        counter <= ver_speed;
-//        correctflag = NOINPUT;
-//    end
-    
     //change color of background, shpuld have another random value
     case (background_color)
         0:COLOR <= GREEN;
@@ -180,6 +188,30 @@ always @ (posedge sixclock) begin
         2:COLOR <= BLUE;
         3:COLOR <= RED;
     endcase
+    
+    end
+    
+    if (word_start == 1) begin
+        if (startflag == 0) begin
+            fivesec = fivesec + 1;
+            case (startscreens)
+                0: wordgamedata <= title_data;
+                1: wordgamedata <= instructions_data;
+                2: wordgamedata <= instructions2_data;
+            endcase
+            startscreens <= (fivesec == 0)?((startscreens == 2)?startscreens:startscreens+1):startscreens;
+            if (reset && startscreens == 2) begin
+                startflag <= 1;
+                startscreens <= 0;
+            end
+        end
+    end
+    if (word_start == 0) begin
+        fivesec = 0;
+        startscreens <= 0;
+        startflag <= 0;
+    end
+    
     
     // Checks if answer is correct
     if(correctflag == CORRECT && counter != 0 && word!= CORRECT_SCREEN) begin //answer is correct with time remaining
@@ -203,6 +235,7 @@ always @ (posedge sixclock) begin
             ver_speed <= 1;
             correctflag = NOINPUT;
             word<= BLUE_WORD;
+            lives <= 3;
         end
         else begin
             word <= END_SCREEN;
