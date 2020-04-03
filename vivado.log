@@ -24,3 +24,27 @@ launch_runs impl_1 -to_step write_bitstream -jobs 12
 Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
 [Sat Apr  4 00:49:44 2020] Launched impl_1...
 Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon2.mem
+add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon3.mem
+add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon4.mem
+add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon5.mem
+add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon6.mem
+export_ip_user_files -of_objects  [get_files C:/Users/Sean/Desktop/EE2026_Main_Project/balloon1.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/Sean/Desktop/EE2026_Main_Project/balloon1.mem
+export_ip_user_files -of_objects  [get_files C:/Users/Sean/Desktop/EE2026_Main_Project/balloon2.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/Sean/Desktop/EE2026_Main_Project/balloon2.mem
+export_ip_user_files -of_objects  [get_files C:/Users/Sean/Desktop/EE2026_Main_Project/balloon3.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/Sean/Desktop/EE2026_Main_Project/balloon3.mem
+export_ip_user_files -of_objects  [get_files C:/Users/Sean/Desktop/EE2026_Main_Project/balloon4.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/Sean/Desktop/EE2026_Main_Project/balloon4.mem
+export_ip_user_files -of_objects  [get_files C:/Users/Sean/Desktop/EE2026_Main_Project/balloon5.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/Sean/Desktop/EE2026_Main_Project/balloon5.mem
+export_ip_user_files -of_objects  [get_files C:/Users/Sean/Desktop/EE2026_Main_Project/balloon6.mem] -no_script -reset -force -quiet
+remove_files  C:/Users/Sean/Desktop/EE2026_Main_Project/balloon6.mem
+add_files -norecurse {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon4.mem} {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon5.mem} {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon6.mem} {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon3.mem} {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon1.mem} {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon2.mem}}
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  4 01:33:26 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sat Apr  4 01:33:26 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log

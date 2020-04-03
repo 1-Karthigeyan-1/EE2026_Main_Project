@@ -56,7 +56,7 @@ wire [15:0] wrong_data;
 wire [15:0] over_data;
 reg sw8;
 
-screen1 screens(sixclock, sw8 ,pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
+screen1 screens(sixclock,pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
 
 clock_divider clkp5hz(CLK100MHZ , 6249999 , clkp5);
 
@@ -70,7 +70,7 @@ green_color green(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
 pink_color pink(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 
 always @ (posedge sixclock) begin
-    sw8 <= sw[8];
+//    sw8 <= sw[8];
     if (startflag == 1) begin
         if (lives == 0) begin
             endflag = 1;

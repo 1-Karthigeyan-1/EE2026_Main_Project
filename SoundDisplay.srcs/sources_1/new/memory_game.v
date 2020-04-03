@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module memory_game(input sixclock, input startflag, input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, input [15:0] soundlevel, output reg [15:0] mem_data);
+module memory_game(input sixclock, input startflag, input right,input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, input [15:0] soundlevel, output reg [15:0] mem_data);
 wire [4:0] random;
 wire [15:0] draw_question;
 wire [15:0] draw_answer;
@@ -37,6 +37,7 @@ reg [3:0] curr_level;
 reg [15:0] ans_key [15:0];
 parameter qnmode = 0, ansmode = 1;
 reg i = 0;
+reg j = 0;
 reg delayflag =0;
 
 rng_gen(sixclock ,random);
@@ -96,15 +97,19 @@ always @ (posedge sixclock) begin
             
             ansmode:
             begin
-                mem_data <= WHITE;
-//                if (j != num_level) begin
-//                    if (soundlevel == ans_key[j]) begin
-//                        if (right) begin
-//                        correctflag <= 1;
-//                        end
-//                    end
-//                end
-
+//                mem_data <= WHITE;
+                if (j != num_level) begin
+                    if (right && soundlevel == ans_key[j]) begin
+                        correctflag <= 1;
+                    end
+                end
+                if (correctflag) begin
+                    j <= j +1;
+                    correctflag <= 0;
+                end
+                if (j == num_level) begin
+                    mem_data <= WHITE;
+                end
             end
         endcase
 /*        

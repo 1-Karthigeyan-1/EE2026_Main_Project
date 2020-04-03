@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module balloon_screen_main(input clock , input sw8, input [4:0]balloon_state , input [12:0]pixel_index, output reg [12:0] balloon_data );
+module balloon_screen_main(input clock , input [4:0]balloon_state , input [12:0]pixel_index, output reg [12:0] balloon_data );
 
 wire [12:0] balloon1_data , balloon2_data , balloon3_data , balloon4_data , balloon5_data , balloon6_data;
 
-screen1 bscreens(clock, sw8 ,pixel_index, balloon1_data, balloon2_data,balloon3_data, balloon4_data, balloon5_data, balloon6_data);
+//screen1 bscreens(clock, sw8 ,pixel_index, balloon1_data, balloon2_data,balloon3_data, balloon4_data, balloon5_data, balloon6_data);
 
 //balloon_screens bscreen(clock ,pixel_index,  balloon1_data,  balloon2_data, balloon3_data, balloon4_data, balloon5_data,balloon6_data);
 always @(posedge clock)
