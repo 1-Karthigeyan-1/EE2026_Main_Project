@@ -134,3 +134,1425 @@ dismissDialog("Launch Runs"); // f (ck)
 // TclEventType: RUN_LAUNCH
 // bx (ck):  Generate Bitstream : addNotify
 // TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr  3 13:37:03 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 13:37:03 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// Elapsed time: 141 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, correct_screen.mem]", 16, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, covid_title.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, distancing.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, game_over.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, keeping_safe.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, mask.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, sanitiser.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, stayhome.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, wash_hands.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, stayhome.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, sanitiser.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, mask.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, keeping_safe.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, game_over.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, distancing.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, covid_title.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, Memory File, correct_screen.mem]", -1, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), amp : amplitude_mode (amplitude_mode.v)]", 13, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), CaptAudio : Audio_Capture (Audio_Capture.v)]", 12, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), oled : Oled_Display (Oled_Display.v)]", 11, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), rightf : debounce (debounce.v)]", 10, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), downf : debounce (debounce.v)]", 8, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), upf : debounce (debounce.v)]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), upf : debounce (debounce.v)]", 7, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), midf : debounce (debounce.v)]", 6, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), clk381hz : clock_divider (clock_divider.v)]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), clk2hz : clock_divider (clock_divider.v)]", 4, false); // B (D, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 642 MB. GUI used memory: 41 MB. Current time: 4/3/20 1:39:32 PM SGT
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v)]", 18, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v)]", 18, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v), screen : covid_screens (covid_screens.v)]", 19, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v), screen : covid_screens (covid_screens.v)]", 19, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 2); // k (j, ck)
+selectCodeEditor("covid_screens.v", 228, 8); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+typeControlKey(null, null, 'z');
+selectCodeEditor("covid_screens.v", 192, 70); // ce (w, ck)
+selectCodeEditor("covid_screens.v", 166, 32); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("covid_screens.v", 218, 331); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// [Engine Memory]: 649 MB (+2547kb) [00:04:04]
+selectCodeEditor("covid_screens.v", 666, 196); // ce (w, ck)
+typeControlKey((HResource) null, "covid_screens.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "covid_screens.v", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("covid_screens.v", 66, 326); // ce (w, ck)
+selectCodeEditor("covid_screens.v", 66, 326, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "covid_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("covid_screens.v", 858, 198); // ce (w, ck)
+selectCodeEditor("covid_screens.v", 858, 198, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "covid_screens.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+selectCodeEditor("covid_main.v", 169, 294); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("covid_main.v", 872, 109); // ce (w, ck)
+typeControlKey((HResource) null, "covid_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("covid_main.v", 266, 333); // ce (w, ck)
+selectCodeEditor("covid_main.v", 254, 337); // ce (w, ck)
+selectCodeEditor("covid_main.v", 239, 344); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 552ms to process. Increasing delay to 2000 ms.
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 2); // k (j, ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 19 seconds
+selectCodeEditor("covid_main.v", 192, 224); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectCodeEditor("covid_main.v", 122, 324); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("covid_main.v", 127, 224); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("covid_main.v", 122, 174); // ce (w, ck)
+selectCodeEditor("covid_main.v", 122, 174, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey(null, null, 'z');
+selectCodeEditor("covid_main.v", 118, 274); // ce (w, ck)
+selectCodeEditor("covid_main.v", 118, 274, false, false, false, false, true); // ce (w, ck) - Double Click
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// [GUI Memory]: 88 MB (+2041kb) [00:06:11]
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 21 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (ck):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// Tcl Message: open_hw 
+dismissDialog("Open Hardware Manager"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // ad (aj, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 
+// bx (ck):  Auto Connect : addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 666 MB. GUI used memory: 46 MB. Current time: 4/3/20 1:42:32 PM SGT
+// Tcl Message: INFO: [Labtools 27-2222] Launching hw_server... 
+// Tcl Message: INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.2   **** Build date : Jun 14 2018-20:42:52     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACA941A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// [Engine Memory]: 1,318 MB (+667419kb) [00:06:38]
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 53 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("Top_Student.v", 71, 260); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 71, 260, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 136, 168); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 136, 168, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 131, 214); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 131, 214, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("Top_Student.v", 119, 263); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 119, 263, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("Top_Student.v", 59, 296); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 128, 267); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("Top_Student.v", 138, 240); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1, false, true); // k (j, ck) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+selectCodeEditor("covid_main.v", 164, 218); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr  3 13:45:20 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 13:45:21 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+// [GUI Memory]: 93 MB (+762kb) [00:09:23]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 4); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 388ms to process. Increasing delay to 2000 ms.
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_FAILED
+// ah (ck): Implementation Failed: addNotify
+// Elapsed time: 298 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Implementation Failed"); // ah (ck)
+unMinimizeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // aw
+selectCheckBox(PAResourceItoN.MsgView_WARNING_MESSAGES, (String) null, false); // g (aQ, ck): FALSE
+selectCheckBox(PAResourceItoN.MsgView_INFORMATION_MESSAGES, (String) null, false); // g (aQ, ck): FALSE
+// [GUI Memory]: 100 MB (+1843kb) [00:16:04]
+// Elapsed time: 244 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 2); // k (j, ck)
+selectCodeEditor("covid_screens.v", 686, 193); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+selectCodeEditor("covid_main.v", 24, 74); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("covid_main.v", 198, 76); // ce (w, ck)
+selectCodeEditor("covid_main.v", 198, 76, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("covid_main.v", 169, 134); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 2); // k (j, ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  3 13:55:47 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 13:55:47 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+// Elapsed time: 14 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Failed"); // ah (ck)
+selectCheckBox(PAResourceItoN.MsgView_ERROR_MESSAGES, (String) null, true); // g (aQ, ck): TRUE
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, [Synth 8-6156] failed synthesizing module 'covid_main' [C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_main.v:23]. ]", 2, true); // ah (O, ck) - Node
+messagesViewCrossProbe(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "src;-;C:\Users\Sean\Desktop\EE2026_Main_Project\SoundDisplay.srcs\sources_1\new\covid_main.v;-;;-;16;-;line;-;23;-;;-;16;-;"); // ah (O, ck)
+selectCodeEditor("covid_main.v", 408, 240); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  3 13:56:29 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 13:56:29 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 412 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// [GUI Memory]: 105 MB (+173kb) [00:27:26]
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// [GUI Memory]: 111 MB (+847kb) [00:27:54]
+// Elapsed time: 62 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 0); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 0, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // L (Q, ck)
+selectCodeEditor("covid_main.v", 194, 126); // ce (w, ck)
+// Elapsed time: 42 seconds
+selectCodeEditor("covid_main.v", 172, 230); // ce (w, ck)
+selectCodeEditor("covid_main.v", 76, 127); // ce (w, ck)
+selectCodeEditor("covid_main.v", 109, 331); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("covid_main.v", 77, 329); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr  3 14:06:01 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 14:06:01 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+// Elapsed time: 69 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,349 MB. GUI used memory: 57 MB. Current time: 4/3/20 2:07:17 PM SGT
+setFileChooser("C:/Users/Sean/Desktop/EE2026_Main_Project/balloon1.mem");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 11 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon1.mem 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 13 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 14, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 27 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "balloon"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+// 'h' command handler elapsed time: 15 seconds
+dismissDialog("Add Sources"); // c (ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), memory_game : memory_game (memory_game.v)]", 19); // B (D, ck)
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "balloon_screens"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+dismissDialog("Create Source File"); // F (c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 12 seconds
+dismissDialog("Add Sources"); // c (ck)
+// Tcl Message: close [ open C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_screens.v w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_screens.v 
+// I (ck): Define Module: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v)]", 18); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v), screen : covid_screens (covid_screens.v)]", 19, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v), screen : covid_screens (covid_screens.v)]", 19, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("covid_screens.v", 80, 172); // ce (w, ck)
+typeControlKey((HResource) null, "covid_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("covid_screens.v", 8, 198); // ce (w, ck)
+typeControlKey((HResource) null, "covid_screens.v", 'c'); // ce (w, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, balloon_screens (balloon_screens.v)]", 24, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, balloon_screens (balloon_screens.v)]", 24, false, false, false, false, false, true); // B (D, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 79, 208, false, false, false, true, false); // ce (w, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_PASTE, "Paste"); // ad (aj, Popup.HeavyWeightWindow)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5, false, true); // k (j, ck) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectCodeEditor("balloon_screens.v", 204, 279); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+selectCodeEditor("balloon_screens.v", 596, 281); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("balloon_screens.v", 617, 76); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 617, 76, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+// TclEventType: RUN_STEP_COMPLETED
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("balloon_screens.v", 626, 79); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 626, 79, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 140, 114); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 140, 114, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 2); // k (j, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+selectCodeEditor("balloon_screens.v", 148, 121); // ce (w, ck)
+// Elapsed time: 44 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 0); // k (j, ck)
+selectCodeEditor("covid_main.v", 157, 182); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("covid_main.v", 122, 131); // ce (w, ck)
+selectCodeEditor("covid_main.v", 122, 131, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 47 seconds
+selectCodeEditor("covid_main.v", 72, 210); // ce (w, ck)
+selectCodeEditor("covid_main.v", 72, 210, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("covid_main.v", 196, 213); // ce (w, ck)
+selectCodeEditor("covid_main.v", 196, 213, false, false, false, false, true); // ce (w, ck) - Double Click
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("covid_main.v", 120, 95); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("covid_main.v", 201, 109); // ce (w, ck)
+// Elapsed time: 13 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+selectCodeEditor("balloon_screens.v", 150, 209); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 97, 61); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 97, 61, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 115, 210); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 115, 210, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 116, 233); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 116, 233, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 92, 249); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 92, 249, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 98, 269); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 98, 269, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 102, 282); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 102, 282, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 121, 291); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 121, 291, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("balloon_screens.v", 116, 63); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 116, 63, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 226, 214); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 226, 214, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 113, 231); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 113, 231, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 197, 231); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 197, 231, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 121, 249); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 121, 249, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 188, 252); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 188, 252, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 108, 267); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 108, 267, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 204, 263); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 204, 263, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 118, 281); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 118, 281, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 187, 287); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 187, 287, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 107, 297); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 107, 297, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 212, 299); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 212, 299, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 265, 305); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 76, 199); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 100, 59); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 100, 59, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 76, 199); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 24, 219); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 222, 52); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 222, 52, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 162, 189); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 162, 189, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 209, 72); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 209, 72, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 124, 215); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 124, 215, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 224, 99); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 224, 99, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 125, 232); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 125, 232, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 208, 115); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 208, 115, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 158, 254); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 158, 254, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 202, 131); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 202, 131, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 128, 269); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 128, 269, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 223, 143); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 223, 143, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 161, 284); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 161, 284, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screens.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 318, 297); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("balloon_screens.v", 372, 49); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 276, 158); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("balloon_screens.v", 285, 292); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// Elapsed time: 40 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 0); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager]", 0, true); // u (O, ck) - Node
+// Run Command: PAResourceCommand.PACommandNames_GOTO_PROJECT_MANAGER
+// Elapsed time: 11 seconds
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, balloon_screens (balloon_screens.v)]", 24, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, balloon_screens (balloon_screens.v)]", 24, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectCodeEditor("balloon_screens.v", 48, 180); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screens.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 3); // k (j, ck)
+selectCodeEditor("oled_main.v", 127, 169); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 175, 180); // ce (w, ck)
+selectCodeEditor("oled_main.v", 175, 180, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 22 seconds
+selectCodeEditor("oled_main.v", 259, 180); // ce (w, ck)
+// Elapsed time: 74 seconds
+selectCodeEditor("oled_main.v", 158, 208); // ce (w, ck)
+selectCodeEditor("oled_main.v", 112, 222); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 95, 364); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+// Elapsed time: 70 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v)]", 18, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), covid_main : covid_main (covid_main.v)]", 18, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 43 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+selectCodeEditor("balloon_screens.v", 216, 197); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_screens.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+// Elapsed time: 104 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("balloon_screens.v", 204, 258); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 276, 278); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5, false, true); // k (j, ck) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5, false, true); // k (j, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+// [GUI Memory]: 117 MB (+670kb) [00:48:25]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 3); // k (j, ck)
+selectCodeEditor("oled_main.v", 115, 214); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 4); // k (j, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("Top_Student.v", 743, 298); // ce (w, ck)
+selectCodeEditor("Top_Student.v", 743, 298, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 5); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+unMinimizeFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // aw
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), memory_game : memory_game (memory_game.v)]", 19, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), memory_game : memory_game (memory_game.v)]", 19, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 6); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 6, false, true); // k (j, ck) - Double Click
+unmaximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 6); // k (j, ck)
+selectTab((HResource) null, "PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 6, false, true); // k (j, ck) - Double Click
+maximizeView(PAResourceOtoP.PAViews_BASE_WORKSPACE, "BaseWorkspace"); // O (Q, ck)
+selectCodeEditor("memory_game.v", 280, 94); // ce (w, ck)
+// Elapsed time: 38 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Top_Student.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 3); // k (j, ck)
+selectCodeEditor("oled_main.v", 616, 226); // ce (w, ck)
+selectCodeEditor("oled_main.v", 616, 226, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 51 seconds
+selectCodeEditor("oled_main.v", 255, 182); // ce (w, ck)
+// Elapsed time: 37 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 29 seconds
+selectCodeEditor("oled_main.v", 219, 186); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 6); // k (j, ck)
+// Elapsed time: 19 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "covid_main.v", 1); // k (j, ck)
+selectCodeEditor("covid_main.v", 62, 322); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 6); // k (j, ck)
+selectCodeEditor("memory_game.v", 258, 95); // ce (w, ck)
+// Elapsed time: 32 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 18 seconds
+selectCodeEditor("memory_game.v", 102, 147); // ce (w, ck)
+selectCodeEditor("memory_game.v", 102, 312); // ce (w, ck)
+selectCodeEditor("memory_game.v", 183, 309); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 22 seconds
+selectCodeEditor("memory_game.v", 252, 150); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("memory_game.v", 156, 326); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// [GUI Memory]: 123 MB (+113kb) [00:54:56]
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  3 14:30:57 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 14:30:57 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+// Elapsed time: 17 seconds
+selectCodeEditor("memory_game.v", 210, 184); // ce (w, ck)
+selectCodeEditor("memory_game.v", 210, 184, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 79 seconds
+selectCodeEditor("memory_game.v", 145, 156); // ce (w, ck)
+// Elapsed time: 48 seconds
+selectCodeEditor("memory_game.v", 189, 180); // ce (w, ck)
+selectCodeEditor("memory_game.v", 189, 180, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 185, 120); // ce (w, ck)
+selectCodeEditor("memory_game.v", 171, 108); // ce (w, ck)
+selectCodeEditor("memory_game.v", 145, 93); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 87 seconds
+selectCodeEditor("memory_game.v", 402, 148); // ce (w, ck)
+// Elapsed time: 32 seconds
+selectCodeEditor("memory_game.v", 511, 44); // ce (w, ck)
+selectCodeEditor("memory_game.v", 511, 44, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 11 seconds
+selectCodeEditor("memory_game.v", 86, 32); // ce (w, ck)
+// ah (ck): Bitstream Generation Completed: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 54 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 5); // k (j, ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,354 MB. GUI used memory: 56 MB. Current time: 4/3/20 2:37:17 PM SGT
+// Elapsed time: 48 seconds
+selectCodeEditor("memory_game.v", 106, 129); // ce (w, ck)
+selectCodeEditor("memory_game.v", 220, 132); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("memory_game.v", 88, 237); // ce (w, ck)
+// Elapsed time: 40 seconds
+selectCodeEditor("memory_game.v", 544, 229); // ce (w, ck)
+selectCodeEditor("memory_game.v", 544, 229, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 353, 314); // ce (w, ck)
+selectCodeEditor("memory_game.v", 353, 314, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 541, 301); // ce (w, ck)
+selectCodeEditor("memory_game.v", 541, 301, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 215, 252); // ce (w, ck)
+selectCodeEditor("memory_game.v", 215, 252, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 226, 122); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 124, 91); // ce (w, ck)
+selectCodeEditor("memory_game.v", 189, 287); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("memory_game.v", 195, 233); // ce (w, ck)
+selectCodeEditor("memory_game.v", 195, 233, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 195, 233); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("memory_game.v", 151, 318); // ce (w, ck)
+selectCodeEditor("memory_game.v", 267, 301); // ce (w, ck)
+selectCodeEditor("memory_game.v", 249, 281); // ce (w, ck)
+// Elapsed time: 253 seconds
+selectCodeEditor("memory_game.v", 175, 292); // ce (w, ck)
+selectCodeEditor("memory_game.v", 175, 292); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("memory_game.v", 133, 181); // ce (w, ck)
+selectCodeEditor("memory_game.v", 133, 181, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 81 seconds
+selectCodeEditor("memory_game.v", 411, 185); // ce (w, ck)
+// Elapsed time: 431 seconds
+selectCodeEditor("memory_game.v", 398, 227); // ce (w, ck)
+selectCodeEditor("memory_game.v", 110, 76); // ce (w, ck)
+// Elapsed time: 30 seconds
+selectCodeEditor("memory_game.v", 82, 75); // ce (w, ck)
+selectCodeEditor("memory_game.v", 82, 75, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 98, 81); // ce (w, ck)
+// Elapsed time: 18 seconds
+selectCodeEditor("memory_game.v", 136, 133); // ce (w, ck)
+selectCodeEditor("memory_game.v", 127, 151); // ce (w, ck)
+selectCodeEditor("memory_game.v", 180, 167); // ce (w, ck)
+selectCodeEditor("memory_game.v", 180, 167, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 15 seconds
+selectCodeEditor("memory_game.v", 136, 175); // ce (w, ck)
+// Elapsed time: 71 seconds
+selectCodeEditor("memory_game.v", 387, 196); // ce (w, ck)
+selectCodeEditor("memory_game.v", 387, 196, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 16 seconds
+selectCodeEditor("memory_game.v", 447, 203); // ce (w, ck)
+selectCodeEditor("memory_game.v", 447, 203, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 86 seconds
+selectCodeEditor("memory_game.v", 350, 195); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+// Elapsed time: 157 seconds
+selectCodeEditor("memory_game.v", 268, 169); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 57 seconds
+selectCodeEditor("memory_game.v", 316, 245); // ce (w, ck)
+// Elapsed time: 44 seconds
+selectCodeEditor("memory_game.v", 153, 195); // ce (w, ck)
+selectCodeEditor("memory_game.v", 85, 199); // ce (w, ck)
+selectCodeEditor("memory_game.v", 85, 199, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 96, 199); // ce (w, ck)
+selectCodeEditor("memory_game.v", 96, 199, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 182, 185); // ce (w, ck)
+selectCodeEditor("memory_game.v", 157, 192); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 196 seconds
+selectCodeEditor("memory_game.v", 273, 150); // ce (w, ck)
+selectCodeEditor("memory_game.v", 212, 247); // ce (w, ck)
+selectCodeEditor("memory_game.v", 212, 247, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 235, 160); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 235, 160); // ce (w, ck)
+selectCodeEditor("memory_game.v", 235, 160); // ce (w, ck)
+selectCodeEditor("memory_game.v", 267, 213); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 191, 177); // ce (w, ck)
+// Elapsed time: 38 seconds
+selectCodeEditor("memory_game.v", 621, 115); // ce (w, ck)
+selectCodeEditor("memory_game.v", 621, 115, false, false, false, false, true); // ce (w, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,354 MB. GUI used memory: 55 MB. Current time: 4/3/20 3:07:18 PM SGT
+// Elapsed time: 76 seconds
+selectCodeEditor("memory_game.v", 153, 97); // ce (w, ck)
+selectCodeEditor("memory_game.v", 153, 97, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 27 seconds
+selectCodeEditor("memory_game.v", 282, 197); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("memory_game.v", 224, 124); // ce (w, ck)
+// Elapsed time: 22 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// Elapsed time: 74 seconds
+selectCodeEditor("memory_game.v", 339, 201); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 10 seconds
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 11 seconds
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 12 seconds
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 160 seconds
+selectCodeEditor("memory_game.v", 167, 52); // ce (w, ck)
+selectCodeEditor("memory_game.v", 167, 52, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 94, 355); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("memory_game.v", 95, 95); // ce (w, ck)
+selectCodeEditor("memory_game.v", 95, 95, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 20 seconds
+selectCodeEditor("memory_game.v", 453, 256); // ce (w, ck)
+selectCodeEditor("memory_game.v", 468, 249); // ce (w, ck)
+// Elapsed time: 81 seconds
+selectCodeEditor("memory_game.v", 533, 203); // ce (w, ck)
+selectCodeEditor("memory_game.v", 511, 206); // ce (w, ck)
+selectCodeEditor("memory_game.v", 193, 178); // ce (w, ck)
+selectCodeEditor("memory_game.v", 193, 178, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 48 seconds
+selectCodeEditor("memory_game.v", 177, 164); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("memory_game.v", 165, 183); // ce (w, ck)
+selectCodeEditor("memory_game.v", 165, 183, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 165, 183); // ce (w, ck)
+selectCodeEditor("memory_game.v", 119, 79); // ce (w, ck)
+selectCodeEditor("memory_game.v", 119, 79, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 239, 225); // ce (w, ck)
+selectCodeEditor("memory_game.v", 222, 111); // ce (w, ck)
+selectCodeEditor("memory_game.v", 108, 132); // ce (w, ck)
+selectCodeEditor("memory_game.v", 108, 132, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 160, 79); // ce (w, ck)
+selectCodeEditor("memory_game.v", 145, 59); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("memory_game.v", 323, 109); // ce (w, ck)
+// Elapsed time: 67 seconds
+selectCodeEditor("memory_game.v", 327, 130); // ce (w, ck)
+selectCodeEditor("memory_game.v", 327, 130, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 196, 125); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("memory_game.v", 184, 207); // ce (w, ck)
+selectCodeEditor("memory_game.v", 191, 250); // ce (w, ck)
+selectCodeEditor("memory_game.v", 191, 250, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 217, 231); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("memory_game.v", 314, 178); // ce (w, ck)
+selectCodeEditor("memory_game.v", 447, 227); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 321, 186); // ce (w, ck)
+// Elapsed time: 56 seconds
+selectCodeEditor("memory_game.v", 397, 215); // ce (w, ck)
+// Elapsed time: 27 seconds
+selectCodeEditor("memory_game.v", 543, 147); // ce (w, ck)
+selectCodeEditor("memory_game.v", 177, 141); // ce (w, ck)
+selectCodeEditor("memory_game.v", 177, 141, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 183, 302); // ce (w, ck)
+selectCodeEditor("memory_game.v", 371, 131); // ce (w, ck)
+selectCodeEditor("memory_game.v", 375, 58); // ce (w, ck)
+selectCodeEditor("memory_game.v", 381, 98); // ce (w, ck)
+selectCodeEditor("memory_game.v", 507, 75); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("memory_game.v", 301, 137); // ce (w, ck)
+selectCodeEditor("memory_game.v", 301, 137, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 296, 127); // ce (w, ck)
+selectCodeEditor("memory_game.v", 296, 127, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 381, 128); // ce (w, ck)
+selectCodeEditor("memory_game.v", 344, 144); // ce (w, ck)
+// Elapsed time: 176 seconds
+selectCodeEditor("memory_game.v", 297, 299); // ce (w, ck)
+// Elapsed time: 134 seconds
+selectCodeEditor("memory_game.v", 126, 251); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Elapsed time: 21 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  3 15:28:51 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 15:28:51 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 261 seconds
+selectCodeEditor("memory_game.v", 111, 191); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 67 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 67 seconds
+selectCodeEditor("memory_game.v", 261, 251); // ce (w, ck)
+selectCodeEditor("memory_game.v", 261, 251, false, false, false, false, true); // ce (w, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,354 MB. GUI used memory: 57 MB. Current time: 4/3/20 3:37:18 PM SGT
+// Elapsed time: 259 seconds
+selectCodeEditor("memory_game.v", 239, 197); // ce (w, ck)
+selectCodeEditor("memory_game.v", 239, 197); // ce (w, ck)
+selectCodeEditor("memory_game.v", 239, 197, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 67 seconds
+selectCodeEditor("memory_game.v", 404, 209); // ce (w, ck)
+selectCodeEditor("memory_game.v", 415, 196); // ce (w, ck)
+// Elapsed time: 34 seconds
+selectCodeEditor("memory_game.v", 138, 234); // ce (w, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("memory_game.v", 140, 133); // ce (w, ck)
+// Elapsed time: 15 seconds
+selectCodeEditor("memory_game.v", 191, 145); // ce (w, ck)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "mode"); // l (aQ, ck)
+selectCodeEditor("memory_game.v", 181, 29); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 227, 71); // ce (w, ck)
+selectCodeEditor("memory_game.v", 266, 71); // ce (w, ck)
+selectCodeEditor("memory_game.v", 200, 165); // ce (w, ck)
+// Elapsed time: 94 seconds
+selectCodeEditor("memory_game.v", 250, 251); // ce (w, ck)
+selectCodeEditor("memory_game.v", 231, 243); // ce (w, ck)
+// Elapsed time: 24 seconds
+selectCodeEditor("memory_game.v", 293, 123); // ce (w, ck)
+selectCodeEditor("memory_game.v", 227, 182); // ce (w, ck)
+// Elapsed time: 19 seconds
+selectCodeEditor("memory_game.v", 241, 171); // ce (w, ck)
+selectCodeEditor("memory_game.v", 247, 167); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 26 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// Tcl Message: [Fri Apr  3 15:45:44 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 15:45:44 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// TclEventType: RUN_COMPLETED
+// Elapsed time: 211 seconds
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (aI, ck)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 25 seconds
+selectCodeEditor("memory_game.v", 222, 113); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("memory_game.v", 182, 73); // ce (w, ck)
+selectCodeEditor("memory_game.v", 182, 73, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 18 seconds
+selectCodeEditor("memory_game.v", 181, 257); // ce (w, ck)
+selectCodeEditor("memory_game.v", 176, 246); // ce (w, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 38 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bB (ck)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 90 seconds
+selectCodeEditor("memory_game.v", 97, 193); // ce (w, ck)
+selectCodeEditor("memory_game.v", 97, 193, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 240, 108); // ce (w, ck)
+selectCodeEditor("memory_game.v", 139, 95); // ce (w, ck)
+selectCodeEditor("memory_game.v", 139, 95, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 251, 233); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("memory_game.v", 368, 200); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 331, 273); // ce (w, ck)
+selectCodeEditor("memory_game.v", 318, 259); // ce (w, ck)
+// Elapsed time: 58 seconds
+selectCodeEditor("memory_game.v", 432, 111); // ce (w, ck)
+selectCodeEditor("memory_game.v", 325, 123); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("memory_game.v", 375, 170); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// aj (ck): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (aj)
+// bx (ck):  Save Constraints : addNotify
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Save Project"); // aj (ck)
+// TclEventType: FILE_SET_CHANGE
+// 'cv' command handler elapsed time: 3 seconds
+selectButton("PAResourceQtoS.RunBitgen_BITSTREAM_GENERATION_HAS_ALREADY_COMPLETED_Cancel", "Cancel"); // JButton (A, G)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+dismissDialog("Launch Runs"); // f (ck)
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr  3 15:55:06 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 15:55:06 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+// Elapsed time: 25 seconds
+selectCodeEditor("memory_game.v", 304, 200); // ce (w, ck)
+selectCodeEditor("memory_game.v", 304, 200, false, false, false, false, true); // ce (w, ck) - Double Click
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// HMemoryUtils.trashcanNow. Engine heap size: 1,354 MB. GUI used memory: 56 MB. Current time: 4/3/20 4:07:19 PM SGT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,354 MB. GUI used memory: 56 MB. Current time: 4/3/20 4:37:19 PM SGT
+// Elapsed time: 3760 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // ad (aj, ck)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bB (ck): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bB)
+// bx (ck):  Program Device : addNotify
+dismissDialog("Program Device"); // bB (ck)
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (ck)
+// Elapsed time: 308 seconds
+selectCodeEditor("memory_game.v", 325, 295); // ce (w, ck)
+selectCodeEditor("memory_game.v", 346, 247); // ce (w, ck)
+selectCodeEditor("memory_game.v", 331, 219); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 89, 77); // ce (w, ck)
+selectCodeEditor("memory_game.v", 89, 77, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 289, 77); // ce (w, ck)
+selectCodeEditor("memory_game.v", 266, 148); // ce (w, ck)
+selectCodeEditor("memory_game.v", 159, 191); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 18 seconds
+selectCodeEditor("memory_game.v", 193, 143); // ce (w, ck)
+selectCodeEditor("memory_game.v", 193, 143, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (ck)
+// TclEventType: RUN_RESET
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// f (ck): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 4 seconds
+dismissDialog("Launch Runs"); // f (ck)
+// bx (ck):  Generate Bitstream : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 4 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Fri Apr  3 17:04:32 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Fri Apr  3 17:04:32 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// Elapsed time: 50 seconds
+selectCodeEditor("memory_game.v", 171, 161); // ce (w, ck)
+selectCodeEditor("memory_game.v", 171, 161, false, false, false, false, true); // ce (w, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,354 MB. GUI used memory: 55 MB. Current time: 4/3/20 5:07:19 PM SGT
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 487ms to process. Increasing delay to 3000 ms.
+// Elapsed time: 358 seconds
+closeMainWindow("SoundDisplay - [C:/Users/Sean/Desktop/EE2026_Main_Project/SoundDisplay.xpr] - Vivado 2018.2"); // ck
+// A (ck): Exit Vivado: addNotify
