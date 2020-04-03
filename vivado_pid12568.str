@@ -246,3 +246,4 @@ dismissDialog("Generate Bitstream"); // bx (ck)
 // WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 963ms to process. Increasing delay to 2000 ms.
 // TclEventType: RUN_STEP_COMPLETED
 // [GUI Memory]: 99 MB (+20kb) [00:10:56]
+// TclEventType: RUN_COMPLETED
