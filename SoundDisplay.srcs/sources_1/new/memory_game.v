@@ -24,10 +24,10 @@ module memory_game(input sixclock, input startflag, input [6:0] x, input [6:0] y
 wire [4:0] random;
 wire [15:0] draw_question;
 wire [15:0] draw_answer;
-reg [15:0] qn_level;
+reg [15:0] qn_level = 0;
 reg [4:0] state;
-reg [21:0] onesec = 0;
-reg [22:0] twosec = 0;
+reg [23:0] ver = 0;
+reg [22:0] twosec = 1;
 reg [23:0] threesec = 0;
 reg correctflag;
 reg [2:0] mode = 0;
@@ -35,8 +35,9 @@ reg [3:0] num_level = 2;
 reg [3:0] qn_num_level = 0;
 reg [3:0] curr_level;
 reg [15:0] ans_key [15:0];
-parameter qnmode = 0, ansmode = 1, delaymode = 2;
+parameter qnmode = 0, ansmode = 1;
 reg i = 0;
+reg delayflag =0;
 
 rng_gen(sixclock ,random);
 
@@ -46,24 +47,25 @@ drawRectangle ans(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_a
 always @ (posedge sixclock) begin
     if (startflag == 1) begin
 
-        state = (threesec == 0)? random % 16 +1 : state; //chooses a random state from 1 - 16
+        state <= (threesec == 0)? random % 16 +1 : state; //chooses a random state from 1 - 16
         case(state)
-        1: qn_level <= 16'b0000000000000001;
-        2: qn_level <= 16'b0000000000000011;
-        3: qn_level <= 16'b0000000000000111;
-        4: qn_level <= 16'b0000000000001111;
-        5: qn_level <= 16'b0000000000011111;
-        6: qn_level <= 16'b0000000000111111;
-        7: qn_level <= 16'b0000000001111111;
-        8: qn_level <= 16'b0000000011111111;
-        9: qn_level <= 16'b0000000111111111;
-        10: qn_level <= 16'b0000001111111111;
-        11: qn_level <= 16'b0000011111111111;
-        12: qn_level <= 16'b0000111111111111;
-        13: qn_level <= 16'b0001111111111111;
-        14: qn_level <= 16'b0011111111111111;
-        15: qn_level <= 16'b0111111111111111;
-        16: qn_level <= 16'b1111111111111111;
+        0: qn_level = 0;
+        1: qn_level = 16'b0000000000000001;
+        2: qn_level = 16'b0000000000000011;
+        3: qn_level = 16'b0000000000000111;
+        4: qn_level = 16'b0000000000001111;
+        5: qn_level = 16'b0000000000011111;
+        6: qn_level = 16'b0000000000111111;
+        7: qn_level = 16'b0000000001111111;
+        8: qn_level = 16'b0000000011111111;
+        9: qn_level = 16'b0000000111111111;
+        10: qn_level = 16'b0000001111111111;
+        11: qn_level = 16'b0000011111111111;
+        12: qn_level = 16'b0000111111111111;
+        13: qn_level = 16'b0001111111111111;
+        14: qn_level = 16'b0011111111111111;
+        15: qn_level = 16'b0111111111111111;
+        16: qn_level = 16'b1111111111111111;
         endcase
         //num_level is essentially score
         case (mode)
@@ -73,22 +75,30 @@ always @ (posedge sixclock) begin
                 if (qn_num_level != num_level) begin
                     mem_data <= draw_question;
                     threesec <= threesec + 1;
-                    if (threesec == 0) begin
+                    if (threesec == 0 && qn_level != 0) begin
                         qn_num_level <= qn_num_level + 1;
                         i <= i+1;
                         ans_key[i] <= qn_level;
+                        delayflag <= 1;
                     end
                 end
-                else begin
+                if (delayflag == 1) begin
+                    twosec <= twosec + 1;
+                    mem_data <= BLACK;
+                    threesec <= 1;
+                    if (twosec == 0) begin
+                        delayflag <= 0;
+                    end
+                end
+                if(qn_num_level == num_level && delayflag == 0) begin
                     mode <= ansmode;
                 end
-
             end
             
             ansmode:
             begin
-                mem_data <= draw_answer;
-//                if (i != num_level) begin
+                mem_data <= WHITE;
+//                if (j != num_level) begin
 //                    if (soundlevel == ans_key[i]) begin
 //                        ver = ver + 1;
 //                        correctflag <= 1;
@@ -97,20 +107,7 @@ always @ (posedge sixclock) begin
 //                end
 //                else begin
 //                    num_level <= num_level + 1;
-//                    copy_num_level = num_level;
 //                end
-            end
-            
-            delaymode:
-            begin
-                if (twosec == 0) begin
-                    mode <= qnmode;
-                    threesec <= 0;
-                end
-                else begin
-                    twosec <= twosec + 1;
-                    mem_data <= BLACK;
-                end
             end
         endcase
 /*        
@@ -124,10 +121,10 @@ always @ (posedge sixclock) begin
             mode <= ansmode;
         end
 */
-    if (threesec ==0 && mode == qnmode) begin
-//        mem_data <= draw_question;
-        mode <= delaymode;
-    end
+//    if (threesec == 1 && mode == qnmode) begin
+////        mem_data <= draw_question;
+//        mode <= delaymode;
+//    end
     end
     if (startflag == 0) begin
         twosec<= 0;

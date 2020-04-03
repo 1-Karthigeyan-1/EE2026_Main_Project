@@ -20,9 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module balloon_game( input left_button,  input[4:0]peak_count,  input sw , input right_button  , input slow_clock  ,fast_clock,   countdown_clock , output [15:0]timer , output [7:0] segs0 , segs1, segs2, segs3); 
+module balloon_game( input left_button,  input[4:0]peak_count,  input sw , input right_button  , input slow_clock  ,fast_clock,   countdown_clock , output [15:0]timer , output [7:0] segs0 , segs1, segs2, segs3, output reg [4:0]balloon_state); 
 reg enable1 , enable2;
-reg [4:0]  balloon_state;
 parameter startgame = 0;
 reg [20:0] number;
 wire [7:0] random1 , random2, ptsegs1, ptsegs2, ptsegs3,ptsegs0;

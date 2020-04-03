@@ -44,7 +44,7 @@ module Top_Student (
     wire [2:0] wlives;
     wire [15:0] balloon_timer;
     wire [7:0] balloon_segs0 , balloon_segs1, balloon_segs2 , balloon_segs3;
-    wire [4:0]peak_count;
+    wire [4:0]peak_count, balloon_state;
     
     //Clocks
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
@@ -67,8 +67,8 @@ module Top_Student (
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
     amplitude_mode amp(.clk381(clk381), .clk20k(clk20k), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(peak), .segs0(segs0) , .segs1(segs1) ,.segs2(segs2), .segs3(segs3),  .countA(peak_count) );
     
-    oled_main display(CLK100MHZ, sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wlives);
-    balloon_game gametwo( .left_button(left) , .sw(sw[8]) ,.slow_clock(clk1),  .fast_clock(clk20k) ,  .countdown_clock(clk1),.timer(balloon_timer) , .segs0(balloon_segs0) , .segs1(balloon_segs1) ,.segs2(balloon_segs2) , .segs3(balloon_segs3),  .right_button(right) , .peak_count(peak_count));
+    oled_main display(CLK100MHZ, sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wlives , balloon_state);
+    balloon_game gametwo( .left_button(left) , .sw(sw[8]) ,.slow_clock(clk1),  .fast_clock(clk20k) ,  .countdown_clock(clk1),.timer(balloon_timer) , .segs0(balloon_segs0) , .segs1(balloon_segs1) ,.segs2(balloon_segs2) , .segs3(balloon_segs3),  .right_button(right) , .peak_count(peak_count), .balloon_state(balloon_state));
 /*
     always @ (posedge sixclock) begin
         soundlevel <= 16'b1111111111111111;

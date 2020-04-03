@@ -2,28 +2,27 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Fri Apr  3 22:02:38 2020
-# Process ID: 5452
+# Start of session at: Fri Apr  3 22:28:14 2020
+# Process ID: 2352
 # Current directory: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent18424 C:\Users\karth\Desktop\EE2026_Compare\EE2026_Main_Project\SoundDisplay.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10860 C:\Users\karth\Desktop\EE2026_Compare\EE2026_Main_Project\SoundDisplay.xpr
 # Log file: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/vivado.log
 # Journal file: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.xpr
-INFO: [Project 1-313] Project file moved from 'C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project' since last save.
 Scanning sources...
 Finished scanning sources
-WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.ip_user_files', nor could it be found using path 'C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.ip_user_files'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.ip_user_files'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2018.2/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 794.270 ; gain = 54.496
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 819.652 ; gain = 81.066
 update_compile_order -fileset sources_1
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Fri Apr  3 22:03:13 2020] Launched synth_1...
+[Fri Apr  3 22:28:43 2020] Launched synth_1...
 Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
-[Fri Apr  3 22:03:13 2020] Launched impl_1...
+[Fri Apr  3 22:28:43 2020] Launched impl_1...
 Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
 open_hw
 connect_hw_server
@@ -36,6 +35,7 @@ INFO: [Labtools 27-2221] Launch Output:
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
 
+connect_hw_server: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 842.844 ; gain = 0.938
 open_hw_target
 INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183ACA976A
 set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
@@ -59,12 +59,578 @@ Resolution:
 1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
 2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
 For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 6
-[Fri Apr  3 22:14:14 2020] Launched synth_1...
+[Fri Apr  3 22:42:02 2020] Launched synth_1...
 Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
-[Fri Apr  3 22:14:14 2020] Launched impl_1...
+[Fri Apr  3 22:42:02 2020] Launched impl_1...
 Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
 reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Apr  3 22:43:29 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Fri Apr  3 22:43:29 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Apr  3 22:54:42 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Fri Apr  3 22:54:42 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7a35tcpg236-1
+Top: Top_Student
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1660.719 ; gain = 109.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Top_Student' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Top_Student.v:17]
+INFO: [Synth 8-6157] synthesizing module 'clock_divider' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'clock_divider' (1#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/clock_divider.v:23]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'sp_mod' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/sp_mod.v:23]
+INFO: [Synth 8-6157] synthesizing module 'my_dff' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/my_dff.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'my_dff' (2#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/my_dff.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'sp_mod' (3#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/sp_mod.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (4#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/debounce.v:23]
+INFO: [Synth 8-6157] synthesizing module 'Oled_Display' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+	Parameter Width bound to: 96 - type: integer 
+	Parameter Height bound to: 64 - type: integer 
+	Parameter PixelCount bound to: 6144 - type: integer 
+	Parameter PixelCountWidth bound to: 13 - type: integer 
+	Parameter ClkFreq bound to: 6250000 - type: integer 
+	Parameter FrameFreq bound to: 60 - type: integer 
+	Parameter FrameDiv bound to: 104166 - type: integer 
+	Parameter FrameDivWidth bound to: 17 - type: integer 
+	Parameter PowerDelay bound to: 20 - type: integer 
+	Parameter ResetDelay bound to: 3 - type: integer 
+	Parameter VccEnDelay bound to: 20 - type: integer 
+	Parameter StartupCompleteDelay bound to: 100 - type: integer 
+	Parameter MaxDelay bound to: 100 - type: integer 
+	Parameter MaxDelayCount bound to: 625000 - type: integer 
+	Parameter StateCount bound to: 32 - type: integer 
+	Parameter StateWidth bound to: 5 - type: integer 
+	Parameter PowerUp bound to: 5'b00000 
+	Parameter Reset bound to: 5'b00001 
+	Parameter ReleaseReset bound to: 5'b00011 
+	Parameter EnableDriver bound to: 5'b00010 
+	Parameter DisplayOff bound to: 5'b00110 
+	Parameter SetRemapDisplayFormat bound to: 5'b00111 
+	Parameter SetStartLine bound to: 5'b00101 
+	Parameter SetOffset bound to: 5'b00100 
+	Parameter SetNormalDisplay bound to: 5'b01100 
+	Parameter SetMultiplexRatio bound to: 5'b01101 
+	Parameter SetMasterConfiguration bound to: 5'b01111 
+	Parameter DisablePowerSave bound to: 5'b01110 
+	Parameter SetPhaseAdjust bound to: 5'b01010 
+	Parameter SetDisplayClock bound to: 5'b01011 
+	Parameter SetSecondPrechargeA bound to: 5'b01001 
+	Parameter SetSecondPrechargeB bound to: 5'b01000 
+	Parameter SetSecondPrechargeC bound to: 5'b11000 
+	Parameter SetPrechargeLevel bound to: 5'b11001 
+	Parameter SetVCOMH bound to: 5'b11011 
+	Parameter SetMasterCurrent bound to: 5'b11010 
+	Parameter SetContrastA bound to: 5'b11110 
+	Parameter SetContrastB bound to: 5'b11111 
+	Parameter SetContrastC bound to: 5'b11101 
+	Parameter DisableScrolling bound to: 5'b11100 
+	Parameter ClearScreen bound to: 5'b10100 
+	Parameter VccEn bound to: 5'b10101 
+	Parameter DisplayOn bound to: 5'b10111 
+	Parameter PrepareNextFrame bound to: 5'b10110 
+	Parameter SetColAddress bound to: 5'b10010 
+	Parameter SetRowAddress bound to: 5'b10011 
+	Parameter WaitNextFrame bound to: 5'b10001 
+	Parameter SendPixel bound to: 5'b10000 
+	Parameter SpiCommandMaxWidth bound to: 40 - type: integer 
+	Parameter SpiCommandBitCountWidth bound to: 6 - type: integer 
+INFO: [Synth 8-226] default block is never used [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Oled_Display.v:124]
+INFO: [Synth 8-226] default block is never used [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Oled_Display.v:201]
+WARNING: [Synth 8-693] zero replication count - replication ignored [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Oled_Display.v:349]
+INFO: [Synth 8-6155] done synthesizing module 'Oled_Display' (5#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Oled_Display.v:36]
+WARNING: [Synth 8-350] instance 'oled' of module 'Oled_Display' requires 15 connections, but only 11 given [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Top_Student.v:64]
+INFO: [Synth 8-6157] synthesizing module 'Audio_Capture' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'Audio_Capture' (6#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Audio_Capture.v:25]
+INFO: [Synth 8-6157] synthesizing module 'amplitude_mode' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/amplitude_mode.v:45]
+	Parameter x bound to: 9'b001110011 
+	Parameter y bound to: 13'b0100011001010 
+INFO: [Synth 8-6157] synthesizing module 'number2seg' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/number2seg.v:23]
+INFO: [Synth 8-6157] synthesizing module 'numberscrollA' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/numberscroll.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/numberscroll.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'numberscrollA' (7#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/numberscroll.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'counter' does not match port width (16) of module 'numberscrollA' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/number2seg.v:27]
+WARNING: [Synth 8-689] width (32) of port connection 'counter' does not match port width (16) of module 'numberscrollA' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/number2seg.v:28]
+WARNING: [Synth 8-689] width (32) of port connection 'counter' does not match port width (16) of module 'numberscrollA' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/number2seg.v:29]
+WARNING: [Synth 8-689] width (32) of port connection 'counter' does not match port width (16) of module 'numberscrollA' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/number2seg.v:30]
+INFO: [Synth 8-6155] done synthesizing module 'number2seg' (8#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/number2seg.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'countA' does not match port width (16) of module 'number2seg' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/amplitude_mode.v:51]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/amplitude_mode.v:189]
+INFO: [Synth 8-6155] done synthesizing module 'amplitude_mode' (9#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/amplitude_mode.v:45]
+INFO: [Synth 8-6157] synthesizing module 'oled_main' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/oled_main.v:23]
+INFO: [Synth 8-6157] synthesizing module 'coordinates' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/coordinates.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'coordinates' (10#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/coordinates.v:23]
+INFO: [Synth 8-6157] synthesizing module 'drawRectangle' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/drawRectangle.v:22]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/drawRectangle.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'drawRectangle' (11#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/drawRectangle.v:22]
+INFO: [Synth 8-6157] synthesizing module 'wordGame' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:23]
+	Parameter NOINPUT bound to: 0 - type: integer 
+	Parameter CORRECT bound to: 1 - type: integer 
+	Parameter WRONG bound to: 2 - type: integer 
+	Parameter BLUE_WORD bound to: 0 - type: integer 
+	Parameter RED_WORD bound to: 1 - type: integer 
+	Parameter GREEN_WORD bound to: 2 - type: integer 
+	Parameter PINK_WORD bound to: 3 - type: integer 
+	Parameter CORRECT_SCREEN bound to: 4 - type: integer 
+	Parameter WRONG_SCREEN bound to: 5 - type: integer 
+	Parameter END_SCREEN bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'screen1' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:23]
+INFO: [Synth 8-3876] $readmem data file 'word_game_title.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:43]
+INFO: [Synth 8-3876] $readmem data file 'word_instructions.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:44]
+INFO: [Synth 8-3876] $readmem data file 'word_instructions_2.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:45]
+INFO: [Synth 8-3876] $readmem data file 'correct_screen.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:46]
+INFO: [Synth 8-3876] $readmem data file 'wrong_screen.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:47]
+INFO: [Synth 8-3876] $readmem data file 'game_over.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'screen1' (12#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/screen1.v:23]
+INFO: [Synth 8-6157] synthesizing module 'rng_gen' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/rng_gen.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'rng_gen' (13#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/rng_gen.v:23]
+WARNING: [Synth 8-689] width (2) of port connection 'actual' does not match port width (8) of module 'rng_gen' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:63]
+WARNING: [Synth 8-689] width (2) of port connection 'actual' does not match port width (8) of module 'rng_gen' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:64]
+INFO: [Synth 8-6157] synthesizing module 'blue_color' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:23]
+INFO: [Synth 8-6157] synthesizing module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/letters.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/letters.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'letters' (14#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/letters.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:32]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:32]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'blue_color' (15#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/blue_color.v:23]
+INFO: [Synth 8-6157] synthesizing module 'red_color' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:32]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:32]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'red_color' (16#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/red_color.v:23]
+INFO: [Synth 8-6157] synthesizing module 'green_color' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:36]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:37]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:37]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'green_color' (17#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/green_color.v:23]
+INFO: [Synth 8-6157] synthesizing module 'pink_color' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:32]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:32]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:33]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:34]
+WARNING: [Synth 8-689] width (32) of port connection 'x1' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'x2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:35]
+WARNING: [Synth 8-689] width (32) of port connection 'y2' does not match port width (7) of module 'letters' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:35]
+INFO: [Synth 8-6155] done synthesizing module 'pink_color' (18#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/pink_color.v:23]
+WARNING: [Synth 8-6090] variable 'endflag' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:107]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:123]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:143]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:163]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:183]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:113]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:220]
+INFO: [Synth 8-6155] done synthesizing module 'wordGame' (19#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/wordGame.v:23]
+INFO: [Synth 8-6157] synthesizing module 'covid_main' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_main.v:23]
+INFO: [Synth 8-6157] synthesizing module 'covid_screens' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:23]
+INFO: [Synth 8-3876] $readmem data file 'covid_title.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:35]
+INFO: [Synth 8-3876] $readmem data file 'keeping_safe.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:36]
+INFO: [Synth 8-3876] $readmem data file 'wash_hands.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:37]
+INFO: [Synth 8-3876] $readmem data file 'sanitiser.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:38]
+INFO: [Synth 8-3876] $readmem data file 'mask.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:39]
+INFO: [Synth 8-3876] $readmem data file 'distancing.mem' is read successfully [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'covid_screens' (20#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_screens.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_main.v:44]
+INFO: [Synth 8-6155] done synthesizing module 'covid_main' (21#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/covid_main.v:23]
+INFO: [Synth 8-6157] synthesizing module 'memory_game' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/memory_game.v:23]
+	Parameter qnmode bound to: 0 - type: integer 
+	Parameter ansmode bound to: 1 - type: integer 
+	Parameter delaymode bound to: 2 - type: integer 
+WARNING: [Synth 8-689] width (5) of port connection 'actual' does not match port width (8) of module 'rng_gen' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/memory_game.v:41]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/memory_game.v:50]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/memory_game.v:69]
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/memory_game.v:78]
+WARNING: [Synth 8-6014] Unused sequential element ans_key_reg was removed. 
+INFO: [Synth 8-6155] done synthesizing module 'memory_game' (22#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/memory_game.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'oled_main' (23#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/oled_main.v:23]
+INFO: [Synth 8-6157] synthesizing module 'balloon_game' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_game.v:23]
+	Parameter startgame bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'led_trail' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/led_trail.v:23]
+WARNING: [Synth 8-5788] Register done_reg in module led_trail is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/led_trail.v:32]
+INFO: [Synth 8-6155] done synthesizing module 'led_trail' (24#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/led_trail.v:23]
+WARNING: [Synth 8-689] width (5) of port connection 'countA' does not match port width (16) of module 'number2seg' [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_game.v:49]
+WARNING: [Synth 8-6014] Unused sequential element points_reg was removed.  [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_game.v:58]
+WARNING: [Synth 8-5788] Register balloon_state_reg in module balloon_game is has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_game.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'balloon_game' (25#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_game.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'Top_Student' (26#1) [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/Top_Student.v:17]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[15]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[14]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[13]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[12]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[11]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[10]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[9]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[8]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[7]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[6]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[5]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[4]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[3]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[2]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[1]
+WARNING: [Synth 8-3331] design drawRectangle has unconnected port WHITE[0]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[15]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[14]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[13]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[12]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[11]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[10]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[9]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[8]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[7]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[6]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[5]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[4]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[3]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[2]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[1]
+WARNING: [Synth 8-3331] design letters has unconnected port GREEN[0]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[15]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[14]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[13]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[12]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[11]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[10]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[9]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[8]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[7]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[6]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[5]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[4]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[3]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[2]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[1]
+WARNING: [Synth 8-3331] design letters has unconnected port PINK[0]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[15]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[14]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[13]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[12]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[11]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[10]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[9]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[8]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[7]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[6]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[5]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[4]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[3]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[2]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[1]
+WARNING: [Synth 8-3331] design letters has unconnected port RED[0]
+WARNING: [Synth 8-3331] design screen1 has unconnected port sw8
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[15]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[14]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[13]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[12]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[11]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[10]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[9]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[7]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[6]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[5]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[4]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[3]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[2]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[1]
+WARNING: [Synth 8-3331] design wordGame has unconnected port sw[0]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[15]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[14]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[13]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[12]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[11]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[10]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[9]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[8]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[7]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[6]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[5]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[4]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[3]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[2]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[1]
+WARNING: [Synth 8-3331] design wordGame has unconnected port BLACK[0]
+WARNING: [Synth 8-3331] design amplitude_mode has unconnected port clk381
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 1776.535 ; gain = 225.703
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1776.535 ; gain = 225.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1776.535 ; gain = 225.703
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+Finished Parsing XDC File [C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/constrs_1/new/Basys3_Master.xdc]
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2118.922 ; gain = 568.090
+83 Infos, 158 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:35 . Memory (MB): peak = 2118.922 ; gain = 568.090
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+close [ open C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_screen_main.v w ]
+add_files C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.srcs/sources_1/new/balloon_screen_main.v
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Apr  3 23:26:24 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Fri Apr  3 23:26:24 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Fri Apr  3 23:36:53 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Fri Apr  3 23:36:53 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sat Apr  4 00:07:37 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sat Apr  4 00:07:37 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 6
+[Sat Apr  4 00:11:46 2020] Launched synth_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sat Apr  4 00:11:46 2020] Launched impl_1...
+Run output will be captured here: C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.runs/impl_1/Top_Student.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
 exit
-INFO: [Common 17-206] Exiting Vivado at Fri Apr  3 22:18:49 2020...
+INFO: [Common 17-206] Exiting Vivado at Sat Apr  4 00:24:23 2020...
