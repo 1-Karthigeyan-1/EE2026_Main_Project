@@ -29,10 +29,9 @@ reg [4:0] state;
 reg [21:0] onesec = 0;
 reg [22:0] twosec = 0;
 reg [23:0] threesec = 0;
-reg [23:0] ver = 0;
 reg correctflag;
 reg [2:0] mode = 0;
-reg [3:0] num_level = 1;
+reg [3:0] num_level = 2;
 reg [3:0] qn_num_level = 0;
 reg [3:0] curr_level;
 reg [15:0] ans_key [15:0];
@@ -72,6 +71,7 @@ always @ (posedge sixclock) begin
             begin
                 //question to be displayed has yet to finish
                 if (qn_num_level != num_level) begin
+                    mem_data <= draw_question;
                     threesec <= threesec + 1;
                     if (threesec == 0) begin
                         qn_num_level <= qn_num_level + 1;
@@ -79,27 +79,28 @@ always @ (posedge sixclock) begin
                         ans_key[i] <= qn_level;
                     end
                 end
-//                if (qn_num_level == num_level) begin
-//                    mode <= ansmode;
-//                end
+                else begin
+                    mode <= ansmode;
+                end
+
             end
-            /*
+            
             ansmode:
             begin
                 mem_data <= draw_answer;
-                if (i != num_level) begin
-                    if (soundlevel == ans_key[i]) begin
-                        ver = ver + 1;
-                        correctflag <= 1;
-                        i = (ver == 0)? i +1 : i;
-                    end
-                end
-                else begin
-                    num_level <= num_level + 1;
-                    copy_num_level = num_level;
-                end
+//                if (i != num_level) begin
+//                    if (soundlevel == ans_key[i]) begin
+//                        ver = ver + 1;
+//                        correctflag <= 1;
+//                        i = (ver == 0)? i +1 : i;
+//                    end
+//                end
+//                else begin
+//                    num_level <= num_level + 1;
+//                    copy_num_level = num_level;
+//                end
             end
-            */
+            
             delaymode:
             begin
                 if (twosec == 0) begin
@@ -124,7 +125,7 @@ always @ (posedge sixclock) begin
         end
 */
     if (threesec ==0 && mode == qnmode) begin
-        mem_data <= draw_question;
+//        mem_data <= draw_question;
         mode <= delaymode;
     end
     end
