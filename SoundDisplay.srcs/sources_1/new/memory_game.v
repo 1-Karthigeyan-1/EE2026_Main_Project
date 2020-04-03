@@ -98,15 +98,13 @@ always @ (posedge sixclock) begin
             begin
                 mem_data <= WHITE;
 //                if (j != num_level) begin
-//                    if (soundlevel == ans_key[i]) begin
-//                        ver = ver + 1;
+//                    if (soundlevel == ans_key[j]) begin
+//                        if (right) begin
 //                        correctflag <= 1;
-//                        i = (ver == 0)? i +1 : i;
+//                        end
 //                    end
 //                end
-//                else begin
-//                    num_level <= num_level + 1;
-//                end
+
             end
         endcase
 /*        
