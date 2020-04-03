@@ -259,6 +259,8 @@ always @ (posedge sixclock) begin
             correctflag = NOINPUT;
             word<= BLUE_WORD;
             lives <= 7;
+            startscreens <= 1;
+            startflag <= 0;
         end
         else begin
             word <= END_SCREEN;
