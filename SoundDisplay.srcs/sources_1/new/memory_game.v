@@ -46,7 +46,6 @@ drawRectangle ans(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_a
 
 always @ (posedge sixclock) begin
     if (startflag == 1) begin
-
         state <= (threesec == 0)? random % 16 +1 : state; //chooses a random state from 1 - 16
         case(state)
         0: qn_level = 0;

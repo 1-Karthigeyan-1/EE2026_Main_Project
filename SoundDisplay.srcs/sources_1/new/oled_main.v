@@ -39,12 +39,13 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
     wire [15:0] covid_data;
     wire [15:0]mem_data, balloon_data;
     reg mem_start = 0;
+    reg sw8;
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
     wordGame word(CLK100MHZ,sixclock,sw,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
     covid_main(sixclock,covid_start, soundlevel, pixel_index, covid_data);
     memory_game(sixclock, mem_start, x, y, GREEN,YELLOW,RED,BLACK,WHITE, soundlevel,mem_data);
-    balloon_screen_main(sixclock ,balloon_state , pixel_index, balloon_data );
+    balloon_screen_main(sixclock ,sw8,balloon_state , pixel_index, balloon_data );
     always @ (posedge sixclock) begin
         if (sw[13] == 1) begin
             GREEN = 16'b0000011111111111; //Cyan
@@ -86,6 +87,7 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
         //balloon game activated
         if (sw[8] == 1) begin
             oled_data <= balloon_data;
+            sw8 <= 1;
         end
         //reset word-game
         if (sw[1] == 0) begin
@@ -98,6 +100,10 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
         //reset mem game
         if (sw[3] == 0) begin
             mem_start <= 0;
+        end
+        //reset balloon game
+        if (sw[3] == 0) begin
+            sw8 <= 0;
         end
         if (sw[1] == 0 && sw[2] == 0 && sw[3] == 0 && sw[8] == 0) begin
             //1 pixel border

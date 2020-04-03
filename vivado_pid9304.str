@@ -1,0 +1,568 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 9304
+License: Customer
+
+Current time: 	Sat Apr 04 00:30:52 SGT 2020
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 76 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Sean
+User home directory: C:/Users/Sean
+User working directory: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/vivado.log
+Vivado journal file location: 	C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/vivado.jou
+Engine tmp dir: 	C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/.Xil/Vivado-9304-DESKTOP-905I2GK
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	199 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 526 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr. Version: Vivado v2018.2 
+// [GUI Memory]: 68 MB (+69076kb) [00:00:05]
+// [Engine Memory]: 480 MB (+352086kb) [00:00:05]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr} 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 550 MB (+47786kb) [00:00:08]
+// [GUI Memory]: 81 MB (+10188kb) [00:00:08]
+// [Engine Memory]: 586 MB (+9353kb) [00:00:08]
+// [GUI Memory]: 88 MB (+2365kb) [00:00:08]
+// [GUI Memory]: 94 MB (+2281kb) [00:00:09]
+// HMemoryUtils.trashcanNow. Engine heap size: 614 MB. GUI used memory: 41 MB. Current time: 4/4/20 12:30:54 AM SGT
+// Project name: SoundDisplay; location: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [Engine Memory]: 620 MB (+4309kb) [00:00:12]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 20 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 16); // B (D, ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), gametwo : balloon_game (balloon_game.v)]", 23); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 16, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 16, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 16); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 22, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 22, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), memory_game : memory_game (memory_game.v)]", 21, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), memory_game : memory_game (memory_game.v)]", 21, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v), bscreen : balloon_screens (balloon_screens.v)]", 26, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v), bscreen : balloon_screens (balloon_screens.v)]", 26, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 25, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 25, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 2); // k (j, ck)
+// Elapsed time: 535 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), gametwo : balloon_game (balloon_game.v)]", 26, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 25, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), gametwo : balloon_game (balloon_game.v)]", 26, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), gametwo : balloon_game (balloon_game.v)]", 26, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), gametwo : balloon_game (balloon_game.v)]", 26); // B (D, ck)
+// Elapsed time: 15 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), word : wordGame (wordGame.v)]", 19, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), word : wordGame (wordGame.v), red : red_color (red_color.v)]", 25, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), word : wordGame (wordGame.v), screens : screen1 (screen1.v)]", 20, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), word : wordGame (wordGame.v), screens : screen1 (screen1.v)]", 20, false, false, false, false, false, true); // B (D, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 633 MB. GUI used memory: 45 MB. Current time: 4/4/20 12:41:24 AM SGT
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wordGame.v", 6); // k (j, ck)
+// Elapsed time: 28 seconds
+selectCodeEditor("wordGame.v", 213, 217); // ce (w, ck)
+selectCodeEditor("wordGame.v", 214, 210); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+selectCodeEditor("screen1.v", 70, 214); // ce (w, ck)
+selectCodeEditor("screen1.v", 62, 214); // ce (w, ck)
+selectCodeEditor("screen1.v", 118, 245); // ce (w, ck)
+selectCodeEditor("screen1.v", 198, 324); // ce (w, ck)
+selectCodeEditor("screen1.v", 216, 308); // ce (w, ck)
+selectCodeEditor("screen1.v", 137, 317); // ce (w, ck)
+selectCodeEditor("screen1.v", 146, 318); // ce (w, ck)
+selectCodeEditor("screen1.v", 251, 455); // ce (w, ck)
+selectCodeEditor("screen1.v", 251, 455); // ce (w, ck)
+selectCodeEditor("screen1.v", 251, 455); // ce (w, ck)
+selectCodeEditor("screen1.v", 251, 455, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("screen1.v", 67, 384); // ce (w, ck)
+selectCodeEditor("screen1.v", 254, 349); // ce (w, ck)
+selectCodeEditor("screen1.v", 254, 349, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wordGame.v", 6); // k (j, ck)
+selectCodeEditor("wordGame.v", 214, 216); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("wordGame.v", 166, 343); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("wordGame.v", 203, 111); // ce (w, ck)
+selectCodeEditor("wordGame.v", 205, 107); // ce (w, ck)
+selectCodeEditor("wordGame.v", 207, 113); // ce (w, ck)
+selectCodeEditor("wordGame.v", 175, 188); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("wordGame.v", 39, 450); // ce (w, ck)
+selectCodeEditor("wordGame.v", 39, 450, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("wordGame.v", 460, 145); // ce (w, ck)
+selectCodeEditor("wordGame.v", 379, 187); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("screen1.v", 213, 378); // ce (w, ck)
+selectCodeEditor("screen1.v", 208, 401); // ce (w, ck)
+selectCodeEditor("screen1.v", 188, 396); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("screen1.v", 63, 334); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("screen1.v", 110, 331); // ce (w, ck)
+selectCodeEditor("screen1.v", 94, 316); // ce (w, ck)
+selectCodeEditor("screen1.v", 91, 317); // ce (w, ck)
+selectCodeEditor("screen1.v", 58, 316); // ce (w, ck)
+selectCodeEditor("screen1.v", 115, 316); // ce (w, ck)
+selectCodeEditor("screen1.v", 115, 316, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("screen1.v", 278, 339); // ce (w, ck)
+selectCodeEditor("screen1.v", 285, 308); // ce (w, ck)
+selectCodeEditor("screen1.v", 320, 318); // ce (w, ck)
+selectCodeEditor("screen1.v", 339, 306); // ce (w, ck)
+selectCodeEditor("screen1.v", 348, 299); // ce (w, ck)
+selectCodeEditor("screen1.v", 258, 319); // ce (w, ck)
+selectCodeEditor("screen1.v", 258, 319, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 21 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+// Elapsed time: 10 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v), bscreen : balloon_screens (balloon_screens.v)]", 34, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v), bscreen : balloon_screens (balloon_screens.v)]", 34, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+selectCodeEditor("balloon_screen_main.v", 4, 194); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("balloon_screen_main.v", 132, 173); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 88, 174); // ce (w, ck)
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+typeControlKey(null, null, 'z');
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wordGame.v", 6); // k (j, ck)
+typeControlKey((HResource) null, "wordGame.v", 'c'); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 62, 199); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 56, 198); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 239, 128); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 239, 128, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 149, 197); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 149, 197, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 179, 198); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 189, 200); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectCodeEditor("oled_main.v", 236, 284); // ce (w, ck)
+// Elapsed time: 12 seconds
+selectCodeEditor("oled_main.v", 304, 417); // ce (w, ck)
+// Elapsed time: 14 seconds
+selectCodeEditor("oled_main.v", 160, 282); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 170, 399); // ce (w, ck)
+// [GUI Memory]: 99 MB (+1kb) [00:16:37]
+selectCodeEditor("oled_main.v", 167, 396); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 99, 404); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 92, 420); // ce (w, ck)
+selectCodeEditor("oled_main.v", 117, 415); // ce (w, ck)
+selectCodeEditor("oled_main.v", 117, 415, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("oled_main.v", 198, 449); // ce (w, ck)
+// Elapsed time: 11 seconds
+selectCodeEditor("oled_main.v", 96, 185); // ce (w, ck)
+selectCodeEditor("oled_main.v", 96, 185, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "oled_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 192, 177); // ce (w, ck)
+typeControlKey((HResource) null, "oled_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("oled_main.v", 238, 151); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectCodeEditor("balloon_screen_main.v", 338, 201); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 338, 201, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 262, 201); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 262, 201, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 322, 198); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 322, 198, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectCodeEditor("balloon_screen_main.v", 445, 193); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 445, 193, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 580, 197); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 580, 197, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 689, 201); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 689, 201, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 777, 200); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 777, 200, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 838, 194); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 838, 194, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 124, 160); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 124, 160, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 333, 196); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 333, 196, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 226, 163); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 226, 163, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 449, 198); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 449, 198, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 342, 163); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 342, 163, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 566, 199); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 566, 199, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 477, 168); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 477, 168, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 660, 197); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 660, 197, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 594, 167); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 594, 167, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 749, 201); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 749, 201, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 679, 166); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 679, 166, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'c'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 831, 200); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 831, 200, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "balloon_screen_main.v", 'v'); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 836, 233); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 820, 199); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 680, 197); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 647, 215); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 288, 128); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectCodeEditor("balloon_screen_main.v", 484, 132); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 484, 132, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 68, 195); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 68, 195, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (O, ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (ck): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// TclEventType: DG_GRAPH_GENERATED
+// bx (ck):  Resetting Runs : addNotify
+// f (ck): Launch Runs: addNotify
+dismissDialog("No Implementation Results Available"); // A (ck)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HOptionPane Warning: 'A background task is running. Please wait until it completes and try again. (Background Task)'
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton("OptionPane.button", "OK"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cv' command handler elapsed time: 3 seconds
+// [Engine Memory]: 656 MB (+5476kb) [00:18:56]
+// TclEventType: DG_ANALYSIS_MSG_RESET
+dismissDialog("Launch Runs"); // f (ck)
+// bx (ck):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 12 
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sat Apr  4 00:49:43 2020] Launched synth_1... Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log [Sat Apr  4 00:49:44 2020] Launched impl_1... Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 664 MB. GUI used memory: 46 MB. Current time: 4/4/20 12:49:44 AM SGT
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("oled_main.v", 248, 95); // ce (w, ck)
+selectCodeEditor("oled_main.v", 248, 95, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 2); // k (j, ck)
+selectCodeEditor("memory_game.v", 83, 245); // ce (w, ck)
+selectCodeEditor("memory_game.v", 83, 245, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 2); // k (j, ck)
+selectCodeEditor("memory_game.v", 114, 275); // ce (w, ck)
+selectCodeEditor("memory_game.v", 114, 266); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+// Elapsed time: 26 seconds
+selectCodeEditor("oled_main.v", 236, 187); // ce (w, ck)
+selectCodeEditor("oled_main.v", 218, 211); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "memory_game.v", 2); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "oled_main.v", 1); // k (j, ck)
+// Elapsed time: 41 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wordGame.v", 6); // k (j, ck)
+selectCodeEditor("wordGame.v", 594, 250); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+// Elapsed time: 23 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wordGame.v", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "wordGame.v", 6); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_game.v", 5); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+// Elapsed time: 11 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aE (Q, ck)
+selectTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Vivado Commands, General Messages, [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.ip_user_files'.. ]", 2, false); // ah (O, ck)
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ActiveMsgMonitor Process Messages Timer) is taking 925ms to process. Increasing delay to 2000 ms.
+// Elapsed time: 23 seconds
+selectCodeEditor("balloon_screens.v", 1033, 298); // ce (w, ck)
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 49 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon_screen_main : balloon_screen_main (balloon_screen_main.v)]", 33); // B (D, ck)
+// TclEventType: RUN_COMPLETED
+// ah (ck): Bitstream Generation Completed: addNotify
+// Elapsed time: 102 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (ck)
+// Elapsed time: 94 seconds
+closeMainWindow("SoundDisplay - [C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr] - Vivado 2018.2"); // ck
+// A (ck): Exit Vivado: addNotify
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (A)
+dismissDialog("Exit Vivado"); // A (ck)
+// Elapsed time: 29 seconds
+selectCodeEditor("balloon_screens.v", 259, 390); // ce (w, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+selectCodeEditor("screen1.v", 177, 231); // ce (w, ck)
+selectCodeEditor("screen1.v", 177, 231, false, false, false, false, true); // ce (w, ck) - Double Click
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+// HMemoryUtils.trashcanNow. Engine heap size: 686 MB. GUI used memory: 54 MB. Current time: 4/4/20 12:58:49 AM SGT
+setFileChooser("C:/Users/Sean/Desktop/EE2026_Main_Project/balloon2.mem");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 6 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon2.mem 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/Sean/Desktop/EE2026_Main_Project/balloon3.mem");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 6 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon3.mem 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/Sean/Desktop/EE2026_Main_Project/balloon4.mem");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 6 seconds
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon4.mem 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/Sean/Desktop/EE2026_Main_Project/balloon5.mem");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 5 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon5.mem 
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files"); // a (C, c)
+setFileChooser("C:/Users/Sean/Desktop/EE2026_Main_Project/balloon6.mem");
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 5 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon6.mem 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 41); // B (D, ck)
+selectCodeEditor("screen1.v", 160, 316); // ce (w, ck)
+selectCodeEditor("screen1.v", 160, 316, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("screen1.v", 145, 230); // ce (w, ck)
+selectCodeEditor("screen1.v", 145, 230, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("screen1.v", 135, 317); // ce (w, ck)
+selectCodeEditor("screen1.v", 135, 317, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "screen1.v", 'c'); // ce (w, ck)
+selectCodeEditor("screen1.v", 149, 229); // ce (w, ck)
+selectCodeEditor("screen1.v", 149, 229, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "screen1.v", 'v'); // ce (w, ck)
+selectCodeEditor("screen1.v", 153, 252); // ce (w, ck)
+selectCodeEditor("screen1.v", 153, 252, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "screen1.v", 'v'); // ce (w, ck)
+selectCodeEditor("screen1.v", 178, 263); // ce (w, ck)
+selectCodeEditor("screen1.v", 178, 263, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "screen1.v", 'v'); // ce (w, ck)
+selectCodeEditor("screen1.v", 154, 281); // ce (w, ck)
+selectCodeEditor("screen1.v", 154, 281, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "screen1.v", 'v'); // ce (w, ck)
+selectCodeEditor("screen1.v", 146, 300); // ce (w, ck)
+selectCodeEditor("screen1.v", 146, 300, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "screen1.v", 'v'); // ce (w, ck)
+selectCodeEditor("screen1.v", 141, 315); // ce (w, ck)
+selectCodeEditor("screen1.v", 141, 315, false, false, false, false, true); // ce (w, ck) - Double Click
+typeControlKey((HResource) null, "screen1.v", 'v'); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_game.v", 5); // k (j, ck)
+// TclEventType: DG_GRAPH_GENERATED
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screens.v", 4); // k (j, ck)
+selectCodeEditor("balloon_screens.v", 310, 412); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("balloon_screens.v", 321, 299); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("balloon_screens.v", 461, 121); // ce (w, ck)
+selectCodeEditor("balloon_screens.v", 467, 174); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("balloon_screen_main.v", 324, 162); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 324, 162, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 445, 166); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 445, 166, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 527, 167); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 527, 167, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 654, 160); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 654, 160, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 762, 164); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 762, 164, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("balloon_screen_main.v", 867, 160); // ce (w, ck)
+selectCodeEditor("balloon_screen_main.v", 867, 160, false, false, false, false, true); // ce (w, ck) - Double Click
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "balloon_screen_main.v", 3); // k (j, ck)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "screen1.v", 7); // k (j, ck)

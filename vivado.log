@@ -2,25 +2,25 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr  4 00:27:09 2020
-# Process ID: 5280
+# Start of session at: Sat Apr  4 00:30:40 2020
+# Process ID: 9304
 # Current directory: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4300 C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12544 C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr
 # Log file: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/vivado.log
 # Journal file: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr}
-INFO: [Project 1-313] Project file moved from 'C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project' since last save.
 Scanning sources...
 Finished scanning sources
-WARNING: [Project 1-509] GeneratedRun file for 'synth_1' not found
-WARNING: [Project 1-509] GeneratedRun file for 'impl_1' not found
-WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.ip_user_files', nor could it be found using path 'C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project/SoundDisplay.ip_user_files'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.ip_user_files'.
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'.
 update_compile_order -fileset sources_1
-add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon1.mem
-exit
-INFO: [Common 17-206] Exiting Vivado at Sat Apr  4 00:29:38 2020...
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+[Sat Apr  4 00:49:43 2020] Launched synth_1...
+Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/synth_1/runme.log
+[Sat Apr  4 00:49:44 2020] Launched impl_1...
+Run output will be captured here: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.runs/impl_1/runme.log

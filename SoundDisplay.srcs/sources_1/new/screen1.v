@@ -31,23 +31,23 @@ reg [15:0] game_over [0:6143];
 
 
 always @ (posedge sixclock) begin
-//if (sw8 == 1) begin
-//    $readmemh("word_game_title.mem", title);
-//    $readmemh("word_instructions.mem", instructions);
-//    $readmemh("word_instructions_2.mem", instructions2);
-//    $readmemh("correct_screen.mem", correct_screen);
-//    $readmemh("wrong_screen.mem", wrong_screen);
-//    $readmemh("test.mem", game_over);
-//end
-//else begin
+if (sw8 == 1) begin
+    $readmemh("balloon1.mem", title);
+    $readmemh("balloon2.mem", instructions);
+    $readmemh("balloon3.mem", instructions2);
+    $readmemh("balloon4.mem", correct_screen);
+    $readmemh("balloon5.mem", wrong_screen);
+    $readmemh("balloon6.mem", game_over);
+end
+else begin
     $readmemh("word_game_title.mem", title);
     $readmemh("word_instructions.mem", instructions);
     $readmemh("word_instructions_2.mem", instructions2);
     $readmemh("correct_screen.mem", correct_screen);
     $readmemh("wrong_screen.mem", wrong_screen);
     $readmemh("game_over.mem", game_over);
-    
-//end
+end
+
 title_data = title[pixel_index];
 instructions_data = instructions[pixel_index];
 instructions2_data = instructions2[pixel_index];

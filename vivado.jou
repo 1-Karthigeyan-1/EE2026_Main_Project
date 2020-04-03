@@ -2,14 +2,16 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr  4 00:27:09 2020
-# Process ID: 5280
+# Start of session at: Sat Apr  4 00:30:40 2020
+# Process ID: 9304
 # Current directory: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4300 C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12544 C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr
 # Log file: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/vivado.log
 # Journal file: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr}
 update_compile_order -fileset sources_1
-add_files -norecurse C:/Users/Sean/Desktop/EE2026_Main_Project/balloon1.mem
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 12
+wait_on_run impl_1
