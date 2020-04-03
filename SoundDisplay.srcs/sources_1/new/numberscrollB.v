@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module numberscrollB(input CLK ,input [11:0]max,  output reg[7:0]number = 0, input[15:0]countB );
+module numberscrollB(input CLK,  output reg[7:0]number = 0, input[15:0]countB  );
 reg counter = 0;
 always@ (posedge CLK)
     begin

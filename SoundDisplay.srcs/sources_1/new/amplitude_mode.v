@@ -20,15 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module amplitude_mode(input clk20k,input clk2,  input[11:0] my_mic_data  , output reg [15:0]led_state = 0, output [7:0]segs1, output [7:0]segs0);
+module amplitude_mode(input clk20k,clk2,clk381  , input[11:0] my_mic_data  , output reg [15:0]led_state = 0, output [7:0]segs0,segs1,segs2,segs3 ,  output reg [4:0]countA = 0 );
     reg [11:0]max = 0;
-    reg [4:0]countA = 0;
     reg [15:0]counter = 0;
     parameter [8:0] x = 115;
     parameter [12:0] y = 2250;
     
-    numberscrollA A( .CLK(clk20k) , .max(max) , .number(segs0), .countA(countA));
-    numberscrollB B( .CLK(clk20k)  , .max(max/10) , .number(segs1), .countB(countA));
+   number2seg convert(.clk(clk2) , .segs0(segs0) , .segs1(segs1) ,.segs2(segs2) , .segs3(segs3),  .countA(countA) , .max(16) );
     /*
     always@(posedge clk20k, posedge clk2)
     begin
@@ -162,7 +160,10 @@ module amplitude_mode(input clk20k,input clk2,  input[11:0] my_mic_data  , outpu
             countA <= 1;
        else 
             countA <= 0;
-        
+       end
+       
+       always @ (posedge clk2)
+       begin 
         case(countA)
         0:
             led_state <= 16'b0000_0000_0000_0000;
