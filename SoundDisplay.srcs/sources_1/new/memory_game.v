@@ -127,9 +127,13 @@ always @ (posedge sixclock) begin
 //    end
     end
     if (startflag == 0) begin
-        twosec<= 0;
+        twosec<= 1;
         threesec <= 0;
-        state = 0;
+        state <= 0;
+        mode <= 0;
+        qn_level <= 0;
+        num_level <= 2;
+        qn_num_level <= 0;
     end
 end
 endmodule
