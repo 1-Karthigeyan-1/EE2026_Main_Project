@@ -69,8 +69,17 @@ module Top_Student (
 
     always @  (posedge clk2)
     begin
+    if (sw[0] == 1) begin
+        led <= my_mic_data;
+    end
+    if (sw[0] == 0) begin
+        led <= led_state;
+    end
+    if (sw[1] == 1) begin
+        led <= wlives;
+    end
 //    led = (sw[0] == 1) ? my_mic_data:led_state; //replace 0 with amplitude stud;
-    led = wlives;
+//    led = wlives;
     end
     always @ (posedge clk381)
     begin
@@ -103,9 +112,9 @@ module Top_Student (
         endcase    
     end
     always @ (posedge sixclock) begin
-        soundlevel <= led;
+        soundlevel <= led_state;
         if (sw[11] == 0)
-            copy_of_mic <= led;
+            copy_of_mic <= led_state;
         //Freeze volume bar
         if (sw[11] == 1)
             soundlevel <= copy_of_mic;

@@ -31,9 +31,9 @@ reg [22:0] twosec = 0;
 reg [23:0] threesec = 0;
 reg [23:0] ver = 0;
 reg correctflag;
-reg mode;
+reg mode = 0;
 reg [3:0] num_level = 1;
-reg [3:0] copy_num_level = 0;
+reg [3:0] copy_num_level = 1;
 reg [3:0] curr_level;
 reg [15:0] ans_key [15:0];
 parameter qnmode = 0, ansmode = 1;
@@ -61,7 +61,6 @@ always @ (posedge sixclock) begin
                     i = (threesec == 0)? ((i == 15)?i:i+1):i;
                     ans_key[i] <= qn_level;
                 end
-
             end
             ansmode:
             begin

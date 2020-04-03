@@ -41,7 +41,7 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
     reg mem_start;
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
-    wordGame word(CLK100MHZ,sixclock,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
+    wordGame word(CLK100MHZ,sixclock,sw,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
     covid_main(sixclock,covid_start, soundlevel, pixel_index, covid_data);
     memory_game(sixclock, mem_start, x, y, GREEN,YELLOW,RED,BLACK,WHITE, soundlevel,mem_data);
     

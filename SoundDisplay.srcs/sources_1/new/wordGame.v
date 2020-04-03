@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module wordGame(input CLK100MHZ, input sixclock, input word_start,input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [2:0] lives);
+module wordGame(input CLK100MHZ, input sixclock, input [15:0]sw, input word_start,input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [2:0] lives);
 wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
@@ -55,7 +55,7 @@ wire [15:0] correct_data;
 wire [15:0] wrong_data;
 wire [15:0] over_data;
 
-screen1 screens(sixclock, pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
+screen1 screens(sixclock, sw[8] ,pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
 
 clock_divider clkp5hz(CLK100MHZ , 6249999 , clkp5);
 
