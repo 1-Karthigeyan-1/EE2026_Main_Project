@@ -20,14 +20,9 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module numberscrollA(input CLK ,input [11:0]max,  output reg[7:0]number = 0, input[15:0]countA );
-reg [4:0]counter = 0;
+module numberscrollA(input CLK ,  output reg[7:0]number = 0, input[15:0]counter  ); 
 always@ (posedge CLK)
     begin
-    if (countA > 16)
-        counter = 6;
-    else
-        counter = countA%10;
     case(counter)
         0:  
             number <= 8'b11000000; //0
