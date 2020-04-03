@@ -37,15 +37,16 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
     reg covid_start = 0;    
     wire [2:0] wlives;
     wire [15:0] covid_data;
-    wire [15:0]mem_data, balloon_data;
+    wire [15:0]mem_data;
+    wire [12:0] balloon_data;
     reg mem_start = 0;
     reg sw8;
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
     wordGame word(CLK100MHZ,sixclock,sw,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
-    covid_main(sixclock,covid_start, soundlevel, pixel_index, covid_data);
-    memory_game(sixclock, mem_start,right, x, y, GREEN,YELLOW,RED,BLACK,WHITE, soundlevel,mem_data);
-    balloon_screen_main(sixclock,balloon_state , pixel_index, balloon_data );
+    covid_main cov(sixclock,covid_start, soundlevel, pixel_index, covid_data);
+    memory_game memory(sixclock, mem_start,right, x, y, GREEN,YELLOW,RED,BLACK,WHITE, soundlevel,mem_data);
+    balloon_screen_main balloon(sixclock,x,y,YELLOW,BLACK,balloon_state , pixel_index, balloon_data );
     always @ (posedge sixclock) begin
         if (sw[13] == 1) begin
             GREEN = 16'b0000011111111111; //Cyan
