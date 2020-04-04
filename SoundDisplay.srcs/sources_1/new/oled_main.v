@@ -26,7 +26,6 @@ module oled_main(input CLK100MHZ, input clk6p25m, input [15:0] sw , input [15:0]
     wire [6:0] y;
     wire [15:0] wordgamedata;
     wire [15:0] graphdata;
-//    reg [15:0] z = 0;
     reg [15:0] GREEN = 16'b0000011111100000;
     reg [15:0] YELLOW = 16'b1111111111100000;
     reg [15:0] PINK = 16'b1111100000011111;
@@ -41,7 +40,7 @@ module oled_main(input CLK100MHZ, input clk6p25m, input [15:0] sw , input [15:0]
     wire [15:0]mem_data;
     wire [12:0] balloon_data;
     reg mem_start = 0;
-    reg sw8;
+    
     coordinates coor(pixel_index, x , y);
     drawRectangle rect(clk6p25m,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
     wordGame word(CLK100MHZ,clk6p25m,sw,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
@@ -108,14 +107,14 @@ module oled_main(input CLK100MHZ, input clk6p25m, input [15:0] sw , input [15:0]
             if ((x == 0 || x == 95) || (y==0 || y==63)) begin
                 if(sw[14] == 0)
                     oled_data <= WHITE;
-                else //turn off border
+                else
                     oled_data <= BLACK;
             end
             //3 pixel border
             else if (((x>= 1 && x <= 2) || (x >= 93 && x <= 94)) || ((y>= 1 && y <= 2) || (y>=61 && y <= 62))) begin
                 if(sw[14] == 0 && sw[15] == 1)
                     oled_data <= WHITE;
-                else //turn off border
+                else
                     oled_data <= BLACK;
             end
             //soundbar

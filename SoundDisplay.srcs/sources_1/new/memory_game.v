@@ -75,7 +75,7 @@ always @ (posedge clk6p25m) begin
         15: qn_level = 16'b0111111111111111;
         16: qn_level = 16'b1111111111111111;
         endcase
-        //num_level is essentially score
+
         case (mode)
             qnmode:
             begin
@@ -90,6 +90,7 @@ always @ (posedge clk6p25m) begin
                         delayflag <= 1;
                     end
                 end
+                //delay after every question
                 if (delayflag == 1) begin
                     twosec = twosec + 1;
                     mem_data <= BLACK;
@@ -98,6 +99,7 @@ always @ (posedge clk6p25m) begin
                         delayflag <= 0;
                     end
                 end
+                //all questions displayed
                 if(qn_num_level == num_level && delayflag == 0) begin
                     mode <= ansmode;
                 end
@@ -105,7 +107,6 @@ always @ (posedge clk6p25m) begin
             
             ansmode:
             begin
-//                mem_data <= WHITE;
                 if (j < num_level && correctflag == 0) begin
                     if (right && soundlevel == ans_key[j]) begin
                         correctflag <= 1; //correct
@@ -140,7 +141,6 @@ always @ (posedge clk6p25m) begin
                 end
                 //infinite game
                 if (j == num_level ) begin
-//                   mem_data <= over_data;
                     num_level <= num_level + 1;
                     //reset
                     twosec <= 0;
@@ -157,6 +157,7 @@ always @ (posedge clk6p25m) begin
             end
         endcase
     end
+    //switch reset
     if (startflag == 0) begin
         twosec<= 0;
         threesec <= 0;

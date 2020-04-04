@@ -54,7 +54,6 @@ wire [15:0] instructions2_data;
 wire [15:0] correct_data;
 wire [15:0] wrong_data;
 wire [15:0] over_data;
-reg sw8;
 
 screen1 screens(clk6p25m,pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
 
@@ -70,15 +69,17 @@ green_color green(clk6p25m,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
 pink_color pink(clk6p25m,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 
 always @ (posedge clk6p25m) begin
-//    sw8 <= sw[8];
+
     if (startflag == 1) begin
+        // game over
         if (lives == 0) begin
             endflag = 1;
         end
         word <= (counter==0)? random_word%4 : word; //picks a random word
         background_color <= (counter==0)? random_color%4 : background_color; //picks a random background color
         button_counter <= button_counter+1;
-    // change speed of the intervals
+        
+        // change speed of the intervals
         if (word == CORRECT_SCREEN || word == WRONG_SCREEN) begin
             ver_speed <= ver_speed + 1;
             counter <= ver_speed;
@@ -118,6 +119,7 @@ always @ (posedge clk6p25m) begin
             if (up==0 && down==0 && left==1 && right==0) begin
                 correctflag = CORRECT; //correct answer
             end
+            //wrong ans
             if (up == 1 || down== 1 || right == 1) begin
                 if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
@@ -138,6 +140,7 @@ always @ (posedge clk6p25m) begin
             if (up==0 && down==1 && left==0 && right==0) begin
                 correctflag = CORRECT; //correct answer
             end
+            //wrong ans
             if (up == 1 || left== 1 || right == 1) begin
                 if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
@@ -158,6 +161,7 @@ always @ (posedge clk6p25m) begin
             if (up==1 && down==0 && left==0 && right==0) begin
                 correctflag = CORRECT; //correct answer
             end
+            //wrong ans
             if (left == 1 || down== 1 || right == 1) begin
                 if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
@@ -178,6 +182,7 @@ always @ (posedge clk6p25m) begin
             if (up==0 && down==0 && left==0 && right==1) begin
                 correctflag = CORRECT; //correct answer
             end
+            //wrong ans
             if (up == 1 || down== 1 || left == 1) begin
                 if (button_counter == 0) begin
                 word <= WRONG_SCREEN;
@@ -194,11 +199,11 @@ always @ (posedge clk6p25m) begin
         end
         CORRECT_SCREEN:
         begin
-            wordgamedata <= correct_data; //Ans is correct so screen is green for 1 cycle
+            wordgamedata <= correct_data; //Ans is correct 1 cycle of correct
         end
         WRONG_SCREEN:
         begin
-            wordgamedata <= wrong_data; //Ans is wrong so screen is red for 1 cycle
+            wordgamedata <= wrong_data; //Ans is wrong 1 cycle of wrong
         end
         END_SCREEN:
         begin
@@ -206,7 +211,7 @@ always @ (posedge clk6p25m) begin
         end
     endcase
     
-    //change color of background, shpuld have another random value
+    //change color of background
     case (background_color)
         0:COLOR <= GREEN;
         1:COLOR <= PINK;
@@ -214,7 +219,7 @@ always @ (posedge clk6p25m) begin
         3:COLOR <= RED;
     endcase
     end
-    
+    //show instruction screens
     if (word_start == 1) begin
         if (startflag == 0) begin
             fivesec = fivesec + 1;

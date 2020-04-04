@@ -27,17 +27,16 @@ wire [15:0] wash_data;
 wire [15:0] sanitiser_data;
 wire [15:0] mask_data;
 wire [15:0] distancing_data;
-//wire [15:0] stayhome_data;
 
 reg [2:0]mode = 0;
 reg [23:0] twosec = 0;
-//reg [24:0] fivesec = 0;
 reg flag;
 
-covid_screens screen(clk6p25m,pixel_index, covid_title_data, safe_data, wash_data, sanitiser_data, mask_data, distancing_data/*, stayhome_data*/);
+covid_screens screen(clk6p25m,pixel_index, covid_title_data, safe_data, wash_data, sanitiser_data, mask_data, distancing_data);
 parameter alp_C  = 8'b11000110, alp_L = 8'b11000111 , alp_A = 8'b10001000, alp_P = 8'b10001100 , alp_D = 8'b10100000, alp_E = 8'b10000110 , alp_n = 8'b10101011;
 always @ (posedge clk6p25m) begin
     if (mode != 5)
+    //7 seg display
     begin
         segs0 = alp_P;
         segs1 = alp_A;
@@ -51,10 +50,10 @@ always @ (posedge clk6p25m) begin
         segs2 = alp_n;
         segs3 = alp_E;
     end
-    if (covid_start == 1) begin
-//        fivesec <= fivesec + 1; //to be deleted
-        twosec <= twosec + 1;
     
+    if (covid_start == 1) begin
+        twosec <= twosec + 1;
+        //covid slideshow screens
         case (mode)
         0: covid_data <= covid_title_data;
         1: covid_data <= safe_data;
@@ -62,30 +61,22 @@ always @ (posedge clk6p25m) begin
         3: covid_data <= sanitiser_data;
         4: covid_data <= mask_data;
         5: covid_data <= distancing_data;
-//        6: covid_data <= stayhome_data;
+
         endcase
     
         if (twosec == 0) begin
             flag <= 1;
         end
 
-        //to implement with sound
+        //check sound
         if (soundlevel == 16'b1111111111111111 && flag == 1) begin
             mode <= (mode == 5)? 0 : mode + 1;
             flag <= 0;
         end
 
-        /*
-        //to be deleted
-        if (flag == 1 && fivesec == 0) begin
-            mode <= (mode == 5)? 0 : mode + 1;
-            flag <= 0;
-        end
-        */
     end
     
     if (covid_start == 0) begin
-//        fivesec <= 0;
         twosec <= 0;
         mode <= 0;
         flag <= 0;

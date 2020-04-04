@@ -46,7 +46,6 @@ assign upper_limit = upperlimitA[3:0] + 6;
 
 
 //check the balloon state through 7 seg display
-//number2seg ptsystem(.clk(fast_clock) , .segs0(ptsegs0) , .segs1(ptsegs1) ,.segs2(ptsegs2) , .segs3(ptsegs3),  .countA(points) , .max(max) );
 assign segs3 = lose_condition? 8'b11000111 : 8'b1111_1111; //L
 assign segs2 = lose_condition? 8'b11000000 : 8'b1111_1111; //O
 assign segs1 = lose_condition? 8'b10010010 : 8'b1111_1111; //S
