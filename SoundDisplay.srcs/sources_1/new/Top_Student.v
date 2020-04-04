@@ -43,7 +43,7 @@ module Top_Student (
     wire [7:0]segs0 , segs1, segs2 , segs3;
     wire [2:0] wlives;
     wire [15:0] balloon_timer;
-    wire [7:0] balloon_segs0 , balloon_segs1, balloon_segs2 , balloon_segs3;
+    wire [7:0] balloon_segs0 , balloon_segs1, balloon_segs2 , balloon_segs3, covid_segs0 , covid_segs1 , covid_segs2 , covid_segs3;
     wire [4:0]peak_count, balloon_state;
     
     //Clocks
@@ -67,7 +67,7 @@ module Top_Student (
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
     amplitude_mode amp(.clk381(clk381), .clk20k(clk20k), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(peak), .segs0(segs0) , .segs1(segs1) ,.segs2(segs2), .segs3(segs3),  .countA(peak_count) );
     
-    oled_main display(CLK100MHZ, sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wlives , balloon_state);
+    oled_main display(CLK100MHZ, sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wlives , balloon_state , covid_segs0 , covid_segs1 , covid_segs2 , covid_segs3 );
     balloon_game gametwo( .left_button(left) , .sw(sw[8]) ,.slow_clock(clk1),  .fast_clock(clk20k) ,  .countdown_clock(clk1),.timer(balloon_timer) , .segs0(balloon_segs0) , .segs1(balloon_segs1) ,.segs2(balloon_segs2) , .segs3(balloon_segs3),  .right_button(right) , .peak_count(peak_count), .balloon_state(balloon_state));
 /*
     always @ (posedge sixclock) begin
@@ -104,23 +104,23 @@ module Top_Student (
         0:
         begin
             an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 : 4'b1110;
-            seg <= (sw[8] == 1) ? balloon_segs0 :segs0;
+            seg <= (sw[1] == 1) ? covid_segs0:((sw[8] == 1) ? balloon_segs0 :segs0);
         end
         1:
         begin
             an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 :4'b1101;
-            seg <= (sw[8] == 1) ? balloon_segs1 : segs1;
-            display_state <= (sw[8]== 0)?3:display_state + 1;
+            seg <= (sw[1] == 1) ? covid_segs1 : ((sw[8] == 1) ? balloon_segs1 : segs1);
+           // display_state <= (sw[8]== 0)?3:display_state + 1;
         end
         2:
         begin
             an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 : 4'b1011;
-            seg <= (sw[8] == 1)? balloon_segs2 : 8'b1111_1111;
+            seg <= (sw[1] == 1) ? covid_segs2 : ((sw[8] == 1)? balloon_segs2 : 8'b1111_1111);
         end
         3:
         begin
              an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 : 4'b0111;
-            seg <= (sw[8] == 1) ? balloon_segs3 : 8'b1111_1111;
+            seg <= (sw[1] == 1) ? covid_segs3 : ((sw[8] == 1) ? balloon_segs3 : 8'b1111_1111);
         end
         default:
             an <= 4'b1111;

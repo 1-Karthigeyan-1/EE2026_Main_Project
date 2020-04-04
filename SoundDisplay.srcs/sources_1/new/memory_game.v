@@ -31,13 +31,13 @@ reg [22:0] twosec = 0;
 reg [23:0] threesec = 0;
 reg [1:0] correctflag = 0;
 reg [2:0] mode = 0;
-reg [3:0] num_level = 2;
+reg [4:0] num_level = 2;
 reg [3:0] qn_num_level = 0;
 reg [3:0] curr_level;
 reg [15:0] ans_key [15:0];
 parameter qnmode = 0, ansmode = 1;
-reg i = 0;
-reg j = 0;
+reg [4:0]i = 0;
+reg [4:0]j = 0;
 reg delayflag =0;
 
 wire [15:0] data1;
@@ -124,12 +124,14 @@ always @ (posedge sixclock) begin
                 end
                 //wrong
                 if (correctflag == 2) begin
+                    mode <= (ver ==0)? qnmode : mode;
+                    j <= 0;
                     ver = ver + 1;
                     mem_data <= wrong_data;
                     correctflag <= (ver == 0) ? 0 : correctflag;
                 end
                 //infinite game
-                if (j == num_level && correctflag == 0) begin
+                if (j == num_level ) begin
                     mem_data <= over_data;
 //                    num_level <= num_level + 1;
 //                    //reset
