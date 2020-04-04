@@ -45,7 +45,6 @@ module Top_Student (
     wire [15:0] balloon_timer;
     wire [7:0] balloon_segs0 , balloon_segs1, balloon_segs2 , balloon_segs3, covid_segs0 , covid_segs1 , covid_segs2 , covid_segs3;
     wire [4:0]peak_count, balloon_state;
-    wire AN0 , AN1 , AN2 , AN3 , SEG0 , SEG1 , SEG2 , SEG3;
     
     //Clocks
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
@@ -101,18 +100,11 @@ module Top_Student (
         end
     end
     
-//    assign AN0 = (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b1110;
-//    assign AN1 = (sw[1] == 1 || sw[0] == 1) ? 4'b1111 :4'b1101;
-//    assign AN2 = (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b1011;
-//    assign AN3 =  (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b0111;
-//    assign SEG0 = (sw[2] == 1) ? covid_segs0:((sw[8] == 1) ? balloon_segs0 :segs0);
-//    assign SEG1 = (sw[2] == 1) ? covid_segs1 : ((sw[8] == 1) ? balloon_segs1 : segs1);
-//    assign SEG2 = (sw[2] == 1) ? covid_segs2 : ((sw[8] == 1)? balloon_segs2 : 8'b1111_1111);
-//    assign SEG3 = (sw[2] == 1) ? covid_segs3 : ((sw[8] == 1) ? balloon_segs3 : 8'b1111_1111);
+
     
     always @ (posedge clk381)
     begin
-        if(sw[0] == 1)
+        if(sw == 0)
             display_state  = 0;
         else
             display_state = display_state + 1;
@@ -124,21 +116,23 @@ module Top_Student (
         end
         1:
         begin
-            an <=  (sw[1] == 1 ) ? 4'b1111 :4'b1101;
+            an <=  (sw[1] == 1) ? 4'b1111 :4'b1101;
             seg <= (sw[2] == 1) ? covid_segs1 : ((sw[8] == 1) ? balloon_segs1 : segs1);
         end
         2:
         begin
-            an <=  (sw[1] == 1) ? 4'b1111 : 4'b1011;
+            an <=  (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b1011;
             seg <=  (sw[2] == 1) ? covid_segs2 : ((sw[8] == 1)? balloon_segs2 : 8'b1111_1111);
         end
         3:
         begin
-             an <=  (sw[1] == 1 ) ? 4'b1111 : 4'b0111;
+             an <=  (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b0111;
             seg <= (sw[2] == 1) ? covid_segs3 : ((sw[8] == 1) ? balloon_segs3 : 8'b1111_1111);
         end
-        default:
+        default
+        begin
             an <= 4'b1111;
+        end
         endcase    
     end
     

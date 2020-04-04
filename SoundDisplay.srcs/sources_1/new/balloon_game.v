@@ -23,8 +23,9 @@
 module balloon_game( input left_button,  input[4:0]peak_count,  input sw , input right_button  , input slow_clock  ,fast_clock,   countdown_clock , output [15:0]timer , output [7:0] segs0 , segs1, segs2, segs3, output reg [4:0]balloon_state); 
 reg enable1 , enable2;
 parameter startgame = 0;
-reg [20:0] number;
-wire [7:0] random1 , random2, ptsegs1, ptsegs2, ptsegs3,ptsegs0;
+reg [20:0] number , max;
+
+wire [7:0] random1 , random2;
 wire timer_clear  , timer_done  , section_clear ;
 wire [4:0]peak_number; //the decimal number of the peakq
 wire [3:0] upperlimitA;
@@ -45,11 +46,11 @@ assign upper_limit = upperlimitA[3:0] + 6;
 
 
 //check the balloon state through 7 seg display
-number2seg ptsystem(.clk(fast_clock) , .segs0(ptsegs0) , .segs1(ptsegs1) ,.segs2(ptsegs2) , .segs3(ptsegs3),  .countA(balloon_state) , .max(1000) );
-assign segs3 = lose_condition? 8'b11000111 : ptsegs3;
-assign segs2 = lose_condition? 8'b11000000 : ptsegs2;
-assign segs1 = lose_condition? 8'b10010010 : ptsegs1;
-assign segs0 = lose_condition? 8'b10000110 : ptsegs0;
+//number2seg ptsystem(.clk(fast_clock) , .segs0(ptsegs0) , .segs1(ptsegs1) ,.segs2(ptsegs2) , .segs3(ptsegs3),  .countA(points) , .max(max) );
+assign segs3 = lose_condition? 8'b11000111 : 8'b1111_1111; //L
+assign segs2 = lose_condition? 8'b11000000 : 8'b1111_1111; //O
+assign segs1 = lose_condition? 8'b10010010 : 8'b1111_1111; //S
+assign segs0 = lose_condition? 8'b10000110 : 8'b1111_1111; //E
 always@(posedge slow_clock, posedge right_button , posedge clear)
 begin
     if (clear)
