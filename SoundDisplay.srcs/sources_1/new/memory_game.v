@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module memory_game(input sixclock, input startflag, input right,input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, input [15:0] soundlevel, output reg [15:0] mem_data);
+module memory_game(input sixclock, input [12:0] pixel_index, input startflag, input right,input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, input [15:0] soundlevel, output reg [15:0] mem_data);
 wire [4:0] random;
 wire [15:0] draw_question;
 wire [15:0] draw_answer;
 reg [15:0] qn_level = 0;
 reg [4:0] state;
-reg [23:0] ver = 0;
+reg [22:0] ver = 0;
 reg [22:0] twosec = 1;
 reg [23:0] threesec = 0;
 reg correctflag;
@@ -40,10 +40,18 @@ reg i = 0;
 reg j = 0;
 reg delayflag =0;
 
+wire [15:0] data1;
+wire [15:0] data2;
+wire [15:0] data3;
+wire [15:0] correct_data;
+wire [15:0] wrong_data;
+wire [15:0] over_data;
+
 rng_gen(sixclock ,random);
 
 drawRectangle qn(sixclock,qn_level, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_question);
 drawRectangle ans(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_answer);
+screen1 screens(sixclock,pixel_index, data1, data2, data3, correct_data, wrong_data, over_data);
 
 always @ (posedge sixclock) begin
     if (startflag == 1) begin
@@ -98,17 +106,22 @@ always @ (posedge sixclock) begin
             ansmode:
             begin
 //                mem_data <= WHITE;
-                if (j != num_level) begin
+                if (j != num_level && correctflag == 0) begin
                     if (right && soundlevel == ans_key[j]) begin
                         correctflag <= 1;
                     end
+                    else begin
+                        mem_data <= draw_answer;
+                    end
                 end
-                if (correctflag) begin
-                    j <= j +1;
-                    correctflag <= 0;
+                if (correctflag == 1) begin
+                    ver = ver + 1;
+                    mem_data <= correct_data;
+                    j <= (ver == 0) ? j +1: j;
+                    correctflag <= (ver == 0) ? 0 : correctflag;
                 end
-                if (j == num_level) begin
-                    mem_data <= WHITE;
+                if (j == num_level && correctflag == 0) begin
+                    mem_data <= over_data;
                 end
             end
         endcase
