@@ -45,6 +45,7 @@ module Top_Student (
     wire [15:0] balloon_timer;
     wire [7:0] balloon_segs0 , balloon_segs1, balloon_segs2 , balloon_segs3, covid_segs0 , covid_segs1 , covid_segs2 , covid_segs3;
     wire [4:0]peak_count, balloon_state;
+    wire AN0 , AN1 , AN2 , AN3 , SEG0 , SEG1 , SEG2 , SEG3;
     
     //Clocks
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
@@ -71,27 +72,28 @@ module Top_Student (
     balloon_game gametwo( .left_button(left) , .sw(sw[8]) ,.slow_clock(clk1),  .fast_clock(clk20k) ,  .countdown_clock(clk1),.timer(balloon_timer) , .segs0(balloon_segs0) , .segs1(balloon_segs1) ,.segs2(balloon_segs2) , .segs3(balloon_segs3),  .right_button(right) , .peak_count(peak_count), .balloon_state(balloon_state));
 
     assign game2clear = (sw[8] == 1) ? 0 : 1;
-    
     always @  (posedge clk6p25m)
     begin
         soundlevel <= peak;
         if (sw[0] == 1) begin
-            led <= my_mic_data;
-        end
-        if (sw[0] == 0) begin
             led <= peak;
         end
-        if (sw[1] == 1) begin
+        else if (sw == 0) begin
+            led <= my_mic_data;
+        end
+        else if (sw[1] == 1) begin
             led <= wlives;
         end
         // Balloon game
-        if (sw[8] == 1) begin
+        else if (sw[8] == 1) begin
             led<= balloon_timer;
         end
+        else
+            led <= peak;
         if (sw[11] == 0)
             copy_of_mic <= peak;
         //Freeze volume bar
-        if (sw[11] == 1)
+       if (sw[11] == 1)
             soundlevel <= copy_of_mic;
         //Hide volume bar
         if (sw[10] == 1) begin
@@ -99,33 +101,41 @@ module Top_Student (
         end
     end
     
+//    assign AN0 = (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b1110;
+//    assign AN1 = (sw[1] == 1 || sw[0] == 1) ? 4'b1111 :4'b1101;
+//    assign AN2 = (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b1011;
+//    assign AN3 =  (sw[1] == 1 || sw[0] == 1) ? 4'b1111 : 4'b0111;
+//    assign SEG0 = (sw[2] == 1) ? covid_segs0:((sw[8] == 1) ? balloon_segs0 :segs0);
+//    assign SEG1 = (sw[2] == 1) ? covid_segs1 : ((sw[8] == 1) ? balloon_segs1 : segs1);
+//    assign SEG2 = (sw[2] == 1) ? covid_segs2 : ((sw[8] == 1)? balloon_segs2 : 8'b1111_1111);
+//    assign SEG3 = (sw[2] == 1) ? covid_segs3 : ((sw[8] == 1) ? balloon_segs3 : 8'b1111_1111);
+    
     always @ (posedge clk381)
     begin
         if(sw[0] == 1)
             display_state  = 0;
         else
-            display_state <= display_state + 1;
+            display_state = display_state + 1;
         case(display_state)
         0:
         begin
-            an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 : 4'b1110;
-            seg <= (sw[1] == 1) ? covid_segs0:((sw[8] == 1) ? balloon_segs0 :segs0);
+            an <=  (sw[1] == 1) ? 4'b1111 : 4'b1110;
+            seg <= (sw[2] == 1) ? covid_segs0:((sw[8] == 1) ? balloon_segs0 :segs0);
         end
         1:
         begin
-            an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 :4'b1101;
-            seg <= (sw[1] == 1) ? covid_segs1 : ((sw[8] == 1) ? balloon_segs1 : segs1);
-           // display_state <= (sw[8]== 0)?3:display_state + 1;
+            an <=  (sw[1] == 1 ) ? 4'b1111 :4'b1101;
+            seg <= (sw[2] == 1) ? covid_segs1 : ((sw[8] == 1) ? balloon_segs1 : segs1);
         end
         2:
         begin
-            an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 : 4'b1011;
-            seg <= (sw[1] == 1) ? covid_segs2 : ((sw[8] == 1)? balloon_segs2 : 8'b1111_1111);
+            an <=  (sw[1] == 1) ? 4'b1111 : 4'b1011;
+            seg <=  (sw[2] == 1) ? covid_segs2 : ((sw[8] == 1)? balloon_segs2 : 8'b1111_1111);
         end
         3:
         begin
-             an <= ((sw[1] == 1) || (sw[0] == 1)) ? 4'b1111 : 4'b0111;
-            seg <= (sw[1] == 1) ? covid_segs3 : ((sw[8] == 1) ? balloon_segs3 : 8'b1111_1111);
+             an <=  (sw[1] == 1 ) ? 4'b1111 : 4'b0111;
+            seg <= (sw[2] == 1) ? covid_segs3 : ((sw[8] == 1) ? balloon_segs3 : 8'b1111_1111);
         end
         default:
             an <= 4'b1111;

@@ -47,7 +47,7 @@ module oled_main(input CLK100MHZ, input clk6p25m, input [15:0] sw , input [15:0]
     wordGame word(CLK100MHZ,clk6p25m,sw,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
     covid_main cov(clk6p25m,covid_start, soundlevel, pixel_index, covid_data , segs0 , segs1 , segs2 , segs3);
     memory_game memory(clk6p25m, pixel_index, mem_start,right, x, y, GREEN,YELLOW,RED,BLACK,WHITE, soundlevel,mem_data);
-    balloon_screen_main balloon(clk6p25m,x,y,YELLOW,BLACK,balloon_state , pixel_index, balloon_data );
+    balloon_screen_main balloon(clk6p25m,x,y,YELLOW,BLACK,balloon_state , balloon_data );
     
     always @ (posedge clk6p25m) begin
         if (sw[13] == 1) begin

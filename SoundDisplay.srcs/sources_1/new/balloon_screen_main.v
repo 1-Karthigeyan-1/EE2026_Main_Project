@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module balloon_screen_main(input clock , input [6:0] x, input [6:0] y, input [15:0] YELLOW,input [15:0] BLACK, input [4:0]balloon_state , input [12:0]pixel_index, output reg [12:0] balloon_data );
+module balloon_screen_main(input clock , input [6:0] x, input [6:0] y, input [15:0] YELLOW,input [15:0] BLACK, input [4:0]balloon_state ,  output reg [12:0] balloon_data );
 
 wire [12:0] balloon1_data , balloon2_data , balloon3_data , balloon4_data , balloon5_data , balloon6_data;
 

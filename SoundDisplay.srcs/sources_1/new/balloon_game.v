@@ -41,10 +41,10 @@ assign lower_limit = random1 % 4;
 rng_gen upper_limit_random(.clkp5(timer_clear) , .actual(random2));
 assign upperlimitA = (random2)%4;
 assign upper_limit = upperlimitA[3:0] + 6;
-//check the balloon state through 7 seg display
 
-//number2seg test(.clk(fast_clock) , .segs0(ptsegs0) , .segs1(ptsegs1) , .countA(balloon_state));
-//number2seg ptsystem(.clk(fast_clock) , .segs0(segs0) , .segs1(segs1) , .countA(points));
+
+
+//check the balloon state through 7 seg display
 number2seg ptsystem(.clk(fast_clock) , .segs0(ptsegs0) , .segs1(ptsegs1) ,.segs2(ptsegs2) , .segs3(ptsegs3),  .countA(balloon_state) , .max(1000) );
 assign segs3 = lose_condition? 8'b11000111 : ptsegs3;
 assign segs2 = lose_condition? 8'b11000000 : ptsegs2;

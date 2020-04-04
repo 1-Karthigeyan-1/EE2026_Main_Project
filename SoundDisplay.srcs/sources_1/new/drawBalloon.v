@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module drawBalloon(input sixclock, input [3:0] mode, input [6:0] x, input [6:0] y, input [15:0] YELLOW,input [15:0] BLACK,output reg [15:0] oled_data);
+module drawBalloon(input sixclock, input [3:0] mode, input [6:0] x, input [6:0] y, input [15:0] YELLOW,input [15:0] BLACK,output reg [12:0] oled_data);
 
     always @ (posedge sixclock) begin
     case (mode)
