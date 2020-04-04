@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module pink_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,output reg [15:0] green_data);
+module pink_color(input clk6p25m, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,output reg [15:0] green_data);
     
     wire [15:0] P_data;
     wire [15:0] I_data;
@@ -29,12 +29,12 @@ module pink_color(input sixclock, input [6:0] x, input [6:0] y, input [15:0] WHI
     reg [6:0] x1 =0;
     reg [6:0] y1 =0;
     reg [21:0] counter = 0;
-    letters p(sixclock, x, y, x1, x1+4, y1, y1+9, 16, WHITE,GREEN,PINK,RED,BLACK, P_data); //P
-    letters i(sixclock, x, y, x1+7, x1+11, y1, y1+9, 9, WHITE,GREEN,PINK,RED,BLACK, I_data); //I
-    letters n(sixclock, x, y, x1+14, x1+23, y1, y1+9, 14, WHITE,GREEN,PINK,RED,BLACK, N_data); //N
-    letters k(sixclock, x, y, x1+26, x1+35, y1, y1+9, 11, WHITE,GREEN,PINK,RED,BLACK, K_data); //K
+    letters p(clk6p25m, x, y, x1, x1+4, y1, y1+9, 16, WHITE,GREEN,PINK,RED,BLACK, P_data); //P
+    letters i(clk6p25m, x, y, x1+7, x1+11, y1, y1+9, 9, WHITE,GREEN,PINK,RED,BLACK, I_data); //I
+    letters n(clk6p25m, x, y, x1+14, x1+23, y1, y1+9, 14, WHITE,GREEN,PINK,RED,BLACK, N_data); //N
+    letters k(clk6p25m, x, y, x1+26, x1+35, y1, y1+9, 11, WHITE,GREEN,PINK,RED,BLACK, K_data); //K
 
-    always @ (posedge sixclock) begin
+    always @ (posedge clk6p25m) begin
         counter <= counter +1;
         x1 <= (counter == 0)? {x1[5:0], ~(x1[6] ^ x1[5])} % 60 : x1;
         y1 <= (counter == 0)? {y1[5:0], ~(y1[6] ^ y1[5])} % 54: y1;

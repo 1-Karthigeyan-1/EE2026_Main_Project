@@ -20,8 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module letters(input sixclock, input [6:0] x, input [6:0] y, input[6:0] x1,input [6:0] x2, input [6:0] y1, input [6:0] y2, input [4:0] letter, input [15:0] WHITE,GREEN,PINK,RED,BLACK, output reg [15:0] oled_data);
-always @ (posedge sixclock) begin
+module letters(input clk6p25m, input [6:0] x, input [6:0] y, input[6:0] x1,input [6:0] x2, input [6:0] y1, input [6:0] y2, input [4:0] letter, input [15:0] WHITE,GREEN,PINK,RED,BLACK, output reg [15:0] oled_data);
+always @ (posedge clk6p25m) begin
     case (letter)
         2: //b
         begin

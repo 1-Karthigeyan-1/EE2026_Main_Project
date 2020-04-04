@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module wordGame(input CLK100MHZ, input sixclock, input [15:0]sw, input word_start,input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [2:0] lives);
+module wordGame(input CLK100MHZ, input clk6p25m, input [15:0]sw, input word_start,input [12:0] pixel_index, input [6:0] x, input [6:0] y, input [15:0] WHITE,GREEN,PINK,RED,BLACK,BLUE, input up, down, left, right, reset, output reg [15:0] wordgamedata, output reg [2:0] lives);
 wire [15:0] blue_data;
 wire [15:0] red_data;
 wire [15:0] green_data;
@@ -56,20 +56,20 @@ wire [15:0] wrong_data;
 wire [15:0] over_data;
 reg sw8;
 
-screen1 screens(sixclock,pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
+screen1 screens(clk6p25m,pixel_index, title_data, instructions_data,instructions2_data, correct_data, wrong_data, over_data);
 
 clock_divider clkp5hz(CLK100MHZ , 6249999 , clkp5);
 
 
 rng_gen word_gen(clkp5 ,random_word);
-rng_gen color_gen(sixclock ,random_color);
+rng_gen color_gen(clk6p25m ,random_color);
 
-blue_color blue(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,blue_data);
-red_color red(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,red_data);
-green_color green(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
-pink_color pink(sixclock,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
+blue_color blue(clk6p25m,x,y,WHITE,GREEN,PINK,RED,COLOR,blue_data);
+red_color red(clk6p25m,x,y,WHITE,GREEN,PINK,RED,COLOR,red_data);
+green_color green(clk6p25m,x,y,WHITE,GREEN,PINK,RED,COLOR,green_data);
+pink_color pink(clk6p25m,x,y,WHITE,GREEN,PINK,RED,COLOR,pink_data);
 
-always @ (posedge sixclock) begin
+always @ (posedge clk6p25m) begin
 //    sw8 <= sw[8];
     if (startflag == 1) begin
         if (lives == 0) begin

@@ -19,10 +19,10 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module drawRectangle(input sixclock, input [15:0] mode, input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, output reg [15:0] oled_data);
+module drawRectangle(input clk6p25m, input [15:0] mode, input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, output reg [15:0] oled_data);
 
     //13 x 3 pixel rectangles
-    always @ (posedge sixclock) begin
+    always @ (posedge clk6p25m) begin
         case (mode)
             0: begin
                 oled_data <= BLACK;

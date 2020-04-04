@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module memory_game(input sixclock, input [12:0] pixel_index, input startflag, input right,input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, input [15:0] soundlevel, output reg [15:0] mem_data);
+module memory_game(input clk6p25m, input [12:0] pixel_index, input startflag, input right,input [6:0] x, input [6:0] y, input [15:0] GREEN,input [15:0] YELLOW,input [15:0] RED,input [15:0] BLACK,input [15:0] WHITE, input [15:0] soundlevel, output reg [15:0] mem_data);
 wire [4:0] random;
 wire [15:0] draw_question;
 wire [15:0] draw_answer;
@@ -47,13 +47,13 @@ wire [15:0] correct_data;
 wire [15:0] wrong_data;
 wire [15:0] over_data;
 
-rng_gen(sixclock ,random);
+rng_gen(clk6p25m ,random);
 
-drawRectangle qn(sixclock,qn_level, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_question);
-drawRectangle ans(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_answer);
-screen1 screens(sixclock,pixel_index, data1, data2, data3, correct_data, wrong_data, over_data);
+drawRectangle qn(clk6p25m,qn_level, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_question);
+drawRectangle ans(clk6p25m,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, draw_answer);
+screen1 screens(clk6p25m,pixel_index, data1, data2, data3, correct_data, wrong_data, over_data);
 
-always @ (posedge sixclock) begin
+always @ (posedge clk6p25m) begin
     if (startflag == 1) begin
         state <= (threesec == 0)? random % 16 +1 : state; //chooses a random state from 1 - 16
         case(state)

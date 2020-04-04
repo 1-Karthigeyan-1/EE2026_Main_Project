@@ -29,7 +29,7 @@ module Top_Student (
     );
     
     wire [15:0] oled_data;
-    wire sixclock, reset, clk20k, clk2, clk381, clkp5 , clk1 , clk100k;
+    wire clk6p25m, reset, clk20k, clk2, clk381, clkp5 , clk1 , clk100k;
     wire game2clear;
     wire up, down, left, right;
     wire [11:0] my_mic_data;
@@ -48,7 +48,7 @@ module Top_Student (
     
     //Clocks
     clock_divider clk(CLK100MHZ , 2499 , clk20k);
-    clock_divider clk6p25m(CLK100MHZ, 8 , sixclock);
+    clock_divider clk6p25(CLK100MHZ, 8 , clk6p25m);
     clock_divider clk2hz(CLK100MHZ , 24999999 ,clk2);
     clock_divider clk381hz(CLK100MHZ , 130 , clk381);
     clock_divider clk1hz(CLK100MHZ , 49_999_999 , clk1);
@@ -61,39 +61,44 @@ module Top_Student (
     debounce leftf(left_button,CLK100MHZ,left);
     debounce rightf(right_button,CLK100MHZ,right);
     
-    Oled_Display oled(.clk(sixclock), .reset(reset),.pixel_index(pixel_index),
+    Oled_Display oled(.clk(clk6p25m), .reset(reset),.pixel_index(pixel_index),
     .pixel_data(oled_data), .cs(rgb_cs), .sdin(rgb_sdin), .sclk(rgb_sclk), .d_cn(rgb_d_cn), .resn(rgb_resn), .vccen(rgb_vccen),
       .pmoden(rgb_pmoden));
     Audio_Capture CaptAudio(.CLK(CLK100MHZ),.cs(clk20k), .MISO(J_MIC3_Pin3), .clk_samp(J_MIC3_Pin1),.sclk(J_MIC3_Pin4),.sample(my_mic_data) );
     amplitude_mode amp(.clk381(clk381), .clk20k(clk20k), .clk2(clk2),  .my_mic_data(my_mic_data)  , .led_state(peak), .segs0(segs0) , .segs1(segs1) ,.segs2(segs2), .segs3(segs3),  .countA(peak_count) );
     
-    oled_main display(CLK100MHZ, sixclock, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wlives , balloon_state , covid_segs0 , covid_segs1 , covid_segs2 , covid_segs3 );
+    oled_main display(CLK100MHZ, clk6p25m, sw , soundlevel, pixel_index, up, down, left, right, reset, oled_data, wlives , balloon_state , covid_segs0 , covid_segs1 , covid_segs2 , covid_segs3 );
     balloon_game gametwo( .left_button(left) , .sw(sw[8]) ,.slow_clock(clk1),  .fast_clock(clk20k) ,  .countdown_clock(clk1),.timer(balloon_timer) , .segs0(balloon_segs0) , .segs1(balloon_segs1) ,.segs2(balloon_segs2) , .segs3(balloon_segs3),  .right_button(right) , .peak_count(peak_count), .balloon_state(balloon_state));
-/*
-    always @ (posedge sixclock) begin
-        soundlevel <= 16'b1111111111111111;
-    end
-*/
+
     assign game2clear = (sw[8] == 1) ? 0 : 1;
     
-    always @  (posedge sixclock)
+    always @  (posedge clk6p25m)
     begin
-    if (sw[0] == 1) begin
-        led <= my_mic_data;
+        soundlevel <= peak;
+        if (sw[0] == 1) begin
+            led <= my_mic_data;
+        end
+        if (sw[0] == 0) begin
+            led <= peak;
+        end
+        if (sw[1] == 1) begin
+            led <= wlives;
+        end
+        // Balloon game
+        if (sw[8] == 1) begin
+            led<= balloon_timer;
+        end
+        if (sw[11] == 0)
+            copy_of_mic <= peak;
+        //Freeze volume bar
+        if (sw[11] == 1)
+            soundlevel <= copy_of_mic;
+        //Hide volume bar
+        if (sw[10] == 1) begin
+            soundlevel <= 0;
+        end
     end
-    if (sw[0] == 0) begin
-        led <= peak;
-    end
-    if (sw[1] == 1) begin
-        led <= wlives;
-    end
-    if (sw[8] == 1) begin
-        led<= balloon_timer;
-     end
-        
-//    led = (sw[0] == 1) ? my_mic_data:led_state; //replace 0 with amplitude stud;
-//    led = wlives;
-    end
+    
     always @ (posedge clk381)
     begin
         if(sw[0] == 1)
@@ -126,16 +131,5 @@ module Top_Student (
             an <= 4'b1111;
         endcase    
     end
-    always @ (posedge sixclock) begin
-        soundlevel <= peak;
-        if (sw[11] == 0)
-            copy_of_mic <= peak;
-        //Freeze volume bar
-        if (sw[11] == 1)
-            soundlevel <= copy_of_mic;
-        //Hide volume bar
-        if (sw[10] == 1) begin
-            soundlevel <= 0;
-        end
-    end
+    
 endmodule

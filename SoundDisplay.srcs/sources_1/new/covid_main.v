@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module covid_main(input sixclock,input covid_start, input [15:0] soundlevel, input [12:0]pixel_index,output reg [15:0] covid_data, output reg [7:0] segs0 , segs1 , segs2 , segs3);
+module covid_main(input clk6p25m,input covid_start, input [15:0] soundlevel, input [12:0]pixel_index,output reg [15:0] covid_data, output reg [7:0] segs0 , segs1 , segs2 , segs3);
 wire [15:0] covid_title_data;
 wire [15:0] safe_data;
 wire [15:0] wash_data;
@@ -34,9 +34,9 @@ reg [23:0] twosec = 0;
 //reg [24:0] fivesec = 0;
 reg flag;
 
-covid_screens screen(sixclock,pixel_index, covid_title_data, safe_data, wash_data, sanitiser_data, mask_data, distancing_data/*, stayhome_data*/);
+covid_screens screen(clk6p25m,pixel_index, covid_title_data, safe_data, wash_data, sanitiser_data, mask_data, distancing_data/*, stayhome_data*/);
 parameter alp_C  = 8'b11000110, alp_L = 8'b11000111 , alp_A = 8'b10001000, alp_P = 8'b10001100 , alp_D = 8'b10100000, alp_E = 8'b10000110 , alp_n = 8'b10101011;
-always @ (posedge sixclock) begin
+always @ (posedge clk6p25m) begin
     if (mode != 5)
     begin
         segs0 = alp_P;

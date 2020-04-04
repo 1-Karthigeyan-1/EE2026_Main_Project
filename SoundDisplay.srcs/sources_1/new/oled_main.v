@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0] soundlevel, input [12:0] pixel_index, input up, down, left, right, reset, output reg [15:0] oled_data, output reg [2:0] lives , input [4:0]balloon_state,
+module oled_main(input CLK100MHZ, input clk6p25m, input [15:0] sw , input [15:0] soundlevel, input [12:0] pixel_index, input up, down, left, right, reset, output reg [15:0] oled_data, output reg [2:0] lives , input [4:0]balloon_state,
                   output [7:0] segs0 , segs1 , segs2, segs3);
     wire [6:0] x;
     wire [6:0] y;
     wire [15:0] wordgamedata;
     wire [15:0] graphdata;
-    reg [15:0] z = 0;
+//    reg [15:0] z = 0;
     reg [15:0] GREEN = 16'b0000011111100000;
     reg [15:0] YELLOW = 16'b1111111111100000;
     reg [15:0] PINK = 16'b1111100000011111;
@@ -43,12 +43,13 @@ module oled_main(input CLK100MHZ, input sixclock, input [15:0] sw , input [15:0]
     reg mem_start = 0;
     reg sw8;
     coordinates coor(pixel_index, x , y);
-    drawRectangle rect(sixclock,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
-    wordGame word(CLK100MHZ,sixclock,sw,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
-    covid_main cov(sixclock,covid_start, soundlevel, pixel_index, covid_data , segs0 , segs1 , segs2 , segs3);
-    memory_game memory(sixclock, pixel_index, mem_start,right, x, y, GREEN,YELLOW,RED,BLACK,WHITE, soundlevel,mem_data);
-    balloon_screen_main balloon(sixclock,x,y,YELLOW,BLACK,balloon_state , pixel_index, balloon_data );
-    always @ (posedge sixclock) begin
+    drawRectangle rect(clk6p25m,soundlevel, x, y,GREEN,YELLOW,RED,BLACK,WHITE, graphdata);
+    wordGame word(CLK100MHZ,clk6p25m,sw,word_start,pixel_index, x,y,WHITE,GREEN,PINK,RED,BLACK,BLUE,up,down,left,right,reset,wordgamedata, wlives);
+    covid_main cov(clk6p25m,covid_start, soundlevel, pixel_index, covid_data , segs0 , segs1 , segs2 , segs3);
+    memory_game memory(clk6p25m, pixel_index, mem_start,right, x, y, GREEN,YELLOW,RED,BLACK,WHITE, soundlevel,mem_data);
+    balloon_screen_main balloon(clk6p25m,x,y,YELLOW,BLACK,balloon_state , pixel_index, balloon_data );
+    
+    always @ (posedge clk6p25m) begin
         if (sw[13] == 1) begin
             GREEN = 16'b0000011111111111; //Cyan
             YELLOW = 16'b1111111111111111; //White
