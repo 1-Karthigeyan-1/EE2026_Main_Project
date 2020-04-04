@@ -282,3 +282,95 @@ selectCodeEditor("memory_game.v", 395, 161); // ce (w, ck)
 selectCodeEditor("memory_game.v", 395, 161, false, false, false, false, true); // ce (w, ck) - Double Click
 selectCodeEditor("memory_game.v", 203, 163); // ce (w, ck)
 selectCodeEditor("memory_game.v", 203, 163, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 125 seconds
+selectCodeEditor("memory_game.v", 411, 220); // ce (w, ck)
+// Elapsed time: 84 seconds
+selectCodeEditor("memory_game.v", 304, 219); // ce (w, ck)
+selectCodeEditor("memory_game.v", 304, 219, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 146 seconds
+selectCodeEditor("memory_game.v", 106, 267); // ce (w, ck)
+selectCodeEditor("memory_game.v", 106, 267, false, false, false, false, true); // ce (w, ck) - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 673 MB. GUI used memory: 48 MB. Current time: 4/4/20 1:26:40 PM SGT
+// Elapsed time: 1328 seconds
+selectCodeEditor("memory_game.v", 146, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 144, 269); // ce (w, ck)
+// Elapsed time: 137 seconds
+selectCodeEditor("memory_game.v", 209, 48); // ce (w, ck)
+// Elapsed time: 17 seconds
+selectCodeEditor("memory_game.v", 165, 85); // ce (w, ck)
+// Elapsed time: 22 seconds
+selectCodeEditor("memory_game.v", 213, 368); // ce (w, ck)
+selectCodeEditor("memory_game.v", 213, 368, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 39 seconds
+selectCodeEditor("memory_game.v", 199, 368); // ce (w, ck)
+selectCodeEditor("memory_game.v", 199, 366, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 468 seconds
+selectCodeEditor("memory_game.v", 291, 266); // ce (w, ck)
+selectCodeEditor("memory_game.v", 291, 266, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 190, 260); // ce (w, ck)
+selectCodeEditor("memory_game.v", 278, 281); // ce (w, ck)
+selectCodeEditor("memory_game.v", 278, 281, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 185, 294); // ce (w, ck)
+selectCodeEditor("memory_game.v", 185, 294, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 258, 296); // ce (w, ck)
+selectCodeEditor("memory_game.v", 258, 296, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 170, 281); // ce (w, ck)
+selectCodeEditor("memory_game.v", 170, 281, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 177, 298); // ce (w, ck)
+selectCodeEditor("memory_game.v", 178, 298, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 255, 301); // ce (w, ck)
+selectCodeEditor("memory_game.v", 255, 301, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 180, 216); // ce (w, ck)
+selectCodeEditor("memory_game.v", 180, 216); // ce (w, ck)
+selectCodeEditor("memory_game.v", 180, 216, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 202, 276); // ce (w, ck)
+selectCodeEditor("memory_game.v", 202, 276, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 294, 282); // ce (w, ck)
+selectCodeEditor("memory_game.v", 294, 282, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 300, 215); // ce (w, ck)
+selectCodeEditor("memory_game.v", 300, 215, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 47 seconds
+selectCodeEditor("memory_game.v", 143, 250); // ce (w, ck)
+selectCodeEditor("memory_game.v", 193, 249); // ce (w, ck)
+selectCodeEditor("memory_game.v", 193, 249, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 19 seconds
+selectCodeEditor("memory_game.v", 289, 200); // ce (w, ck)
+selectCodeEditor("memory_game.v", 289, 200); // ce (w, ck)
+selectCodeEditor("memory_game.v", 289, 200, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 17 seconds
+selectCodeEditor("memory_game.v", 372, 237); // ce (w, ck)
+selectCodeEditor("memory_game.v", 300, 305); // ce (w, ck)
+selectCodeEditor("memory_game.v", 306, 312); // ce (w, ck)
+selectCodeEditor("memory_game.v", 280, 293); // ce (w, ck)
+selectCodeEditor("memory_game.v", 153, 314); // ce (w, ck)
+selectCodeEditor("memory_game.v", 153, 314, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 218, 322); // ce (w, ck)
+selectCodeEditor("memory_game.v", 181, 331); // ce (w, ck)
+selectCodeEditor("memory_game.v", 167, 321); // ce (w, ck)
+selectCodeEditor("memory_game.v", 288, 317); // ce (w, ck)
+selectCodeEditor("memory_game.v", 254, 283); // ce (w, ck)
+// Elapsed time: 37 seconds
+selectCodeEditor("memory_game.v", 269, 297); // ce (w, ck)
+selectCodeEditor("memory_game.v", 269, 297, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 254, 420); // ce (w, ck)
+selectCodeEditor("memory_game.v", 254, 420, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 269, 420); // ce (w, ck)
+selectCodeEditor("memory_game.v", 269, 420, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 55 seconds
+selectCodeEditor("memory_game.v", 209, 480); // ce (w, ck)
+selectCodeEditor("memory_game.v", 209, 480, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 40 seconds
+selectCodeEditor("memory_game.v", 162, 95); // ce (w, ck)
+// Elapsed time: 131 seconds
+selectCodeEditor("memory_game.v", 161, 386); // ce (w, ck)
+selectCodeEditor("memory_game.v", 192, 385); // ce (w, ck)
+selectCodeEditor("memory_game.v", 192, 385, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 274, 450); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("memory_game.v", 54, 245); // ce (w, ck)
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // B (f, ck)
+selectCodeEditor("memory_game.v", 297, 308); // ce (w, ck)
+selectCodeEditor("memory_game.v", 274, 242); // ce (w, ck)
+selectCodeEditor("memory_game.v", 306, 250); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

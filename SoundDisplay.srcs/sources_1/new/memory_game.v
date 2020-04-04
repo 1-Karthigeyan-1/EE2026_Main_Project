@@ -106,16 +106,14 @@ always @ (posedge sixclock) begin
             ansmode:
             begin
 //                mem_data <= WHITE;
-                if (j != num_level && correctflag == 0) begin
+                if (j < num_level && correctflag == 0) begin
                     if (right && soundlevel == ans_key[j]) begin
-                        correctflag <= 1;
+                        correctflag <= 1; //correct
                     end
                     if (right && soundlevel != ans_key[j]) begin
-                        correctflag <= 2;
+                        correctflag <= 2; //wrong
                     end
-                    else begin
-                        mem_data <= draw_answer;
-                    end
+                    mem_data <= draw_answer;
                 end
                 //correct
                 if (correctflag == 1) begin
@@ -131,20 +129,20 @@ always @ (posedge sixclock) begin
                     correctflag <= (ver == 0) ? 0 : correctflag;
                 end
                 //infinite game
-                if (j >= num_level && correctflag == 0) begin
-//                    mem_data <= over_data;
-                    num_level <= num_level + 1;
-                    //reset
-                    twosec <= 0;
-                    threesec <= 0;
-                    ver <= 0;
-                    state <= 0;
-                    mode <= 0;
-                    qn_level <= 0;
-                    qn_num_level <= 0;
-                    i <= 0;
-                    j <= 0;
-                    correctflag <= 0;
+                if (j == num_level && correctflag == 0) begin
+                    mem_data <= over_data;
+//                    num_level <= num_level + 1;
+//                    //reset
+//                    twosec <= 0;
+//                    threesec <= 0;
+//                    ver <= 0;
+//                    state <= 0;
+//                    mode <= 0;
+//                    qn_level <= 0;
+//                    qn_num_level <= 0;
+//                    i <= 0;
+//                    j <= 0;
+//                    correctflag <= 0;
                 end
             end
         endcase

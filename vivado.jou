@@ -11,3 +11,4 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr}
+update_compile_order -fileset sources_1
