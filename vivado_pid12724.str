@@ -1,0 +1,317 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:03:12 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 12724
+License: Customer
+
+Current time: 	Sat Apr 04 17:00:02 SGT 2020
+Time zone: 	Singapore Time (Asia/Singapore)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 12
+
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 76 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre
+Java executable location: 	C:/Xilinx/Vivado/2018.2/tps/win64/jre/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	Sean
+User home directory: C:/Users/Sean
+User working directory: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project
+User country: 	SG
+User language: 	en
+User locale: 	en_SG
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2018.2
+RDI_DATADIR: C:/Xilinx/Vivado/2018.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2018.2/bin
+
+Vivado preferences file location: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/
+Vivado layouts directory: C:/Users/Sean/AppData/Roaming/Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/vivado.log
+Vivado journal file location: 	C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/vivado.jou
+Engine tmp dir: 	C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/.Xil/Vivado-12724-DESKTOP-905I2GK
+
+Xilinx Environment Variables
+----------------------------
+XILINX: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2018.2
+XILINX_SDK: C:/Xilinx/SDK/2018.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2018.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2018.2
+
+
+GUI allocated memory:	199 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 520 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr. Version: Vivado v2018.2 
+// [GUI Memory]: 55 MB (+54896kb) [00:00:05]
+// [Engine Memory]: 476 MB (+347978kb) [00:00:05]
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr} 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr} 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/karth/Desktop/EE2026_Compare/EE2026_Main_Project' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 69 MB (+12162kb) [00:00:08]
+// [Engine Memory]: 539 MB (+40569kb) [00:00:08]
+// HMemoryUtils.trashcanNow. Engine heap size: 561 MB. GUI used memory: 41 MB. Current time: 4/4/20 5:00:05 PM SGT
+// Project name: SoundDisplay; location: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project; part: xc7a35tcpg236-1
+// [Engine Memory]: 571 MB (+5006kb) [00:00:10]
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// a (ck): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File]", 2); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon1.mem]", 3, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon1.mem]", 3, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon1.mem}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon1.mem}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon2.mem]", 3, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon2.mem}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon2.mem}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon3.mem]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon3.mem]", 4, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon3.mem}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon3.mem}} 
+// [GUI Memory]: 74 MB (+1293kb) [00:00:34]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon4.mem]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon4.mem]", 5, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // aa (aj, ck)
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon4.mem}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon4.mem}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon5.mem]", 6, false); // B (D, ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon5.mem]", 6, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+// [Engine Memory]: 601 MB (+1421kb) [00:00:39]
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon5.mem}}] -no_script -reset -force -quiet 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon5.mem}} 
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon6.mem]", 7, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, balloon6.mem]", 7, false, false, false, false, true, false); // B (D, ck) - Popup Trigger
+selectMenuItem(RDIResourceCommand.RDICommands_DELETE, "Remove File from Project..."); // ad (aj, ck)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// aE (ck): Remove Sources: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aE)
+dismissDialog("Remove Sources"); // aE (ck)
+// Tcl Message: export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon6.mem}}] -no_script -reset -force -quiet 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon6.mem}} 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// [GUI Memory]: 83 MB (+5395kb) [00:00:46]
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, covid_title.mem]", 4, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, distancing.mem]", 5, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, game_over.mem]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Memory File, keeping_safe.mem]", 7, false); // B (D, ck)
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v)]", 1, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), clk : clock_divider (clock_divider.v)]", 2, false, false, false, false, false, true); // B (D, ck) - Double Click
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v)]", 16); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon : balloon_screen_main (balloon_screen_main.v)]", 22, true); // B (D, ck) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), balloon : balloon_screen_main (balloon_screen_main.v), drawBalloon_1 : drawBalloon (drawBalloon.v)]", 25, false, false, false, false, false, true); // B (D, ck) - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), memory : memory_game (memory_game.v)]", 21, true); // B (D, ck) - Node
+// [GUI Memory]: 90 MB (+2949kb) [00:01:18]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Top_Student (Top_Student.v), display : oled_main (oled_main.v), memory : memory_game (memory_game.v)]", 21, true, false, false, false, false, true); // B (D, ck) - Double Click - Node
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // B
+selectCodeEditor("memory_game.v", 269, 181); // ce (w, ck)
+selectCodeEditor("memory_game.v", 146, 135); // ce (w, ck)
+selectCodeEditor("memory_game.v", 145, 134); // ce (w, ck)
+selectCodeEditor("memory_game.v", 148, 130); // ce (w, ck)
+selectCodeEditor("memory_game.v", 288, 213); // ce (w, ck)
+selectCodeEditor("memory_game.v", 288, 212, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 351, 270); // ce (w, ck)
+selectCodeEditor("memory_game.v", 351, 270); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 270); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 270); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 270); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 350, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 352, 263); // ce (w, ck)
+selectCodeEditor("memory_game.v", 352, 262); // ce (w, ck)
+selectCodeEditor("memory_game.v", 353, 261); // ce (w, ck)
+selectCodeEditor("memory_game.v", 353, 261); // ce (w, ck)
+selectCodeEditor("memory_game.v", 353, 261); // ce (w, ck)
+// Elapsed time: 47 seconds
+selectCodeEditor("memory_game.v", 298, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 298, 269); // ce (w, ck)
+selectCodeEditor("memory_game.v", 298, 269, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 27 seconds
+selectCodeEditor("memory_game.v", 146, 388); // ce (w, ck)
+// Elapsed time: 10 seconds
+selectCodeEditor("memory_game.v", 202, 179); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("memory_game.v", 176, 372); // ce (w, ck)
+selectCodeEditor("memory_game.v", 176, 382); // ce (w, ck)
+selectCodeEditor("memory_game.v", 176, 382, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 378, 273); // ce (w, ck)
+selectCodeEditor("memory_game.v", 309, 362); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 323, 127); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+// Elapsed time: 33 seconds
+selectCodeEditor("memory_game.v", 390, 214); // ce (w, ck)
+selectCodeEditor("memory_game.v", 390, 214, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 10 seconds
+selectCodeEditor("memory_game.v", 189, 182); // ce (w, ck)
+selectCodeEditor("memory_game.v", 189, 182, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 250, 178); // ce (w, ck)
+selectCodeEditor("memory_game.v", 250, 178, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 177, 198); // ce (w, ck)
+selectCodeEditor("memory_game.v", 177, 198, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 266, 416); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 190, 200); // ce (w, ck)
+selectCodeEditor("memory_game.v", 190, 200, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 175, 181); // ce (w, ck)
+selectCodeEditor("memory_game.v", 175, 181, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 116, 348); // ce (w, ck)
+selectCodeEditor("memory_game.v", 116, 348, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 294, 249); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 144, 214); // ce (w, ck)
+selectCodeEditor("memory_game.v", 144, 214, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 154, 228); // ce (w, ck)
+selectCodeEditor("memory_game.v", 154, 228, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 161, 242); // ce (w, ck)
+selectCodeEditor("memory_game.v", 161, 242, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 154, 316); // ce (w, ck)
+selectCodeEditor("memory_game.v", 174, 314); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 283, 259); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 196, 300); // ce (w, ck)
+selectCodeEditor("memory_game.v", 176, 279); // ce (w, ck)
+selectCodeEditor("memory_game.v", 176, 279, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 178, 293); // ce (w, ck)
+selectCodeEditor("memory_game.v", 178, 293, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 103, 164); // ce (w, ck)
+selectCodeEditor("memory_game.v", 103, 164, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 183, 337); // ce (w, ck)
+selectCodeEditor("memory_game.v", 183, 337, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 185, 345); // ce (w, ck)
+selectCodeEditor("memory_game.v", 185, 345, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 169, 369); // ce (w, ck)
+selectCodeEditor("memory_game.v", 168, 369, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 164, 389); // ce (w, ck)
+selectCodeEditor("memory_game.v", 164, 389, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 238, 282); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'c'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 306, 86); // ce (w, ck)
+typeControlKey((HResource) null, "memory_game.v", 'v'); // ce (w, ck)
+selectCodeEditor("memory_game.v", 170, 315); // ce (w, ck)
+selectCodeEditor("memory_game.v", 170, 315, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 177, 384); // ce (w, ck)
+selectCodeEditor("memory_game.v", 177, 384, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 174, 413); // ce (w, ck)
+selectCodeEditor("memory_game.v", 174, 413, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 171, 396); // ce (w, ck)
+selectCodeEditor("memory_game.v", 171, 396, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 171, 428); // ce (w, ck)
+selectCodeEditor("memory_game.v", 181, 457); // ce (w, ck)
+// [GUI Memory]: 95 MB (+461kb) [00:05:50]
+selectCodeEditor("memory_game.v", 181, 457, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 292, 243); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+selectCodeEditor("memory_game.v", 174, 227); // ce (w, ck)
+selectCodeEditor("memory_game.v", 174, 227, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 143, 231); // ce (w, ck)
+selectCodeEditor("memory_game.v", 143, 231, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 146, 231); // ce (w, ck)
+selectCodeEditor("memory_game.v", 146, 231, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 14 seconds
+selectCodeEditor("memory_game.v", 171, 386); // ce (w, ck)
+selectCodeEditor("memory_game.v", 171, 386, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 172, 402); // ce (w, ck)
+selectCodeEditor("memory_game.v", 172, 402, false, false, false, false, true); // ce (w, ck) - Double Click
+selectCodeEditor("memory_game.v", 179, 364); // ce (w, ck)
+selectCodeEditor("memory_game.v", 179, 364, false, false, false, false, true); // ce (w, ck) - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("memory_game.v", 307, 392); // ce (w, ck)
+closeMainWindow("SoundDisplay - [C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr] - Vivado 2018.2"); // ck
+// A (ck): Exit Vivado: addNotify

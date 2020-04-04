@@ -126,8 +126,14 @@ always @ (posedge sixclock) begin
                 if (correctflag == 2) begin
                     mode <= (ver ==0)? qnmode : mode;
                     j <= 0;
+                    i <= 0;
                     ver = ver + 1;
                     mem_data <= wrong_data;
+                    qn_num_level <= 0;
+                    qn_level <= 0;
+                    twosec<= 0;
+                    threesec <= 0;
+                    state <= 0;
                     correctflag <= (ver == 0) ? 0 : correctflag;
                 end
                 //infinite game
