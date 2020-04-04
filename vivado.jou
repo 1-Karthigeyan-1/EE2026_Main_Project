@@ -2,13 +2,12 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Sat Apr  4 12:35:23 2020
-# Process ID: 7472
+# Start of session at: Sat Apr  4 12:52:06 2020
+# Process ID: 5632
 # Current directory: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8436 C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4376 C:\Users\Sean\Desktop\EE combined\EE2026_Main_Project\SoundDisplay.xpr
 # Log file: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/vivado.log
 # Journal file: C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr}
-update_compile_order -fileset sources_1

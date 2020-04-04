@@ -29,7 +29,7 @@ reg [4:0] state;
 reg [22:0] ver = 0;
 reg [22:0] twosec = 0;
 reg [23:0] threesec = 0;
-reg correctflag;
+reg [1:0] correctflag = 0;
 reg [2:0] mode = 0;
 reg [3:0] num_level = 2;
 reg [3:0] qn_num_level = 0;
@@ -110,18 +110,41 @@ always @ (posedge sixclock) begin
                     if (right && soundlevel == ans_key[j]) begin
                         correctflag <= 1;
                     end
+                    if (right && soundlevel != ans_key[j]) begin
+                        correctflag <= 2;
+                    end
                     else begin
                         mem_data <= draw_answer;
                     end
                 end
+                //correct
                 if (correctflag == 1) begin
                     ver = ver + 1;
                     mem_data <= correct_data;
                     j <= (ver == 0) ? j +1: j;
                     correctflag <= (ver == 0) ? 0 : correctflag;
                 end
+                //wrong
+                if (correctflag == 2) begin
+                    ver = ver + 1;
+                    mem_data <= wrong_data;
+                    correctflag <= (ver == 0) ? 0 : correctflag;
+                end
+                //infinite game
                 if (j >= num_level && correctflag == 0) begin
-                    mem_data <= over_data;
+//                    mem_data <= over_data;
+                    num_level <= num_level + 1;
+                    //reset
+                    twosec <= 0;
+                    threesec <= 0;
+                    ver <= 0;
+                    state <= 0;
+                    mode <= 0;
+                    qn_level <= 0;
+                    qn_num_level <= 0;
+                    i <= 0;
+                    j <= 0;
+                    correctflag <= 0;
                 end
             end
         endcase
