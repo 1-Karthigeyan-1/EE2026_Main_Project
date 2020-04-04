@@ -11,3 +11,16 @@
 #-----------------------------------------------------------
 start_gui
 open_project {C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/SoundDisplay.xpr}
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon1.mem}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon1.mem}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon2.mem}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon2.mem}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon3.mem}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon3.mem}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon4.mem}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon4.mem}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon5.mem}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon5.mem}}
+export_ip_user_files -of_objects  [get_files {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon6.mem}}] -no_script -reset -force -quiet
+remove_files  {{C:/Users/Sean/Desktop/EE combined/EE2026_Main_Project/balloon6.mem}}
