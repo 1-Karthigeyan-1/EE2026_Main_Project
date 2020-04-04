@@ -27,7 +27,7 @@ wire [15:0] draw_answer;
 reg [15:0] qn_level = 0;
 reg [4:0] state;
 reg [22:0] ver = 0;
-reg [22:0] twosec = 1;
+reg [22:0] twosec = 0;
 reg [23:0] threesec = 0;
 reg correctflag;
 reg [2:0] mode = 0;
@@ -91,7 +91,7 @@ always @ (posedge sixclock) begin
                     end
                 end
                 if (delayflag == 1) begin
-                    twosec <= twosec + 1;
+                    twosec = twosec + 1;
                     mem_data <= BLACK;
                     threesec <= 1;
                     if (twosec == 0) begin
@@ -120,35 +120,24 @@ always @ (posedge sixclock) begin
                     j <= (ver == 0) ? j +1: j;
                     correctflag <= (ver == 0) ? 0 : correctflag;
                 end
-                if (j == num_level && correctflag == 0) begin
+                if (j >= num_level && correctflag == 0) begin
                     mem_data <= over_data;
                 end
             end
         endcase
-/*        
-        // keep going into question mode
-        if (copy_num_level != 0) begin
-            copy_num_level = copy_num_level - 1;
-            mode <= qnmode;
-        end
-        //ans mode
-        else begin
-            mode <= ansmode;
-        end
-*/
-//    if (threesec == 1 && mode == qnmode) begin
-////        mem_data <= draw_question;
-//        mode <= delaymode;
-//    end
     end
     if (startflag == 0) begin
-        twosec<= 1;
+        twosec<= 0;
         threesec <= 0;
+        ver <= 0;
         state <= 0;
         mode <= 0;
         qn_level <= 0;
         num_level <= 2;
         qn_num_level <= 0;
+        i <= 0;
+        j <= 0;
+        correctflag <= 0;
     end
 end
 endmodule
