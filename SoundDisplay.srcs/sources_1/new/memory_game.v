@@ -140,19 +140,19 @@ always @ (posedge sixclock) begin
                 end
                 //infinite game
                 if (j == num_level ) begin
-                    mem_data <= over_data;
-//                    num_level <= num_level + 1;
-//                    //reset
-//                    twosec <= 0;
-//                    threesec <= 0;
-//                    ver <= 0;
-//                    state <= 0;
-//                    mode <= 0;
-//                    qn_level <= 0;
-//                    qn_num_level <= 0;
-//                    i <= 0;
-//                    j <= 0;
-//                    correctflag <= 0;
+//                   mem_data <= over_data;
+                    num_level <= num_level + 1;
+                    //reset
+                    twosec <= 0;
+                    threesec <= 0;
+                    ver <= 0;
+                    state <= 0;
+                    mode <= 0;
+                    qn_level <= 0;
+                    qn_num_level <= 0;
+                    i <= 0;
+                    j <= 0;
+                    correctflag <= 0;
                 end
             end
         endcase
